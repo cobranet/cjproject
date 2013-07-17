@@ -15,4 +15,12 @@ describe Jamb do
       assert_equal :LABEL, j.cell(0,col).type
     end
   end
+  
+  it "col num 0 must have type :LABEL and be disabled" do
+    j = Jamb.new
+    j.rows do |row|
+      assert_equal :LABEL, j.cell(row,0).type
+      assert_equal false, j.cell(row,0).is_enabled?
+    end
+  end
 end

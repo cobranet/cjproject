@@ -25,6 +25,11 @@ class Jamb
       yield col
     end
   end  
+  def rows
+    (0...rownum).each do |row|
+       yield row
+    end
+  end
 
   def cell(row,col)
     @cells[row][col]
@@ -45,7 +50,11 @@ class Jamb
     (0...rownum).each do |row|
       @cells[row] = Array.new
       columns do  |col|
-        @cells[row][col] = Cell.new(@@ROW_TYPES[row])
+        if col != 0
+          @cells[row][col] = Cell.new(@@ROW_TYPES[row]) 
+        else
+          @cells[row][col] = Cell.new(:LABEL)
+        end  
       end 
     end
   end
