@@ -19,20 +19,35 @@ class Jamb
                   :NORMAL,
                   :NORMAL,
                   :CALC]
-                 
+
+  def columns
+    (0...colnum).each do |col|
+      yield col
+    end
+  end  
+
+  def cell(row,col)
+    @cells[row][col]
+  end              
+
   def rownum
-    puts @@ROW_LABELS.inspect
     @@ROW_LABELS.size
   end   
 
   def colnum
     @@COL_LABELS.size
   end
+  def cellxy(row,col)
+    puts "Row #{row}- Col #{col}"
+  end   
   def initialize
     @cells = Array.new
-    (1...rownum).each do |row|
+    (0...rownum).each do |row|
       @cells[row] = Array.new
-     end
+      columns do  |col|
+        @cells[row][col] = Cell.new(@@ROW_TYPES[row])
+      end 
+    end
   end
 
 

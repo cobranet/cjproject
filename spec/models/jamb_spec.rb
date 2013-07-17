@@ -9,4 +9,10 @@ describe Jamb do
     assert_equal j.colnum, 4
   end
 
+  it "row num 0 must have type :LABEL and be disabled" do
+    j = Jamb.new
+    j.columns do |col|
+      assert_equal :LABEL, j.cell(0,col).type
+    end
+  end
 end

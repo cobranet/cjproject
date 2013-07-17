@@ -10,7 +10,7 @@ describe Cell do
     c = Cell.new(:LABEL)
     expect do
      c.enable
-    end.should raise_error
+    end.to raise_error
   end
 
 
