@@ -25,6 +25,7 @@ class Jamb
       yield col
     end
   end  
+
   def rows
     (0...rownum).each do |row|
        yield row
@@ -34,7 +35,10 @@ class Jamb
   def cell(row,col)
     @cells[row][col]
   end              
-
+  def set_cell_value(row,col,value)
+    @cells[row][col].value = value
+    @enabled = false
+  end
   def rownum
     @@ROW_LABELS.size
   end   

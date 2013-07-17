@@ -35,15 +35,22 @@ describe Jamb do
      end
     end
   end
-  it "rows from 7 and 8 must be calc and disabled if col <> 0 " do
+
+  it "rows from 7, 8, 11 and 16  must be calc and disabled if col <> 0 " do
     j = Jamb.new
     j.rows do |row|
       j.columns do |col|
-        if [7,8].include?(row) && col != 0
+        if [7,8,11].include?(row) && col != 0
           assert_equal :CALC, j.cell(row,col).type
+          assert_equal false, j.cell(row,col).is_enabled?
         end
      end
     end
   end
 
+  it "if cell is :NORMAL and asigned by value must keep it" do
+    j = Jamb.new
+    j.set_cell_value(1,1,12)
+    assert_equal 12, j.cell(1,1).value
+  end
 end
