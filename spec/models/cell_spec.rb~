@@ -1,0 +1,9 @@
+require 'spec_hepler'
+ 
+describe Cell do
+  it "must be disapbled after creation" do
+    c = Cell.new(:LABEL)
+    assert_equal c.is_enabled?,false
+  end
+end 
+      

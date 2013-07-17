@@ -1,0 +1,2 @@
+class JabmgamesController < ApplicationController
+end

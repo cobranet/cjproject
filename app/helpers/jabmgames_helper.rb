@@ -1,0 +1,2 @@
+module JabmgamesHelper
+end
