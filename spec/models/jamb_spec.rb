@@ -126,6 +126,19 @@ describe Jamb do
     assert_equal j.calc_dif(1), 5*(30-5)
   end
 
+  it "enable next cell in col 1   and 2" do
+    j = Jamb.new
+    assert_equal j.cell(2,1).is_enabled?, false
+    j.enable_next(1,1)
+    assert_equal j.cell(2,1).is_enabled?, true
+
+    assert_equal j.cell(13,2).is_enabled?, false
+    j.enable_next(14,2)
+    assert_equal j.cell(13,2).is_enabled?, false
+
+  end 
+
+
   it "set_cel_value must enable next cel if cols are 1 and 2" do
     j = Jamb.new
     assert_equal j.cell(2,1).is_enabled?, false
@@ -135,4 +148,6 @@ describe Jamb do
     j.set_cell_value(2,1,2)
     assert_equal j.cell(3,1).is_enabled?, true
   end
+
+
 end

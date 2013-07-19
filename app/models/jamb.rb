@@ -79,19 +79,34 @@ class Jamb
   end
   
   def calc_sum(row,col)
-    depends_on(row).sum
+   sum = 0
+   depends_on(row).each do |drow|
+     sum = cell(drow,col).value + sum
+   end
+   sum 
   end
  
   def calc_dif(col)
-    dep =cell(1,col).value * ( cell(9,col).value - cell(10,col).value)
+    dep = cell(1,col).value * ( cell(9,col).value - cell(10,col).value)
   end
-
+ 
+  def enable_next(row,col)
+    return unless [1,2].include?(row)
+    if col == 1
+      next_normal_row = @@ROW_TYPES.slice(row+1,100).find_index(:NORMAL)
+    else
+      next_normal_row = @@ROW_TYPES.slice(0,row).reverse.find_index(:NORMAL)
+    end
+    cell(next_normal_row+1+row,col).enable unless next_normal_row == nil
+  end
+ 
   def set_cell_value(row,col,value)
     if cell(row,col).type == :NORMAL
       raise RuntimeError unless @cells[row][col].empty? == true
     end
     @cells[row][col].value = value
     @enabled = false
+    enable_next(row,col)
     observed_by(row).each do |observer_row|
       if all_full(depends_on(observer_row),col)
         calc(observer_row,col)
