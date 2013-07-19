@@ -59,5 +59,51 @@ describe Jamb do
     j.set_cell_value(1,1,"B")
     expect {j.set_cell_value(1,1,"C")}.to raise_error(RuntimeError)
   end 
-   
+
+  it "if cell is not empty and somebody nust be disabled" do
+    j = Jamb.new
+    j.set_cell_value(1,1,"B")
+    assert_equal j.cell(1,1).is_enabled?, false
+  end 
+  
+  it "for calculated rows method depends_on must be array of rows on which that cell depends" do
+    j = Jamb.new
+    j.rows do |row|
+      j.columns do |col|
+        if j.cell(row,col).type == :CALC  
+          assert_equal j.depends_on(row).class, Array
+        end
+      end
+    end
+  end 
+
+  it "all rows on which row depends that call must be calculate if all cells are full" do
+    j = Jamb.new
+    j.columns do |col|
+      if col != 0 
+        (1..6).each do |row|
+          j.set_cell_value(row,col,1)
+         end
+       assert_equal j.cell(7,col).empty?,  false  
+      end
+    end
+  end
+  
+  it "observed by > for rows that are obsered by same calc rows observed_by must return array of that rows" do
+    j = Jamb.new
+      [2,3,4,5,6].each do |row|
+        assert_equal j.observed_by(row), [7,8]
+      end
+      [1].each do |row|
+        assert_equal j.observed_by(row), [7,8,11]
+      end
+
+      [9,10].each do |row|
+        assert_equal j.observed_by(row), [11]
+      end
+      [12,13,14,15].each do |row|
+        assert_equal j.observed_by(row), [16]
+      end
+
+  end
 end

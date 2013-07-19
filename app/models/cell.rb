@@ -34,4 +34,7 @@ class Cell
     str
   end  
 
+  def to_s
+    "cell type #{@type}  @value #{@value} @enabled #{@enabled}"
+  end
 end
