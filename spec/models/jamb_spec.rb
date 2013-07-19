@@ -104,6 +104,25 @@ describe Jamb do
       [12,13,14,15].each do |row|
         assert_equal j.observed_by(row), [16]
       end
+  end
 
+  it "calc_sum metod calc sum of all rows on which dependes " do
+    j = Jamb.new
+    (1..6).each do |row|
+      j.set_cell_value(row,1,3)
+    end
+    (11...14).each do |row|
+      j.set_cell_value(row,2,10)
+    end
+    assert_equal j.calc_sum(7,1), 6*3
+    assert_equal j.calc_sum(15,2), 4 * 10  
+  end
+
+  it "calc_dif metod is first row multyplay with diference of second and third" do
+    j = Jamb.new
+    j.set_cell_value(1,1,5)
+    j.set_cell_value(9,1,30)
+    j.set_cell_value(10,1,5)
+    assert_equal j.calc_dif(1), 5*(30-5)
   end
 end

@@ -20,10 +20,11 @@ class Jamb
                   :NORMAL,
                   :CALC]
   @@DEPENDS = [ [7,[1,2,3,4,5,6]],
-                [8,[1,2,3,4,5,6]],
+                [8,[1,2,3,4,5,6,7]],
                 [11,[1,9,10]],
                 [16,[12,13,14,15]]
               ]   
+
   def depends_on(row)
     @@DEPENDS.each do |rule| 
       if rule[0] == row 
@@ -66,10 +67,19 @@ class Jamb
 
   def cell(row,col)
     @cells[row][col]
-  end    
+  end
+    
   def calc(row,col)
-    @cells[row,col] = 1
+    @cells[row][col].value = 1
   end         
+  
+  def calc_sum(row,col)
+    depends_on(row).sum
+  end
+ 
+  def calc_dif(col)
+    dep =cell(1,col).value * ( cell(9,col).value - cell(10,col).value)
+  end
   def set_cell_value(row,col,value)
     if cell(row,col).type == :NORMAL
       raise RuntimeError unless @cells[row][col].empty? == true 
@@ -77,12 +87,12 @@ class Jamb
     @cells[row][col].value = value
     @enabled = false
     observed_by(row).each do |observer_row|
-      puts "row #{observer_row} col #{col} #{cell(observer_row,col).to_s}   "
       if all_full(depends_on(observer_row),col)
         calc(observer_row,col)
       end   
     end
   end
+
   def rownum
     @@ROW_LABELS.size
   end   
@@ -90,9 +100,11 @@ class Jamb
   def colnum
     @@COL_LABELS.size
   end
+
   def cellxy(row,col)
     puts "Row #{row}- Col #{col}"
   end   
+
   def initialize
     @cells = Array.new
     (0...rownum).each do |row|
