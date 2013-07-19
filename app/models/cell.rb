@@ -20,7 +20,7 @@ class Cell
   end
 
   def empty?
-    @valule == nil
+    @value == nil
   end
   
   def class_str

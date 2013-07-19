@@ -16,5 +16,12 @@ describe Cell do
     c = Cell.new(:LABEL)
     assert_equal  c.class_str.split(" ").include?('label'), true
    end
+
+   it "must return empty? = false if value is not set otherwise true" do
+     c = Cell.new(:NORMAL)
+     assert_equal c.empty?, true
+     c.value = 1;
+     assert_equal c.empty?, false
+   end
 end 
       

@@ -36,6 +36,7 @@ class Jamb
     @cells[row][col]
   end              
   def set_cell_value(row,col,value)
+    raise RuntimeError unless @cells[row][col].empty? == true
     @cells[row][col].value = value
     @enabled = false
   end

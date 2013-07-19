@@ -53,4 +53,11 @@ describe Jamb do
     j.set_cell_value(1,1,12)
     assert_equal 12, j.cell(1,1).value
   end
+   
+  it "if cell is not empty and somebody try to set value it must raise error" do
+    j = Jamb.new
+    j.set_cell_value(1,1,"B")
+    expect {j.set_cell_value(1,1,"C")}.to raise_error(RuntimeError)
+  end 
+   
 end
