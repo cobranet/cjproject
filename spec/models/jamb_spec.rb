@@ -111,11 +111,11 @@ describe Jamb do
     (1..6).each do |row|
       j.set_cell_value(row,1,3)
     end
-    (11...14).each do |row|
+    (12..15).each do |row|
       j.set_cell_value(row,2,10)
     end
     assert_equal j.calc_sum(7,1), 6*3
-    assert_equal j.calc_sum(15,2), 4 * 10  
+    assert_equal j.calc_sum(16,2), 4 * 10  
   end
 
   it "calc_dif metod is first row multyplay with diference of second and third" do
@@ -124,5 +124,15 @@ describe Jamb do
     j.set_cell_value(9,1,30)
     j.set_cell_value(10,1,5)
     assert_equal j.calc_dif(1), 5*(30-5)
+  end
+
+  it "set_cel_value must enable next cel if cols are 1 and 2" do
+    j = Jamb.new
+    assert_equal j.cell(2,1).is_enabled?, false
+    j.set_cell_value(1,1,1)
+    assert_equal j.cell(2,1).is_enabled?, true
+    assert_equal j.cell(3,1).is_enabled?, false
+    j.set_cell_value(2,1,2)
+    assert_equal j.cell(3,1).is_enabled?, true
   end
 end

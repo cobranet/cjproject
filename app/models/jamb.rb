@@ -23,21 +23,21 @@ class Jamb
                 [8,[1,2,3,4,5,6,7]],
                 [11,[1,9,10]],
                 [16,[12,13,14,15]]
-              ]   
+              ]
 
   def depends_on(row)
-    @@DEPENDS.each do |rule| 
-      if rule[0] == row 
+    @@DEPENDS.each do |rule|
+      if rule[0] == row
         return rule[1]
       end
-    end 
+    end
   end
 
-  def all_full(arr,col) 
+  def all_full(arr,col)
     full = true
     arr.each do |row|
       if cell(row,col).empty?
-        full = false 
+        full = false
       end
     end
     full
@@ -57,7 +57,7 @@ class Jamb
     (0...colnum).each do |col|
       yield col
     end
-  end  
+  end
 
   def rows
     (0...rownum).each do |row|
@@ -70,8 +70,13 @@ class Jamb
   end
     
   def calc(row,col)
-    @cells[row][col].value = 1
-  end         
+    if [7,8,16].include?(row)
+      @cells[row][col].value = calc_sum(row,col)
+    end
+    if row == 11
+      @cells[row][col].value = calc_dif(col)
+    end
+  end
   
   def calc_sum(row,col)
     depends_on(row).sum
@@ -80,22 +85,23 @@ class Jamb
   def calc_dif(col)
     dep =cell(1,col).value * ( cell(9,col).value - cell(10,col).value)
   end
+
   def set_cell_value(row,col,value)
     if cell(row,col).type == :NORMAL
-      raise RuntimeError unless @cells[row][col].empty? == true 
+      raise RuntimeError unless @cells[row][col].empty? == true
     end
     @cells[row][col].value = value
     @enabled = false
     observed_by(row).each do |observer_row|
       if all_full(depends_on(observer_row),col)
         calc(observer_row,col)
-      end   
+      end
     end
   end
 
   def rownum
     @@ROW_LABELS.size
-  end   
+  end
 
   def colnum
     @@COL_LABELS.size
@@ -103,21 +109,20 @@ class Jamb
 
   def cellxy(row,col)
     puts "Row #{row}- Col #{col}"
-  end   
+  end
 
   def initialize
     @cells = Array.new
     (0...rownum).each do |row|
       @cells[row] = Array.new
-      columns do  |col|
+      columns do |col|
         if col != 0
-          @cells[row][col] = Cell.new(@@ROW_TYPES[row]) 
+          @cells[row][col] = Cell.new(@@ROW_TYPES[row])
         else
           @cells[row][col] = Cell.new(:LABEL)
-        end  
-      end 
+        end
+      end
     end
   end
-
 
 end
