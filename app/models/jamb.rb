@@ -42,7 +42,6 @@ class Jamb
     end
     full
   end
-
   def observed_by(row)
     arr = Array.new
     @@DEPENDS.each do |rule|
@@ -113,7 +112,6 @@ class Jamb
       end
     end
   end
-
   def rownum
     @@ROW_LABELS.size
   end
