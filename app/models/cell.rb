@@ -19,7 +19,10 @@ class Cell
     end
     @enabled = true
   end
-
+  
+  def disable
+    @enabled = false
+  end
   def empty?
     @value == nil
   end

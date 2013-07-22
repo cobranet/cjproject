@@ -105,7 +105,7 @@ class Jamb
       raise RuntimeError unless @cells[row][col].empty? == true
     end
     @cells[row][col].value = value
-    @enabled = false
+    @cells[row][col].disable
     enable_next(row,col)
     observed_by(row).each do |observer_row|
       if all_full(depends_on(observer_row),col)
@@ -138,6 +138,8 @@ class Jamb
         end
       end
     end
+    @cells[1][1].enable
+    @cells[15][2].enable
   end
 
 end

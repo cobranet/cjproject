@@ -2,6 +2,12 @@ describe Jamb do
   it "must be created" do
     j = Jamb.new
   end
+  
+  it "after created cells 1,1 and 15,2 must be enabled" do
+    j = Jamb.new
+    assert_equal j.cell(1,1).is_enabled?, true
+    assert_equal j.cell(15,2).is_enabled?, true
+  end
 
   it "must have rownum 16" do
     j = Jamb.new
@@ -60,9 +66,9 @@ describe Jamb do
     expect {j.set_cell_value(1,1,"C")}.to raise_error(RuntimeError)
   end 
 
-  it "if cell is not empty and somebody nust be disabled" do
+  it "if cell is not empty and somebody must be disabled" do
     j = Jamb.new
-    j.set_cell_value(1,1,"B")
+    j.set_cell_value(1,1,1)
     assert_equal j.cell(1,1).is_enabled?, false
   end 
   
