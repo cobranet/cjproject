@@ -154,27 +154,33 @@ describe Jamb do
     j.set_cell_value(2,1,2)
     assert_equal j.cell(3,1).is_enabled?, true
   end
-  
-   it "calc_roll return value for dices and row " do
-     j = Jamb.new
-     assert_equal 3, j.calc_roll(1,[1,1,1,4,5]) 
-     assert_equal 4, j.calc_roll(2,[2,2,1,4,5]) 
-     assert_equal 3, j.calc_roll(3,[3,1,1,4,5]) 
-     assert_equal 20, j.calc_roll(4,[4,4,4,4,4]) 
-     assert_equal 10, j.calc_roll(5,[5,1,1,4,5])  
-     assert_equal 18, j.calc_roll(6,[6,6,1,6,5])
-     assert_equal 23, j.calc_roll(9,[6,6,6,2,3])      
-     assert_equal 7,  j.calc_roll(10,[2,2,1,1,1])
-     assert_equal 45, j.calc_roll(12,[1,2,3,4,5])               
-     assert_equal 0, j.calc_roll(12,[1,2,3,4,6])
-     assert_equal 45, j.calc_roll(12,[6,2,3,4,5]) 
-     assert_equal 58, j.calc_roll(13,[6,6,6,5,5]) 
-     assert_equal 0, j.calc_roll(13,[6,6,6,4,5])                              
-     assert_equal 64, j.calc_roll(14,[6,6,6,6,5]) 
-     assert_equal 0, j.calc_roll(14,[6,5,6,6,5])
-     assert_equal 64, j.calc_roll(14,[6,6,6,6,6])  
-     assert_equal 80, j.calc_roll(13,[6,6,6,6,6])
-     assert_equal 0, j.calc_roll(13,[6,6,6,6,5])  
+  it " with distibution must return sorted array of counts of diferent values of dices" do
+    j = Jamb.new
+    assert_equal [1,2,2], j.distribution([1,2,3,2,1])
+    assert_equal [1,4], j.distribution([3,2,3,3,3])
+    assert_equal [5], j.distribution([1,1,1,1,1])        
+
+  end
+  it "calc_roll return value for dices and row " do
+    j = Jamb.new
+    assert_equal 3, j.calc_roll(1,[1,1,1,4,5]) 
+    assert_equal 4, j.calc_roll(2,[2,2,1,4,5]) 
+    assert_equal 3, j.calc_roll(3,[3,1,1,4,5]) 
+    assert_equal 20, j.calc_roll(4,[4,4,4,4,4]) 
+    assert_equal 10, j.calc_roll(5,[5,1,1,4,5])  
+    assert_equal 18, j.calc_roll(6,[6,6,1,6,5])
+    assert_equal 23, j.calc_roll(9,[6,6,6,2,3])      
+    assert_equal 7,  j.calc_roll(10,[2,2,1,1,1])
+    assert_equal 45, j.calc_roll(12,[1,2,3,4,5])               
+    assert_equal 0, j.calc_roll(12,[1,2,3,4,6])
+    assert_equal 45, j.calc_roll(12,[6,2,3,4,5]) 
+    assert_equal 58, j.calc_roll(13,[6,6,6,5,5]) 
+    assert_equal 0, j.calc_roll(13,[6,6,6,4,5])                              
+    assert_equal 64, j.calc_roll(14,[6,6,6,6,5]) 
+    assert_equal 0, j.calc_roll(14,[6,5,6,6,5])
+    assert_equal 64, j.calc_roll(14,[6,6,6,6,6])  
+    assert_equal 80, j.calc_roll(15,[6,6,6,6,6])
+    assert_equal 0, j.calc_roll(15,[6,6,6,6,5])  
    end
 
 end

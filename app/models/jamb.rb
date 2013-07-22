@@ -141,8 +141,40 @@ class Jamb
         return 45
       end
       return 0
-    end  
-  end   
+    end
+    if row == 13 #FULL
+      if distribution(dices) == [2,3] 
+        return dices.sum + 30
+      else
+        return 0
+      end
+    end
+    if row == 14 #POKER
+      if distribution(dices) != [1,4] && distribution(dices) != [5]
+        return 0
+      else
+        (1..6).each do |num|
+          return num*4 +40 unless dices.select { |x| x==num }.count < 4 
+        end  
+      end  
+    end
+    if row == 15 #JAMB
+      if distribution(dices) == [5]
+        return 50 + 5*dices[0]
+      else
+        return 0
+      end
+    end
+  end
+  def distribution(dices)
+    arr = Array.new
+    (1..6).each do |num|
+      if dices.select { |x| x  == num }.count > 0 
+        arr << dices.select { |x| x == num }.count 
+      end
+    end
+    arr.sort
+  end    
   def initialize
     @cells = Array.new
     (0...rownum).each do |row|
