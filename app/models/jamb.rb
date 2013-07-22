@@ -125,7 +125,7 @@ class Jamb
   def cellxy(row,col)
     puts "Row #{row}- Col #{col}"
   end
-
+   
   def initialize
     @cells = Array.new
     (0...rownum).each do |row|
