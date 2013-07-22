@@ -1,0 +1,11 @@
+
+<h1>Jamb</h1>
+<table id="jtable">
+  <% @jamb.rows do |row| %>
+    <tr>
+    <% @jamb.columns do |col| %>
+    <%= content_tag :td , @jamb.cell(row,col).value %>  
+    <% end %>
+    </tr>
+  <% end %>   
+</table>

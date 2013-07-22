@@ -125,7 +125,24 @@ class Jamb
   def cellxy(row,col)
     puts "Row #{row}- Col #{col}"
   end
-   
+  def calc_roll(row,dices)
+    if [1,2,3,4,5,6].include?(row)
+      sum = 0 
+      dices.each do |dice|
+        sum = sum + dice unless dice != row
+      end
+      return sum
+    end
+    if [9,10].include?(row)
+      return dices.sum
+    end
+    if row == 12
+      if dices.sort == [1,2,3,4,5] || dices.sort == [2,3,4,5,6]
+        return 45
+      end
+      return 0
+    end  
+  end   
   def initialize
     @cells = Array.new
     (0...rownum).each do |row|
