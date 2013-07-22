@@ -9,9 +9,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" >
+          <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">Brand</a>
+        <div class="nav-collapse">
+	  <ul class="nav">
+	    <li><%= link_to "333331" %></li>
+	    <li><%= link_to "2 nesto" %></li>
+	    <li><%= link_to "nesto" %></li>
+	  </ul>   
+      	</div>  
+     </div>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
-      <div class="span9">
+      <div class="span1"></div>
+      <div class="span8">
         <%= yield %>
       </div>
       <div class="span3"></div>
