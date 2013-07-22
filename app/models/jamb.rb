@@ -133,9 +133,14 @@ class Jamb
       columns do |col|
         if col != 0
           @cells[row][col] = Cell.new(@@ROW_TYPES[row])
+          if row == 0 
+           @cells[row][col].value = @@COL_LABELS[col]
+          end
         else
           @cells[row][col] = Cell.new(:LABEL)
+          @cells[row][col].value = @@ROW_LABELS[row]
         end
+        
       end
     end
     @cells[1][1].enable
