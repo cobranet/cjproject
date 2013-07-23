@@ -1,10 +1,25 @@
-<h1>Jamb</h1>
-<table id="jtable">
+<h1>Google</h1>
+<table id="jtable" class="table table-bordered table-game">
   <% @jamb.rows do |row| %>
-    <tr>
-    <% @jamb.columns do |col| %>
-    <%= content_tag :td , @jamb.cell(row,col).value %>  
+    <%  if row == 0  %>
+      <thead><tr>
+    <% else %> 
+      <tr>
     <% end %>
-    </tr>
+    <% @jamb.columns do |col| %>
+      <% if col == 0 %>
+        <%= content_tag :th , @jamb.cell(row,col).value , :class => @jamb.cell(row,col).class_str, :id => @jamb.cell_id(row,col) %>  
+      <% else %> 
+        <%= content_tag :td , @jamb.cell(row,col).value , :class => @jamb.cell(row,col).class_str,:id => @jamb.cell_id(row,col)  %>  
+      <% end %>
+    <% end %>
+
+    <%  if row == 0  %>
+      </tr></thead><tbody>
+    <% else %> 
+      </tr>
+    <% end %>
+   
   <% end %>   
+   </tbody>
 </table>

@@ -1,0 +1,4 @@
+describe DiceBoard do
+  it "must be created " do
+  end
+end

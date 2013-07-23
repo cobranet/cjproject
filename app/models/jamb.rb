@@ -32,7 +32,9 @@ class Jamb
       end
     end
   end
-
+  def cell_id(row,col)
+    "#{row}_#{col}" 
+  end
   def all_full(arr,col)
     full = true
     arr.each do |row|
@@ -175,6 +177,7 @@ class Jamb
   end    
   def initialize
     @cells = Array.new
+    @diceboard = DiceBoard.new(6)
     (0...rownum).each do |row|
       @cells[row] = Array.new
       columns do |col|

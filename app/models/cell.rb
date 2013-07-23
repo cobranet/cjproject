@@ -2,11 +2,11 @@ class Cell
   
   attr_reader :type
   attr_accessor :value
-  
-  def initialize(type)
+  def initialize(type,is_col=false)
     @type = type
     @value = nil
     @enabled = false
+    @is_col = is_col  
   end
  
   def is_enabled?
@@ -28,13 +28,16 @@ class Cell
   end
   
   def class_str
-    str = "#{@type.to_s.downcase}"
+    str = "b#{@type.to_s.downcase}"
     if empty? 
-      str = str + " empty" 
+      str = str + " bempty" 
     end
     if is_enabled? 
-       str  = str + " enabled" 
+       str  = str + " benabled" 
     end      
+    if @is_col
+      str = str + " bcol"
+    end
     str
   end  
 
