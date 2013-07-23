@@ -24,11 +24,22 @@ describe Cell do
      assert_equal c.empty?, false
    end
 
-   it "if is column label must have class style bcol" do
+   it "if is column label and calc must have class style bcolcalc" do
      c = Cell.new(:LABEL,true)
      c1 = Cell.new(:LABEL) 
-     assert_equal c.class_str.split(" ").include?("bcol"), true  
-     assert_equal c1.class_str.split(" ").include?("bcol"), false  
+     assert_equal c.class_str.split(" ").include?("bcolcalc"), true  
+     assert_equal c1.class_str.split(" ").include?("bcolcalc"), false  
    end 
+   
+   it "must have bcolcalc style in rows 7,8,11,16 and col 0 " do
+     j=Jamb.new
+     assert_equal j.cell(7,0).class_str.split(" ").include?("bcolcalc"), true
+     assert_equal j.cell(8,0).class_str.split(" ").include?("bcolcalc"), true
+     assert_equal j.cell(11,0).class_str.split(" ").include?("bcolcalc"), true
+     assert_equal j.cell(16,0).class_str.split(" ").include?("bcolcalc"), true
+     assert_equal j.cell(10,0).class_str.split(" ").include?("bcolcalc"), false
+     assert_equal j.cell(4,0).class_str.split(" ").include?("bcolcalc"), false
+   end  
+  
 end 
       

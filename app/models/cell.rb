@@ -36,7 +36,7 @@ class Cell
        str  = str + " benabled" 
     end      
     if @is_col
-      str = str + " bcol"
+      str = str + " bcolcalc"
     end
     str
   end  

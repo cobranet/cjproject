@@ -33,7 +33,7 @@ class Jamb
     end
   end
   def cell_id(row,col)
-    "#{row}_#{col}" 
+    "#{row}a#{col}" 
   end
   def all_full(arr,col)
     full = true
@@ -187,10 +187,17 @@ class Jamb
            @cells[row][col].value = @@COL_LABELS[col]
           end
         else
-          @cells[row][col] = Cell.new(:LABEL)
+          if [7,8,11,16].include?(row)
+            calccol = true
+          else
+            calccol = false
+          end
+          @cells[row][col] = Cell.new(:LABEL,calccol)
           @cells[row][col].value = @@ROW_LABELS[row]
         end
-        
+        if col == 3 && [0,7,8,11,16].include?(row) == false 
+          @cells[row][col].enable
+        end  
       end
     end
     @cells[1][1].enable
