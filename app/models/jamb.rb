@@ -24,7 +24,7 @@ class Jamb
                 [11,[1,9,10]],
                 [16,[12,13,14,15]]
               ]
-
+  attr_accessor :diceboard
   def depends_on(row)
     @@DEPENDS.each do |rule|
       if rule[0] == row
@@ -166,6 +166,7 @@ class Jamb
       end
     end
   end
+
   def distribution(dices)
     arr = Array.new
     (1..6).each do |num|
