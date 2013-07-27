@@ -119,6 +119,7 @@ D6Animator.prototype.start = function(result) {
 	sequence[i] = result;
 	this.result = result;
 	this.animate(sequence, state);
+
 }
 
 D6Animator.prototype.animate = function(sequence, state) {
@@ -469,11 +470,15 @@ D6.dice = function(numDice, callback, callbackData, useImages, buttonLabel) {
 	genHtml += "</div>";
 	D6.genHtml = genHtml;
 	document.write(genHtml);
+		
 }
 
 D6.roll = function() {
+	alert('tusam');
 	D6AnimBuilder.get("dice").reset();
 	D6AnimBuilder.get("dice").start();
+	alert($('#dice2'));
+	$('#dice2').click(alert("tu sam"));
 }
 
 D6.baseUrl = "";
@@ -534,3 +539,4 @@ D6.diceToShow = function(numDice) {
 	}
 	D6.numDiceShown = numDice;
 }
+

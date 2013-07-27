@@ -30,9 +30,17 @@
 
 <% content_for :diceboard do%>
   <div id="diceboard"> 
+    <div id="old">
     <script type='text/javascript'>
       D6.dice(5);
     </script>
+    </div>
+    <div id='new'>
+      <% (0..5).each do |dice| %>
+        <%= image_tag @jamb.diceboard.img(dice) , :class => @jamb.diceboard.class_str(dice) %>  
+	<% end %>
+	
+    </div>  
   </div>
 <%end%>
 
