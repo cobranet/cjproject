@@ -11,7 +11,7 @@
 	<% if col == 0 %>
 	  <%= content_tag :th , @jamb.cell(row,col).value , :class => @jamb.cell(row,col).class_str, :id => @jamb.cell_id(row,col) %>	     <% else %> 
 	  <% if @jamb.cell(row,col).is_enabled? %>
-            <%= content_tag :td ,  link_to("___ ", play_game_path)  , :class => @jamb.cell(row,col).class_str,:id => @jamb.cell_id(row,col)  %>	  <% else %>
+            <%= content_tag :td ,  link_to("___ ", play_game_path( :row => row , :col=>col),:method => :post  )  , :class => @jamb.cell(row,col).class_str,:id => @jamb.cell_id(row,col)  %>	  <% else %>
 	    <%= content_tag :td ,  @jamb.cell(row,col).value , :class => @jamb.cell(row,col).class_str,:id => @jamb.cell_id(row,col)  %>	 
           <% end %>
        <% end %>
