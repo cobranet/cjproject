@@ -31,8 +31,11 @@
   <div class="container">
     <div class="row">
       <div class="span1"></div>
-      <div class="span8">
-        <%= yield %>
+      <div class="span5">
+        <%= yield :table%>
+      </div>
+      <div class="span3">
+        <%= yield :dices %>
       </div>
       <div class="span3"></div>
     </div>

@@ -1,5 +1,9 @@
 Cjproject::Application.routes.draw do
-  resources :games
+  resources :games do
+    member do
+      post 'play'
+    end
+  end
 
   resources :jabmgames
 
