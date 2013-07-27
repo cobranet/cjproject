@@ -74,11 +74,11 @@ D6Animator.getImageBank = function(key, baseUrl) {
 			whichDie = "die" + i;
 			imageBank[whichDie] = new Object();
 			imageBank[whichDie].die = new Image();
-			imageBank[whichDie].die.src = baseUrl + "die-" + i + ".gif";
+			imageBank[whichDie].die.src = baseUrl + "die-" + i + "large.gif";
 			imageBank[whichDie].side = new Image();
-			imageBank[whichDie].side.src = baseUrl + "dices-" + i + ".gif";
+			imageBank[whichDie].side.src = baseUrl + "dices-" + i + "large.gif";
 			imageBank[whichDie].top = new Image();
-			imageBank[whichDie].top.src = baseUrl + "dicet-" + i + ".gif";
+			imageBank[whichDie].top.src = baseUrl + "dicet-" + i + "large.gif";
 		}
 	}
 	return imageBank;
