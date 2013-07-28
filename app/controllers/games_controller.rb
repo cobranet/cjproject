@@ -14,7 +14,25 @@ class GamesController < ApplicationController
     game.save!
     redirect_to game_path(game.id)
   end
-    
+  
+  def select
+    game = Game.find(params[:id])
+    jamb = game.to_jamb
+    jamb.diceboard.toggle(params[:dice].to_i)
+    game.from_jamb(jamb)
+    game.save!
+    redirect_to game_path(game.id)
+  end 
+
+  def roll 
+    game = Game.find(params[:id])
+    jamb = game.to_jamb
+    jamb.diceboard.roll_selected
+    game.from_jamb(jamb)
+    game.save!
+    redirect_to game_path(game.id)
+  end  
+
   def play
     game = Game.find(params[:id])
     jamb = game.to_jamb

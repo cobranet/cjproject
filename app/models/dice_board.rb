@@ -4,7 +4,14 @@ class DiceBoard
     @num = num
     clear
   end
-  
+
+  def toggle(num)
+    if @selected[num] == true
+      @selected[num] = false
+    else
+      @selected[num] = true
+    end
+  end
   def select(num)
     @selected[num] = true
   end
@@ -51,10 +58,18 @@ class DiceBoard
     end 
     str
   end
-  
+  def roll_all 
+    (0...@num).each do |i|
+      roll(i)
+    end 
+  end   
   def roll_selected
-    @selected.each_with_index do |sel,i|
-      roll(i) unless sel == false
+    if dices[0] == nil 
+      roll_all
+    else
+      @selected.each_with_index do |sel,i|
+        roll(i) unless sel == false
+      end
     end
   end
 

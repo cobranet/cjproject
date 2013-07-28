@@ -1,10 +1,10 @@
 describe DiceBoard do
   it "must be created " do
-    db = DiceBoard.new(6)
+    db = DiceBoard.new(5)
   end
   
   it "must return images sources for dices" do
-    db = DiceBoard.new(6)
+    db = DiceBoard.new(5)
     (0..5).each do |dice|
       assert_equal db.img(dice) == 'blanklarge.gif', true
     end
@@ -13,7 +13,7 @@ describe DiceBoard do
   end
   
   it "must return class_str for dices ... if dices is selected must heave selected class " do
-    db = DiceBoard.new(6)
+    db = DiceBoard.new(5)
     db.select(3)
     assert_equal db.class_str(3).split(" ").include?("selected"), true
     assert_equal db.class_str(4).split(" ").include?("selected"), false

@@ -2,6 +2,8 @@ Cjproject::Application.routes.draw do
   resources :games do
     member do
       post 'play'
+      post 'roll'
+      post 'select'
     end
   end
 

@@ -180,7 +180,7 @@ class Jamb
     
   def initialize
     @cells = Array.new
-    @diceboard = DiceBoard.new(6)
+    @diceboard = DiceBoard.new(5)
     (0...rownum).each do |row|
       @cells[row] = Array.new
       columns do |col|

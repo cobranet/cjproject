@@ -37,9 +37,15 @@
     </div>
     <div id='new'>
       <% (0..5).each do |dice| %>
-        <%= image_tag @jamb.diceboard.img(dice) , :class => @jamb.diceboard.class_str(dice) %>  
-	<% end %>
-	
+        <%= link_to select_game_path(:dice => dice ) , :method => :post do %>
+          <%= image_tag @jamb.diceboard.img(dice) , :id => dice, :class => @jamb.diceboard.class_str(dice) %>  
+	<%end%>  
+      <% end %>
+    </div>
+    <div id="roll_button">
+      <%= link_to roll_game_path,  { :method=>:post, :class =>  "btn btn-primary btn-large"} do %>
+        <i class="icon-white icon-thumbs-up"></i> Roll selected dices</i>
+      <% end %>
     </div>  
   </div>
 <%end%>
