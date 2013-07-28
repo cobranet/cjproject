@@ -36,7 +36,7 @@ class GamesController < ApplicationController
   def play
     game = Game.find(params[:id])
     jamb = game.to_jamb
-    jamb.set_cell_value(params[:row].to_i,params[:col].to_i,3)
+    jamb.play(params[:row].to_i,params[:col].to_i)
     game.from_jamb(jamb)
     game.save!
     redirect_to game_path(game.id)

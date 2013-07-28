@@ -137,11 +137,14 @@ describe Jamb do
     assert_equal j.cell(2,1).is_enabled?, false
     j.enable_next(1,1)
     assert_equal j.cell(2,1).is_enabled?, true
-
+    j.enable_next(3,1)
+    assert_equal j.cell(4,1).is_enabled?, true
+    
     assert_equal j.cell(13,2).is_enabled?, false
     j.enable_next(14,2)
-    assert_equal j.cell(13,2).is_enabled?, false
-
+    assert_equal j.cell(13,2).is_enabled?, true
+    j.enable_next(13,2)
+    assert_equal j.cell(12,2).is_enabled?, true
   end 
 
 
@@ -153,6 +156,12 @@ describe Jamb do
     assert_equal j.cell(3,1).is_enabled?, false
     j.set_cell_value(2,1,2)
     assert_equal j.cell(3,1).is_enabled?, true
+    j.set_cell_value(3,1,8)
+    assert_equal j.cell(4,1).is_enabled?,true
+    j.set_cell_value(15,2,80)
+    assert_equal j.cell(14,2).is_enabled?,true
+    j.set_cell_value(14,2,64)
+    assert_equal j.cell(13,2).is_enabled?,true
   end
   it " with distibution must return sorted array of counts of diferent values of dices" do
     j = Jamb.new

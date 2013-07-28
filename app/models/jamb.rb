@@ -92,13 +92,20 @@ class Jamb
   end
  
   def enable_next(row,col)
-    return unless [1,2].include?(row)
+    return unless [1,2].include?(col)
+    dif = row
     if col == 1
-      next_normal_row = @@ROW_TYPES.slice(row+1,100).find_index(:NORMAL)
+      smer = 1
     else
-      next_normal_row = @@ROW_TYPES.slice(0,row).reverse.find_index(:NORMAL)
+      smer = -1
     end
-    cell(next_normal_row+1+row,col).enable unless next_normal_row == nil
+    while dif >  0 && dif < 16  do 
+      dif = dif + smer
+      if @@ROW_TYPES[dif] == :NORMAL
+        cell(dif,col).enable
+        return
+      end
+    end   
   end
  
   def set_cell_value(row,col,value)
@@ -121,6 +128,11 @@ class Jamb
   def colnum
     @@COL_LABELS.size
   end
+
+  def play(row,col)
+    set_cell_value(row,col,calc_roll(row,@diceboard.dices))
+    @diceboard.clear
+  end  
 
   def cellxy(row,col)
     puts "Row #{row}- Col #{col}"

@@ -18,4 +18,18 @@ describe DiceBoard do
     assert_equal db.class_str(3).split(" ").include?("selected"), true
     assert_equal db.class_str(4).split(" ").include?("selected"), false
   end
+
+  it "must set mode to first roll after roll_all " do
+    db = DiceBoard.new(5)
+    db.roll_all
+    assert_equal db.mode,:first_roll
+  end 
+
+  it "must set mode to first roll after roll selected " do
+    db = DiceBoard.new(5)
+    db.roll_selected
+    assert_equal db.mode,:first_roll
+  end 
+
+
 end

@@ -15,7 +15,7 @@ class Cell
 
   def enable
     if [:LABEL, :CALC].include?(@type)
-      raise RuntimeError
+      raise RuntimeError 
     end
     @enabled = true
   end

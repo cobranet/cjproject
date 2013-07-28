@@ -1,5 +1,5 @@
 class DiceBoard
-  attr_accessor :dices
+  attr_accessor :dices, :mode
   def initialize (num)
     @num = num
     clear
@@ -32,11 +32,7 @@ class DiceBoard
     
   def roll(num)
     @dices[num] = 1 + rand(6)
-    if @mode == :no_roll
-      @mode = :first_roll
-    else
-      @mode = :end
-    end 
+     @selected[num] = false
   end
 
   def img(dice)
@@ -58,19 +54,33 @@ class DiceBoard
     end 
     str
   end
+
   def roll_all 
     (0...@num).each do |i|
       roll(i)
+    end
+    if @mode == :no_roll
+      @mode = :first_roll
+    else
+      @mode = :end
     end 
+    
   end   
+
   def roll_selected
     if dices[0] == nil 
       roll_all
+      return
     else
       @selected.each_with_index do |sel,i|
         roll(i) unless sel == false
       end
     end
+    if @mode == :no_roll
+      @mode = :first_roll
+    else
+      @mode = :end
+    end 
   end
 
 end 
