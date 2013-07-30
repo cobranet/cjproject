@@ -48,6 +48,11 @@
         <%= link_to roll_game_path,  { :method=>:post, :class =>  "btn btn-primary btn-large"} do %>
           <i class="icon-white icon-thumbs-up"></i> Roll selected dices</i>
         <% end %>
+      </div>
+      <div id="roll_other_button">
+        <%= link_to roll_other_game_path,  { :method=>:post, :class =>  "btn btn-primary btn-large"} do %>
+          <i class="icon-white icon-thumbs-up"></i> Roll unselected dices</i>
+        <% end %>
       </div>  
     <% end %>
   </div>

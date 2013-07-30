@@ -3,6 +3,7 @@ Cjproject::Application.routes.draw do
     member do
       post 'play'
       post 'roll'
+      post 'roll_other'
       post 'select'
     end
   end

@@ -24,7 +24,7 @@ class Jamb
                 [11,[1,9,10]],
                 [16,[12,13,14,15]]
               ]
-  attr_accessor :diceboard
+  attr_accessor :diceboard,:playround
   def depends_on(row)
     @@DEPENDS.each do |rule|
       if rule[0] == row
@@ -117,7 +117,11 @@ class Jamb
  
   def set_cell_value(row,col,value)
     if cell(row,col).type == :NORMAL
-      raise RuntimeError unless @cells[row][col].empty? == true
+      if @cells[row][col].empty? == false
+        puts row,col
+        puts @cells[row][col].inspect
+        raise RuntimeError 
+      end  
     end
     @cells[row][col].value = value
     @cells[row][col].disable
@@ -140,6 +144,7 @@ class Jamb
     set_cell_value(row,col,calc_roll(row,@diceboard.dices))
     @diceboard.clear
     @empty = @empty - 1
+    @playround = @playround + 1
     if @empty == 0 
       @diceboard.mode = :end_game
     end
@@ -205,6 +210,7 @@ class Jamb
     @cells = Array.new
     @diceboard = DiceBoard.new(5)
     @empty = (6+2+4)*3
+    @playround = 0
     (0...rownum).each do |row|
       @cells[row] = Array.new
       columns do |col|

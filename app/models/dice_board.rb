@@ -82,6 +82,21 @@ class DiceBoard
       @mode = :end
     end 
   end
+  def roll_unselected
+    if dices[0] == nil 
+      roll_all
+      return
+    else
+      @selected.each_with_index do |sel,i|
+        roll(i) unless sel == true
+      end
+    end
+    if @mode == :no_roll
+      @mode = :first_roll
+    else
+      @mode = :end
+    end 
+  end
 
 end 
 

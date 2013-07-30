@@ -32,10 +32,22 @@ class GamesController < ApplicationController
     game.save!
     redirect_to game_path(game.id)
   end  
+  def roll_other 
+    game = Game.find(params[:id])
+    jamb = game.to_jamb
+    jamb.diceboard.roll_unselected
+    game.from_jamb(jamb)
+    game.save!
+    redirect_to game_path(game.id)
+  end  
 
   def play
     game = Game.find(params[:id])
+    game_playround = params[:id].to_i
     jamb = game.to_jamb
+    if jamb.playround != game_playround -1 
+      raise "some thing"
+    end 
     jamb.play(params[:row].to_i,params[:col].to_i)
     game.from_jamb(jamb)
     game.save!

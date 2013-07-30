@@ -30,6 +30,29 @@ describe DiceBoard do
     db.roll_selected
     assert_equal db.mode,:first_roll
   end 
-
+  
+   it "if is roll selected ... unselected dices must keep value " do
+     db = DiceBoard.new(5)
+     db.roll_all
+     dices_old = db.dices
+     db.select(0)
+     db.select(3)
+     db.select(4)
+     db.roll_selected 
+     assert_equal db.dices[1], dices_old[1]
+     assert_equal db.dices[2], dices_old[2]
+   end
+   it "if is roll unselected ... selected dices must keep value " do
+     db = DiceBoard.new(5)
+     db.roll_all
+     dices_old = db.dices
+     db.select(0)
+     db.select(3)
+     db.select(4)
+     db.roll_selected 
+     assert_equal db.dices[0], dices_old[0]
+     assert_equal db.dices[3], dices_old[3]
+     assert_equal db.dices[4], dices_old[4]
+   end
 
 end
