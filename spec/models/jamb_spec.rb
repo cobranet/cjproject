@@ -111,7 +111,26 @@ describe Jamb do
         assert_equal j.observed_by(row), [16]
       end
   end
-
+  
+  it "calc_rowe must return 30 if sum of rows 1 to 6 is greater 59 " do
+    j = Jamb.new
+    j.set_cell_value(1,1,3)
+    j.set_cell_value(2,1,6)
+    j.set_cell_value(3,1,9)
+    j.set_cell_value(4,1,12)
+    j.set_cell_value(5,1,15)
+    j.set_cell_value(6,1,18)
+    assert_equal j.cell(7,1).value, 30
+    j = Jamb.new
+    j.set_cell_value(1,1,3)
+    j.set_cell_value(2,1,6)
+    j.set_cell_value(3,1,9)
+    j.set_cell_value(4,1,12)
+    j.set_cell_value(5,1,15)
+    j.set_cell_value(6,1,0)
+    assert_equal j.cell(7,1).value, 0
+  end
+ 
   it "calc_sum metod calc sum of all rows on which dependes " do
     j = Jamb.new
     (1..6).each do |row|

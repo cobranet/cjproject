@@ -71,7 +71,15 @@ class Jamb
   end
     
   def calc(row,col)
-    if [7,8,16].include?(row)
+    if row == 7 
+      puts "CALC row#{row} sum #{calc_sum(row,col)}"
+      if calc_sum(row,col) > 59 
+        @cells[row][col].value = 30
+      else
+         @cells[row][col].value = 0
+      end
+    end
+    if [8,16].include?(row)
       @cells[row][col].value = calc_sum(row,col)
     end
     if row == 11
