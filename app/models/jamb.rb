@@ -72,7 +72,6 @@ class Jamb
     
   def calc(row,col)
     if row == 7 
-      puts "CALC row#{row} sum #{calc_sum(row,col)}"
       if calc_sum(row,col) > 59 
         @cells[row][col].value = 30
       else
@@ -137,9 +136,13 @@ class Jamb
     @@COL_LABELS.size
   end
 
-  def play(row,col)
+  def play(row,col)    
     set_cell_value(row,col,calc_roll(row,@diceboard.dices))
     @diceboard.clear
+    @empty = @empty - 1
+    if @empty == 0 
+      @diceboard.mode = :end_game
+    end
   end  
 
   def cellxy(row,col)
@@ -201,6 +204,7 @@ class Jamb
   def initialize
     @cells = Array.new
     @diceboard = DiceBoard.new(5)
+    @empty = (6+2+4)*3
     (0...rownum).each do |row|
       @cells[row] = Array.new
       columns do |col|

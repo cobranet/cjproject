@@ -130,7 +130,7 @@ describe Jamb do
     j.set_cell_value(6,1,0)
     assert_equal j.cell(7,1).value, 0
   end
- 
+
   it "calc_sum metod calc sum of all rows on which dependes " do
     j = Jamb.new
     (1..6).each do |row|
@@ -210,5 +210,22 @@ describe Jamb do
     assert_equal 80, j.calc_roll(15,[6,6,6,6,6])
     assert_equal 0, j.calc_roll(15,[6,6,6,6,5])  
    end
+
+  it "if there is no empty cell than diceboard must go to end_game mode" do
+    j = Jamb.new
+    [1,2,3,4,5,6,9,10,12,13,14,15].each do |row|
+      j.diceboard.roll_all
+      j.play(row,1)
+      j.diceboard.roll_all
+      j.play(row,3)
+    end
+    assert_equal j.diceboard.mode == :end_game, false
+    [1,2,3,4,5,6,9,10,12,13,14,15].reverse.each do |row|
+      j.diceboard.roll_all
+      j.play(row,2)
+    end
+    assert_equal j.diceboard.mode, :end_game
+  
+  end
 
 end
