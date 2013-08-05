@@ -1,8 +1,8 @@
 class Jamb
-  @@TYPES = [ :LABEL, :CALC, :NORMAL]
-  @@ROW_LABELS = %w(X 1 2 3 4 5 6 Bon SUM Mx Mn DIF K F P J SUM)
-  @@COL_LABELS = %w(X DOWN UP FREE)
-  @@ROW_TYPES = [ :LABEL,
+
+  ROW_LABELS = %w(X 1 2 3 4 5 6 Bon SUM Mx Mn DIF K F P J SUM)
+  COL_LABELS = %w(X DOWN UP FREE)
+  ROW_TYPES = [ :LABEL,
                   :NORMAL,
                   :NORMAL,
                   :NORMAL,
@@ -19,14 +19,14 @@ class Jamb
                   :NORMAL,
                   :NORMAL,
                   :CALC]
-  @@DEPENDS = [ [7,[1,2,3,4,5,6]],
+  DEPENDS = [ [7,[1,2,3,4,5,6]],
                 [8,[1,2,3,4,5,6,7]],
                 [11,[1,9,10]],
                 [16,[12,13,14,15]]
               ]
   attr_accessor :diceboard,:playround
   def depends_on(row)
-    @@DEPENDS.each do |rule|
+    DEPENDS.each do |rule|
       if rule[0] == row
         return rule[1]
       end
@@ -46,7 +46,7 @@ class Jamb
   end
   def observed_by(row)
     arr = Array.new
-    @@DEPENDS.each do |rule|
+    DEPENDS.each do |rule|
       if rule[1].include?(row)
         arr << rule[0]
       end
@@ -108,7 +108,7 @@ class Jamb
     end
     while dif >  0 && dif < 16  do 
       dif = dif + smer
-      if @@ROW_TYPES[dif] == :NORMAL
+      if ROW_TYPES[dif] == :NORMAL
         cell(dif,col).enable
         return
       end
@@ -133,11 +133,11 @@ class Jamb
     end
   end
   def rownum
-    @@ROW_LABELS.size
+    ROW_LABELS.size
   end
 
   def colnum
-    @@COL_LABELS.size
+    COL_LABELS.size
   end
 
   def play(row,col)    
@@ -215,9 +215,9 @@ class Jamb
       @cells[row] = Array.new
       columns do |col|
         if col != 0
-          @cells[row][col] = Cell.new(@@ROW_TYPES[row])
+          @cells[row][col] = Cell.new(ROW_TYPES[row])
           if row == 0 
-           @cells[row][col].value = @@COL_LABELS[col]
+           @cells[row][col].value = COL_LABELS[col]
           end
         else
           if [7,8,11,16].include?(row)
@@ -226,7 +226,7 @@ class Jamb
             calccol = false
           end
           @cells[row][col] = Cell.new(:LABEL,calccol)
-          @cells[row][col].value = @@ROW_LABELS[row]
+          @cells[row][col].value = ROW_LABELS[row]
         end
         if col == 3 && [0,7,8,11,16].include?(row) == false 
           @cells[row][col].enable
@@ -236,5 +236,14 @@ class Jamb
     @cells[1][1].enable
     @cells[15][2].enable
   end
-
+  def to_game_string
+    str = ""
+    rows do |row|
+      columns do |col|
+        str =  str+@cells[row][col].to_str + "#"
+      end
+    end
+    str = str + @empty.to_s + "#"
+    str = str + @playround.to_s + "#"    
+  end
 end

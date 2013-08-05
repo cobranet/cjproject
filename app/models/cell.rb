@@ -1,5 +1,5 @@
 class Cell
-  
+  TYPES = [ :LABEL, :CALC, :NORMAL]  
   attr_reader :type
   attr_accessor :value
   def initialize(type,is_col=false)
@@ -12,7 +12,7 @@ class Cell
   def is_enabled?
     @enabled
   end
-
+   
   def enable
      if [:LABEL, :CALC].include?(@type)
       raise RuntimeError 
@@ -39,8 +39,30 @@ class Cell
       str = str + " bcolcalc"
     end
     str
-  end  
-
+  end 
+   
+  def is_to_num(val)
+    if val 
+      return 1
+    else
+      return 0
+    end
+  end
+  def to_str
+    ser = "#{TYPES.index(@type)}&#{@value}&#{is_to_num(@enabled)}&#{is_to_num(@is_col)}"
+  end
+  def from_str(str) 
+    arr = str.split('&')
+    @type = TYPES[arr[0].to_i]
+    if arr[1] == ""
+      @value = nil
+    else
+      @value = arr[1]
+    end
+    arr[2] == "1" ? @enabled = true : @enabled = false 
+    arr[3] == "1" ? @is_col = true : @is_col = false 
+    return self
+  end 
   def to_s
     "cell type #{@type}  @value #{@value} @enabled #{@enabled}"
   end

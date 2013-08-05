@@ -166,7 +166,6 @@ describe Jamb do
     assert_equal j.cell(12,2).is_enabled?, true
   end 
 
-
   it "set_cel_value must enable next cel if cols are 1 and 2" do
     j = Jamb.new
     assert_equal j.cell(2,1).is_enabled?, false
@@ -182,13 +181,14 @@ describe Jamb do
     j.set_cell_value(14,2,64)
     assert_equal j.cell(13,2).is_enabled?,true
   end
+
   it " with distibution must return sorted array of counts of diferent values of dices" do
     j = Jamb.new
     assert_equal [1,2,2], j.distribution([1,2,3,2,1])
     assert_equal [1,4], j.distribution([3,2,3,3,3])
     assert_equal [5], j.distribution([1,1,1,1,1])        
-
   end
+
   it "calc_roll return value for dices and row " do
     j = Jamb.new
     assert_equal 3, j.calc_roll(1,[1,1,1,4,5]) 

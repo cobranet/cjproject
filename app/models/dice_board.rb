@@ -1,5 +1,5 @@
 class DiceBoard
-  attr_accessor :dices, :mode
+  attr_accessor :dices, :mode,:selected
   def initialize (num)
     @num = num
     clear
@@ -97,7 +97,27 @@ class DiceBoard
       @mode = :end
     end 
   end
-
+  def to_str
+    str = ""
+    (0...@num).each do |i|
+      @dices[i] == nil ? str = str + "0" + "&" : str = str + @dices[i].to_s + "&"
+    end
+    (0...@num).each do |i|
+      @selected[i] ? str = str +  "1" + "&" : str = str + "0" + "&"
+    end  
+    str = str + @mode.to_s
+  end
+  def from_str(str)
+    arr = str.split("&")
+    (0...@num).each do |i|
+      arr[i] == "0" ? @dices[i] = nil : @dices[i] = arr[i].to_i
+    end
+    (@num...2*@num).each do |i|
+      arr[i] == "1" ? @selected[i-@num] = true : @selected[i-@num] = false
+    end
+    @mode = arr[2*@num].to_sym
+    self
+  end
 end 
 
     

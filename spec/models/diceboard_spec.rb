@@ -38,6 +38,7 @@ describe DiceBoard do
      db.select(0)
      db.select(3)
      db.select(4)
+
      db.roll_selected 
      assert_equal db.dices[1], dices_old[1]
      assert_equal db.dices[2], dices_old[2]
@@ -54,5 +55,19 @@ describe DiceBoard do
      assert_equal db.dices[3], dices_old[3]
      assert_equal db.dices[4], dices_old[4]
    end
-
+   it "must keep state using to_str and from_str" do
+     a = DiceBoard.new(5)
+     a.dices[0] = 1
+     a.dices[2] = 3
+     a.dices[4] = 5
+     a.select(0)
+     a.select(3)
+     b = DiceBoard.new(5)
+     b.from_str(a.to_str)
+     puts b.to_str
+     (0...5).each do |i|
+       assert_equal a.selected[i] , b.selected[i]
+       assert_equal b.dices[i], a.dices[i]
+     end
+   end
 end

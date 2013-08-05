@@ -40,6 +40,14 @@ describe Cell do
      assert_equal j.cell(10,0).class_str.split(" ").include?("bcolcalc"), false
      assert_equal j.cell(4,0).class_str.split(" ").include?("bcolcalc"), false
    end  
-  
+  it "it must go from to_str and from str in same cell " do
+    j = Jamb.new
+    cell = Cell.new(:LABEL)  
+    j.rows do |row| 
+      j.columns do |col|
+        assert_equal j.cell(row,col).to_str , cell.from_str(j.cell(row,col).to_str).to_str
+      end
+    end 
+  end   
 end 
       

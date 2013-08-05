@@ -11,7 +11,7 @@
 	<% if col == 0 %>
 	  <%= content_tag :th , @jamb.cell(row,col).value , :class => @jamb.cell(row,col).class_str, :id => @jamb.cell_id(row,col) %>	     <% else %> 
 	  <% if @jamb.cell(row,col).is_enabled? %>
-            <%= content_tag :td ,  link_to("___ ", play_game_path( :row => row , :col=>col),:method => :post  )  , :class => @jamb.cell(row,col).class_str,:id => @jamb.cell_id(row,col)  %>	  <% else %>
+            <%= content_tag :td ,  link_to("___ ", play_game_path( :row => row , :col=>col,:playround => @jamb.playround ),:method => :post  )  , :class => @jamb.cell(row,col).class_str,:id => @jamb.cell_id(row,col)  %>	  <% else %>
 	    <%= content_tag :td ,  @jamb.cell(row,col).value , :class => @jamb.cell(row,col).class_str,:id => @jamb.cell_id(row,col)  %>	 
           <% end %>
        <% end %>
@@ -45,12 +45,12 @@
     <%= "mode #{@jamb.diceboard.mode}" %>
     <% if @jamb.diceboard.mode != :end %> 
       <div id="roll_button">
-        <%= link_to roll_game_path,  { :method=>:post, :class =>  "btn btn-primary btn-large"} do %>
+        <%= link_to roll_game_path(:playroud => @jamb.playround),  { :method=>:post, :class =>  "btn btn-primary btn-large"} do %>
           <i class="icon-white icon-thumbs-up"></i> Roll selected dices</i>
         <% end %>
       </div>
       <div id="roll_other_button">
-        <%= link_to roll_other_game_path,  { :method=>:post, :class =>  "btn btn-primary btn-large"} do %>
+        <%= link_to roll_other_game_path(:playround => @jamb.playround) ,  { :method=>:post, :class =>  "btn btn-primary btn-large"} do %>
           <i class="icon-white icon-thumbs-up"></i> Roll unselected dices</i>
         <% end %>
       </div>  

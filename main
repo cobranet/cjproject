@@ -1,0 +1,5021 @@
+[braca@bvm:~]$ls
+Desktop    Music     Templates			       develop	     examples.desktop  tmp
+Documents  Pictures  VMwareTools-9.2.3-1031360.tar.gz  dotfiles      setup	       vmware-tools-distrib
+Downloads  Public    Videos			       dotfiles.old  startup
+[braca@bvm:~]$cd ./develop/rails/cjproject
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..............................
+
+Finished in 0.4332 seconds
+30 examples, 0 failures
+
+Randomized with seed 48806
+
+[braca@bvm:~/develop/rails/cjproject]$rake routes
+       Prefix Verb   URI Pattern                   Controller#Action
+        games GET    /games(.:format)              games#index
+              POST   /games(.:format)              games#create
+     new_game GET    /games/new(.:format)          games#new
+    edit_game GET    /games/:id/edit(.:format)     games#edit
+         game GET    /games/:id(.:format)          games#show
+              PATCH  /games/:id(.:format)          games#update
+              PUT    /games/:id(.:format)          games#update
+              DELETE /games/:id(.:format)          games#destroy
+    jabmgames GET    /jabmgames(.:format)          jabmgames#index
+              POST   /jabmgames(.:format)          jabmgames#create
+ new_jabmgame GET    /jabmgames/new(.:format)      jabmgames#new
+edit_jabmgame GET    /jabmgames/:id/edit(.:format) jabmgames#edit
+     jabmgame GET    /jabmgames/:id(.:format)      jabmgames#show
+              PATCH  /jabmgames/:id(.:format)      jabmgames#update
+              PUT    /jabmgames/:id(.:format)      jabmgames#update
+              DELETE /jabmgames/:id(.:format)      jabmgames#destroy
+[braca@bvm:~/develop/rails/cjproject]$exit
+
+Process shell finished
+[braca@bvm:~/develop/rails/cjproject]$rake routes
+       Prefix Verb   URI Pattern                   Controller#Action
+    play_game POST   /games/:id/play(.:format)     games#play
+        games GET    /games(.:format)              games#index
+              POST   /games(.:format)              games#create
+     new_game GET    /games/new(.:format)          games#new
+    edit_game GET    /games/:id/edit(.:format)     games#edit
+         game GET    /games/:id(.:format)          games#show
+              PATCH  /games/:id(.:format)          games#update
+              PUT    /games/:id(.:format)          games#update
+              DELETE /games/:id(.:format)          games#destroy
+    jabmgames GET    /jabmgames(.:format)          jabmgames#index
+              POST   /jabmgames(.:format)          jabmgames#create
+ new_jabmgame GET    /jabmgames/new(.:format)      jabmgames#new
+edit_jabmgame GET    /jabmgames/:id/edit(.:format) jabmgames#edit
+     jabmgame GET    /jabmgames/:id(.:format)      jabmgames#show
+              PATCH  /jabmgames/:id(.:format)      jabmgames#update
+              PUT    /jabmgames/:id(.:format)      jabmgames#update
+              DELETE /jabmgames/:id(.:format)      jabmgames#destroy
+[braca@bvm:~/develop/rails/cjproject]$rspe
+No command 'rspe' found, did you mean:
+ Command 'spe' from package 'spe' (universe)
+ Command 'rspec' from package 'ruby-rspec-core' (universe)
+ Command 'rspec' from package 'ruby-rspec-core' (main)
+rspe: command not found
+[braca@bvm:~/develop/rails/cjproject]$rspec
+/home/braca/develop/rails/cjproject/spec/controllers/jabmgames_controller_spec.rb:3:in `<top (required)>': uninitialized constant JabmgamesController (NameError)
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject]$rm ./spec/models/jabmgame_spec.rb
+rm: remove regular file './spec/models/jabmgame_spec.rb'? y
+[braca@bvm:~/develop/rails/cjproject]$rm ./spec/models/jabmgame_spec.rb
+rm: cannot remove './spec/models/jabmgame_spec.rb': No such file or directory
+[braca@bvm:~/develop/rails/cjproject]$rspec
+/home/braca/develop/rails/cjproject/spec/controllers/jabmgames_controller_spec.rb:3:in `<top (required)>': uninitialized constant JabmgamesController (NameError)
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject]$rm -rf ./spec/controllers/jabmgames_controller_spec.rb 
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.............................
+
+Finished in 0.16669 seconds
+29 examples, 0 failures
+
+Randomized with seed 65441
+
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "link to play"
+[master ac34cd2] link to play
+ 10 files changed, 305 insertions(+), 31 deletions(-)
+ create mode 100644 app/models/#cell.rb#
+ create mode 100644 app/models/#jamb.rb#
+ create mode 120000 app/models/.#cell.rb
+ create mode 120000 app/models/.#jamb.rb
+ rewrite app/views/games/show.html.erb (90%)
+[braca@bvm:~/develop/rails/cjproject]$git push origin master
+Username for 'https://github.com': cobranet
+Password for 'https://cobranet@github.com': 22003bpm
+
+Counting objects: 35, done.
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (19/19), 1.70 KiB, done.
+Total 19 (delta 14), reused 0 (delta 0)
+To https://github.com/cobranet/cjproject.git
+   f39de3a..ac34cd2  master -> master
+[braca@bvm:~/develop/rails/cjproject]$rake routes
+       Prefix Verb   URI Pattern                   Controller#Action
+    play_game POST   /games/:id/play(.:format)     games#play
+        games GET    /games(.:format)              games#index
+              POST   /games(.:format)              games#create
+     new_game GET    /games/new(.:format)          games#new
+    edit_game GET    /games/:id/edit(.:format)     games#edit
+         game GET    /games/:id(.:format)          games#show
+              PATCH  /games/:id(.:format)          games#update
+              PUT    /games/:id(.:format)          games#update
+              DELETE /games/:id(.:format)          games#destroy
+    jabmgames GET    /jabmgames(.:format)          jabmgames#index
+              POST   /jabmgames(.:format)          jabmgames#create
+ new_jabmgame GET    /jabmgames/new(.:format)      jabmgames#new
+edit_jabmgame GET    /jabmgames/:id/edit(.:format) jabmgames#edit
+     jabmgame GET    /jabmgames/:id(.:format)      jabmgames#show
+              PATCH  /jabmgames/:id(.:format)      jabmgames#update
+              PUT    /jabmgames/:id(.:format)      jabmgames#update
+              DELETE /jabmgames/:id(.:format)      jabmgames#destroy
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "working link"
+[master 5b63ac7] working link
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+[braca@bvm:~/develop/rails/cjproject]$git push origin master
+Username for 'https://github.com': cobranet
+Password for 'https://cobranet@github.com': 22003bpm
+
+Counting objects: 15, done.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 765 bytes, done.
+Total 8 (delta 5), reused 0 (delta 0)
+To https://github.com/cobranet/cjproject.git
+   ac34cd2..5b63ac7  master -> master
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "upis 1"
+[master 0d02ab1] upis 1
+ 4 files changed, 22 insertions(+), 6 deletions(-)
+ create mode 100644 app/views/games/index.html.erb
+[braca@bvm:~/develop/rails/cjproject]$git push  origin master
+Username for 'https://github.com': cobranet
+Password for 'https://cobranet@github.com': 22003bpm
+
+Counting objects: 22, done.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 1.06 KiB, done.
+Total 12 (delta 7), reused 0 (delta 0)
+To https://github.com/cobranet/cjproject.git
+   5b63ac7..0d02ab1  master -> master
+[braca@bvm:~/develop/rails/cjproject]$rspec
+FFF..F...FFFFFFFFFFFFFFFFFFFF
+
+Failures:
+
+  1) Game must have to_jamb method returns Jamb class
+     Failure/Error: j = Jamb.new
+    r NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000052e6878 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/game_spec.rb:12:in `new'
+     # ./spec/models/game_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+  2) Game must have from_jamb method that returns String class 
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x00000004a1dbd8 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/game_spec.rb:5:in `new'
+     # ./spec/models/game_spec.rb:5:in `block (2 levels) in <top (required)>'
+
+  3) Game must preserve state
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x00000004a1a438 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/game_spec.rb:19:in `new'
+     # ./spec/models/game_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+  4) Cell must have bcolcalc style in rows 7,8,11,16 and col 0 
+     Failure/Error: j=Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000050194b0 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/cell_spec.rb:35:in `new'
+     # ./spec/models/cell_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  5) DiceBoard must be created 
+     Failure/Error: db = DiceBoard.new(6)
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x00000005539f08 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./spec/models/diceboard_spec.rb:3:in `new'
+     # ./spec/models/diceboard_spec.rb:3:in `block (2 levels) in <top (required)>'
+
+  6) Jamb calc_roll return value for dices and row 
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x00000005542b80 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:165:in `new'
+     # ./spec/models/jamb_spec.rb:165:in `block (2 levels) in <top (required)>'
+
+  7) Jamb  with distibution must return sorted array of counts of diferent values of dices
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x0000000554c748 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:158:in `new'
+     # ./spec/models/jamb_spec.rb:158:in `block (2 levels) in <top (required)>'
+
+  8) Jamb if cell is :NORMAL and asigned by value must keep it
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x00000005555cf8 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:58:in `new'
+     # ./spec/models/jamb_spec.rb:58:in `block (2 levels) in <top (required)>'
+
+  9) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x0000000555fb40 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:116:in `new'
+     # ./spec/models/jamb_spec.rb:116:in `block (2 levels) in <top (required)>'
+
+  10) Jamb observed by > for rows that are obsered by same calc rows observed_by must return array of that rows
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x00000005569cf8 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:99:in `new'
+     # ./spec/models/jamb_spec.rb:99:in `block (2 levels) in <top (required)>'
+
+  11) Jamb must be created
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x00000005573410 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:3:in `new'
+     # ./spec/models/jamb_spec.rb:3:in `block (2 levels) in <top (required)>'
+
+  12) Jamb rows from 7, 8, 11 and 16  must be calc and disabled if col <> 0 
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x0000000556fc70 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:46:in `new'
+     # ./spec/models/jamb_spec.rb:46:in `block (2 levels) in <top (required)>'
+
+  13) Jamb after created cells 1,1 and 15,2 must be enabled
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x00000005579130 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:7:in `new'
+     # ./spec/models/jamb_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  14) Jamb row num 0 must have type :LABEL and be disabled
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000055838b0 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:19:in `new'
+     # ./spec/models/jamb_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+  15) Jamb rows from 1 to 6 and 9 and 10 must be normal if col <> 0 
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x0000000558cf28 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:35:in `new'
+     # ./spec/models/jamb_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  16) Jamb for calculated rows method depends_on must be array of rows on which that cell depends
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000055969b0 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:76:in `new'
+     # ./spec/models/jamb_spec.rb:76:in `block (2 levels) in <top (required)>'
+
+  17) Jamb calc_dif metod is first row multyplay with diference of second and third
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000055a0910 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:128:in `new'
+     # ./spec/models/jamb_spec.rb:128:in `block (2 levels) in <top (required)>'
+
+  18) Jamb if cell is not empty and somebody try to set value it must raise error
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000055aa9b0 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:64:in `new'
+     # ./spec/models/jamb_spec.rb:64:in `block (2 levels) in <top (required)>'
+
+  19) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000055b3d80 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:149:in `new'
+     # ./spec/models/jamb_spec.rb:149:in `block (2 levels) in <top (required)>'
+
+  20) Jamb must have rownum 16
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000055b05e0 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:13:in `new'
+     # ./spec/models/jamb_spec.rb:13:in `block (2 levels) in <top (required)>'
+
+  21) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000055ba248 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:87:in `new'
+     # ./spec/models/jamb_spec.rb:87:in `block (2 levels) in <top (required)>'
+
+  22) Jamb if cell is not empty and somebody must be disabled
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000055c45e0 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:70:in `new'
+     # ./spec/models/jamb_spec.rb:70:in `block (2 levels) in <top (required)>'
+
+  23) Jamb enable next cell in col 1   and 2
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000055cd988 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:136:in `new'
+     # ./spec/models/jamb_spec.rb:136:in `block (2 levels) in <top (required)>'
+
+  24) Jamb col num 0 must have type :LABEL and be disabled
+     Failure/Error: j = Jamb.new
+     NameError:
+       undefined local variable or method `num' for #<DiceBoard:0x000000055d7640 @dices=[], @selected=[]>
+     # ./app/models/dice_board.rb:17:in `clear'
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./app/models/jamb.rb:182:in `new'
+     # ./app/models/jamb.rb:182:in `initialize'
+     # ./spec/models/jamb_spec.rb:27:in `new'
+     # ./spec/models/jamb_spec.rb:27:in `block (2 levels) in <top (required)>'
+
+Finished in 0.0613 seconds
+29 examples, 24 failures
+
+Failed examples:
+
+rspec ./spec/models/game_spec.rb:11 # Game must have to_jamb method returns Jamb class
+rspec ./spec/models/game_spec.rb:4 # Game must have from_jamb method that returns String class 
+rspec ./spec/models/game_spec.rb:18 # Game must preserve state
+rspec ./spec/models/cell_spec.rb:34 # Cell must have bcolcalc style in rows 7,8,11,16 and col 0 
+rspec ./spec/models/diceboard_spec.rb:2 # DiceBoard must be created 
+rspec ./spec/models/jamb_spec.rb:164 # Jamb calc_roll return value for dices and row 
+rspec ./spec/models/jamb_spec.rb:157 # Jamb  with distibution must return sorted array of counts of diferent values of dices
+rspec ./spec/models/jamb_spec.rb:57 # Jamb if cell is :NORMAL and asigned by value must keep it
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+rspec ./spec/models/jamb_spec.rb:98 # Jamb observed by > for rows that are obsered by same calc rows observed_by must return array of that rows
+rspec ./spec/models/jamb_spec.rb:2 # Jamb must be created
+rspec ./spec/models/jamb_spec.rb:45 # Jamb rows from 7, 8, 11 and 16  must be calc and disabled if col <> 0 
+rspec ./spec/models/jamb_spec.rb:6 # Jamb after created cells 1,1 and 15,2 must be enabled
+rspec ./spec/models/jamb_spec.rb:18 # Jamb row num 0 must have type :LABEL and be disabled
+rspec ./spec/models/jamb_spec.rb:34 # Jamb rows from 1 to 6 and 9 and 10 must be normal if col <> 0 
+rspec ./spec/models/jamb_spec.rb:75 # Jamb for calculated rows method depends_on must be array of rows on which that cell depends
+rspec ./spec/models/jamb_spec.rb:127 # Jamb calc_dif metod is first row multyplay with diference of second and third
+rspec ./spec/models/jamb_spec.rb:63 # Jamb if cell is not empty and somebody try to set value it must raise error
+rspec ./spec/models/jamb_spec.rb:148 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+rspec ./spec/models/jamb_spec.rb:12 # Jamb must have rownum 16
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+rspec ./spec/models/jamb_spec.rb:69 # Jamb if cell is not empty and somebody must be disabled
+rspec ./spec/models/jamb_spec.rb:135 # Jamb enable next cell in col 1   and 2
+rspec ./spec/models/jamb_spec.rb:26 # Jamb col num 0 must have type :LABEL and be disabled
+
+Randomized with seed 15929
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.............................
+
+Finished in 0.13856 seconds
+29 examples, 0 failures
+
+Randomized with seed 26540
+
+[braca@bvm:~/develop/rails/cjproject]$cd app/assets/javascripts/
+[braca@bvm:~/develop/rails/cjproject/app/assets/javascripts]$ls
+application.js	bootstrap.js.coffee  games.js.coffee  jabmgames.js.coffee
+[braca@bvm:~/develop/rails/cjproject/app/assets/javascripts]$cp ../../../../js-anim-d6-dice-roller/d6.js .
+[braca@bvm:~/develop/rails/cjproject/app/assets/javascripts]$ls
+application.js	bootstrap.js.coffee  d6.js  games.js.coffee  jabmgames.js.coffee
+[braca@bvm:~/develop/rails/cjproject/app/assets/javascripts]$ cd ..
+[braca@bvm:~/develop/rails/cjproject/app/assets]$cd images/
+[braca@bvm:~/develop/rails/cjproject/app/assets/images]$ls
+[braca@bvm:~/develop/rails/cjproject/app/assets/images]$cp ../../../../js-anim-d6-dice-roller/*.gif
+cp: target '../../../../js-anim-d6-dice-roller/die-6.gif' is not a directory
+[braca@bvm:~/develop/rails/cjproject/app/assets/images]$cp ../../../../js-anim-d6-dice-roller/*.gif .
+[braca@bvm:~/develop/rails/cjproject/app/assets/images]$ls
+blank.gif    dices-2.gif  dices-4.gif  dices-6.gif  dicet-2.gif  dicet-4.gif  dicet-6.gif  die-2.gif  die-4.gif  die-6.gif
+dices-1.gif  dices-3.gif  dices-5.gif  dicet-1.gif  dicet-3.gif  dicet-5.gif  die-1.gif    die-3.gif  die-5.gif
+[braca@bvm:~/develop/rails/cjproject/app/assets/images]$rspec
+/usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load': cannot load such file -- /home/braca/develop/rails/cjproject/app/assets/images/spec (LoadError)
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject/app/assets/images]$rspec ./spec/models/jamb_spec.rb:127 # Jamb calc_dif metod is first row multyplay with diference of second and third
+/usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load': cannot load such file -- /home/braca/develop/rails/cjproject/app/assets/images/spec/models/jamb_spec.rb (LoadError)
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject/app/assets/images]$cd ..
+[braca@bvm:~/develop/rails/cjproject/app/assets]$cd ..
+[braca@bvm:~/develop/rails/cjproject/app]$cd ..
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.............................
+
+Finished in 0.1902 seconds
+29 examples, 0 failures
+
+Randomized with seed 6405
+
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "some dice"
+[master d22716b] some dice
+ 27 files changed, 1644 insertions(+), 10 deletions(-)
+ create mode 100644 app/assets/images/blank.gif
+ create mode 100644 app/assets/images/dices-1.gif
+ create mode 100644 app/assets/images/dices-2.gif
+ create mode 100644 app/assets/images/dices-3.gif
+ create mode 100644 app/assets/images/dices-4.gif
+ create mode 100644 app/assets/images/dices-5.gif
+ create mode 100644 app/assets/images/dices-6.gif
+ create mode 100644 app/assets/images/dicet-1.gif
+ create mode 100644 app/assets/images/dicet-2.gif
+ create mode 100644 app/assets/images/dicet-3.gif
+ create mode 100644 app/assets/images/dicet-4.gif
+ create mode 100644 app/assets/images/dicet-5.gif
+ create mode 100644 app/assets/images/dicet-6.gif
+ create mode 100644 app/assets/images/die-1.gif
+ create mode 100644 app/assets/images/die-2.gif
+ create mode 100644 app/assets/images/die-3.gif
+ create mode 100644 app/assets/images/die-4.gif
+ create mode 100644 app/assets/images/die-5.gif
+ create mode 100644 app/assets/images/die-6.gif
+ create mode 100644 app/assets/javascripts/d6.js.erb
+ create mode 100644 app/assets/javascripts/d6.js.erb~
+ create mode 100644 app/assets/javascripts/d6.js~
+[braca@bvm:~/develop/rails/cjproject]$git push origin master
+Username for 'https://github.com': cobranet
+Password for 'https://cobranet@github.com': 22003bpm
+
+Counting objects: 53, done.
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (38/38), 29.42 KiB, done.
+Total 38 (delta 20), reused 0 (delta 0)
+To https://github.com/cobranet/cjproject.git
+   0d02ab1..d22716b  master -> master
+[braca@bvm:~/develop/rails/cjproject]$gimp
+The program 'gimp' is currently not installed. You can install it by typing:
+sudo apt-get install gimp
+[braca@bvm:~/develop/rails/cjproject]$sudo apt-get install gimp
+[sudo] password for braca: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  gimp-data libamd2.2.0 libbabl-0.1-0 libblas3 libgegl-0.2-0 libgimp2.0
+  libilmbase6 libjavascriptcoregtk-1.0-0 libopenexr6 libsdl1.2debian
+  libumfpack5.4.0 libwebkitgtk-1.0-0 libwebkitgtk-1.0-common
+Suggested packages:
+  gimp-help-en gimp-help gimp-data-extras gstreamer1.0-ffmpeg
+The following NEW packages will be installed:
+  gimp gimp-data libamd2.2.0 libbabl-0.1-0 libblas3 libgegl-0.2-0 libgimp2.0
+  libilmbase6 libjavascriptcoregtk-1.0-0 libopenexr6 libsdl1.2debian
+  libumfpack5.4.0 libwebkitgtk-1.0-0 libwebkitgtk-1.0-common
+0 upgraded, 14 newly installed, 0 to remove and 7 not upgraded.
+Need to get 19.5 MB of archives.
+After this operation, 76.0 MB of additional disk space will be used.
+Do you want to continue [Y/n]? Y
+Get:1 http://archive.ubuntu.com/ubuntu/ raring/main libbabl-0.1-0 amd64 0.1.10-1ubuntu1 [96.1 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ raring/main libilmbase6 amd64 1.0.1-6 [121 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ raring/main libopenexr6 amd64 1.6.1-7 [225 kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ raring/main libsdl1.2debian amd64 1.2.15-5ubuntu1 [196 kB]
+Get:5 http://archive.ubuntu.com/ubuntu/ raring/main libamd2.2.0 amd64 1:3.4.0-3ubuntu1 [27.1 kB]
+Get:6 http://archive.ubuntu.com/ubuntu/ raring/main libblas3 amd64 1.2.20110419-5 [287 kB]
+Get:7 http://archive.ubuntu.com/ubuntu/ raring/main libumfpack5.4.0 amd64 1:3.4.0-3ubuntu1 [353 kB]
+Get:8 http://archive.ubuntu.com/ubuntu/ raring/main libgegl-0.2-0 amd64 0.2.0-2+nmu1ubuntu1 [608 kB]
+Get:9 http://archive.ubuntu.com/ubuntu/ raring/main libgimp2.0 amd64 2.8.4-1ubuntu1 [481 kB]
+Get:10 http://archive.ubuntu.com/ubuntu/ raring/main gimp-data all 2.8.4-1ubuntu1 [3064 kB]
+Get:11 http://archive.ubuntu.com/ubuntu/ raring/main libjavascriptcoregtk-1.0-0 amd64 1.10.2-0ubuntu1 [1568 kB]
+Get:12 http://archive.ubuntu.com/ubuntu/ raring/main libwebkitgtk-1.0-common all 1.10.2-0ubuntu1 [846 kB]
+Get:13 http://archive.ubuntu.com/ubuntu/ raring/main libwebkitgtk-1.0-0 amd64 1.10.2-0ubuntu1 [8234 kB]
+Get:14 http://archive.ubuntu.com/ubuntu/ raring/main gimp amd64 2.8.4-1ubuntu1 [3386 kB]
+Fetched 19.5 MB in 59s (330 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package libbabl-0.1-0:amd64.
+(Reading database ... 252049 files and directories currently installed.)
+Unpacking libbabl-0.1-0:amd64 (from .../libbabl-0.1-0_0.1.10-1ubuntu1_amd64.deb) ...
+Selecting previously unselected package libilmbase6:amd64.
+Unpacking libilmbase6:amd64 (from .../libilmbase6_1.0.1-6_amd64.deb) ...
+Selecting previously unselected package libopenexr6:amd64.
+Unpacking libopenexr6:amd64 (from .../libopenexr6_1.6.1-7_amd64.deb) ...
+Selecting previously unselected package libsdl1.2debian:amd64.
+Unpacking libsdl1.2debian:amd64 (from .../libsdl1.2debian_1.2.15-5ubuntu1_amd64.deb) ...
+Selecting previously unselected package libamd2.2.0.
+Unpacking libamd2.2.0 (from .../libamd2.2.0_1%3a3.4.0-3ubuntu1_amd64.deb) ...
+Selecting previously unselected package libblas3.
+Unpacking libblas3 (from .../libblas3_1.2.20110419-5_amd64.deb) ...
+Selecting previously unselected package libumfpack5.4.0.
+Unpacking libumfpack5.4.0 (from .../libumfpack5.4.0_1%3a3.4.0-3ubuntu1_amd64.deb) ...
+Selecting previously unselected package libgegl-0.2-0:amd64.
+Unpacking libgegl-0.2-0:amd64 (from .../libgegl-0.2-0_0.2.0-2+nmu1ubuntu1_amd64.deb) ...
+Selecting previously unselected package libgimp2.0.
+Unpacking libgimp2.0 (from .../libgimp2.0_2.8.4-1ubuntu1_amd64.deb) ...
+Selecting previously unselected package gimp-data.
+Unpacking gimp-data (from .../gimp-data_2.8.4-1ubuntu1_all.deb) ...
+Selecting previously unselected package libjavascriptcoregtk-1.0-0.
+Unpacking libjavascriptcoregtk-1.0-0 (from .../libjavascriptcoregtk-1.0-0_1.10.2-0ubuntu1_amd64.deb) ...
+Selecting previously unselected package libwebkitgtk-1.0-common.
+Unpacking libwebkitgtk-1.0-common (from .../libwebkitgtk-1.0-common_1.10.2-0ubuntu1_all.deb) ...
+Selecting previously unselected package libwebkitgtk-1.0-0.
+Unpacking libwebkitgtk-1.0-0 (from .../libwebkitgtk-1.0-0_1.10.2-0ubuntu1_amd64.deb) ...
+Selecting previously unselected package gimp.
+Unpacking gimp (from .../gimp_2.8.4-1ubuntu1_amd64.deb) ...
+Processing triggers for hicolor-icon-theme ...
+Processing triggers for man-db ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Processing triggers for bamfdaemon ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers for desktop-file-utils ...
+Processing triggers for gnome-menus ...
+Setting up libbabl-0.1-0:amd64 (0.1.10-1ubuntu1) ...
+Setting up libilmbase6:amd64 (1.0.1-6) ...
+Setting up libopenexr6:amd64 (1.6.1-7) ...
+Setting up libsdl1.2debian:amd64 (1.2.15-5ubuntu1) ...
+Setting up libamd2.2.0 (1:3.4.0-3ubuntu1) ...
+Setting up libblas3 (1.2.20110419-5) ...
+update-alternatives: using /usr/lib/libblas/libblas.so.3 to provide /usr/lib/libblas.so.3 (libblas.so.3) in auto mode
+Setting up libumfpack5.4.0 (1:3.4.0-3ubuntu1) ...
+Setting up libgegl-0.2-0:amd64 (0.2.0-2+nmu1ubuntu1) ...
+Setting up libgimp2.0 (2.8.4-1ubuntu1) ...
+Setting up gimp-data (2.8.4-1ubuntu1) ...
+Setting up libjavascriptcoregtk-1.0-0 (1.10.2-0ubuntu1) ...
+Setting up libwebkitgtk-1.0-common (1.10.2-0ubuntu1) ...
+Setting up libwebkitgtk-1.0-0 (1.10.2-0ubuntu1) ...
+Setting up gimp (2.8.4-1ubuntu1) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+[braca@bvm:~/develop/rails/cjproject]$ gimp &
+[1] 7289
+[braca@bvm:~/develop/rails/cjproject]$
+(gimp:7289): GLib-GObject-WARNING **: invalid cast from `GimpView' to `GtkImage'
+
+(gimp:7289): Gtk-CRITICAL **: IA__gtk_image_get_storage_type: assertion `GTK_IS_IMAGE (image)' failed
+
+(gimp:7289): GLib-GObject-WARNING **: invalid cast from `GimpView' to `GtkImage'
+
+(gimp:7289): Gtk-CRITICAL **: IA__gtk_image_get_storage_type: assertion `GTK_IS_IMAGE (image)' failed
+
+(gimp:7289): GLib-GObject-WARNING **: invalid cast from `GimpView' to `GtkImage'
+
+(gimp:7289): Gtk-CRITICAL **: IA__gtk_image_get_storage_type: assertion `GTK_IS_IMAGE (image)' failed
+
+(gimp:7289): GLib-GObject-WARNING **: invalid cast from `GimpView' to `GtkImage'
+
+(gimp:7289): Gtk-CRITICAL **: IA__gtk_image_get_storage_type: assertion `GTK_IS_IMAGE (image)' failed
+GIF: too much input data, ignoring extra...
+GIF: too much input data, ignoring extra...
+
+(gimp:7289): GLib-GObject-WARNING **: invalid cast from `GimpView' to `GtkImage'
+
+(gimp:7289): Gtk-CRITICAL **: IA__gtk_image_get_storage_type: assertion `GTK_IS_IMAGE (image)' failed
+
+(gimp:7289): GLib-GObject-WARNING **: invalid cast from `GimpView' to `GtkImage'
+
+(gimp:7289): Gtk-CRITICAL **: IA__gtk_image_get_storage_type: assertion `GTK_IS_IMAGE (image)' failed
+
+[1]+  Done                    gimp
+[braca@bvm:~/develop/rails/cjproject]$
+[braca@bvm:~/develop/rails/cjproject]$ls
+Gemfile       Gemfile~	   Rakefile  bin	config	   db	log	spec  tmp
+Gemfile.lock  README.rdoc  app	     bootstrap	config.ru  lib	public	test  vendor
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "large gifs"
+[master 22867cf] large gifs
+ 20 files changed, 3 insertions(+), 3 deletions(-)
+ create mode 100644 app/assets/images/blanklarge.gif
+ create mode 100644 app/assets/images/dices-1large.gif
+ create mode 100644 app/assets/images/dices-2large.gif
+ create mode 100644 app/assets/images/dices-3large.gif
+ create mode 100644 app/assets/images/dices-4large.gif
+ create mode 100644 app/assets/images/dices-5large.gif
+ create mode 100644 app/assets/images/dices-6large.gif
+ create mode 100644 app/assets/images/dicet-1large.gif
+ create mode 100644 app/assets/images/dicet-2large.gif
+ create mode 100644 app/assets/images/dicet-3large.gif
+ create mode 100644 app/assets/images/dicet-4large.gif
+ create mode 100644 app/assets/images/dicet-5large.gif
+ create mode 100644 app/assets/images/dicet-6large.gif
+ create mode 100644 app/assets/images/die-1large.gif
+ create mode 100644 app/assets/images/die-2large.gif
+ create mode 100644 app/assets/images/die-3large.gif
+ create mode 100644 app/assets/images/die-4large.gif
+ create mode 100644 app/assets/images/die-5large.gif
+ create mode 100644 app/assets/images/die-6large.gif
+[braca@bvm:~/develop/rails/cjproject]$git push origin master
+Username for 'https://github.com': cobranet
+Password for 'https://cobranet@github.com': 22003bpm
+
+Counting objects: 32, done.
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (26/26), 56.04 KiB, done.
+Total 26 (delta 4), reused 0 (delta 0)
+To https://github.com/cobranet/cjproject.git
+   d22716b..22867cf  master -> master
+[braca@bvm:~/develop/rails/cjproject]$rspec
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `require': /home/braca/develop/rails/cjproject/app/models/dice_board.rb:52: syntax error, unexpected $end, expecting keyword_end (SyntaxError)
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `block in require'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `require'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:329:in `require_or_load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:462:in `load_missing_constant'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:183:in `const_missing'
+	from /home/braca/develop/rails/cjproject/spec/models/diceboard_spec.rb:1:in `<top (required)>'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `block in load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject]$rspe
+No command 'rspe' found, did you mean:
+ Command 'spe' from package 'spe' (universe)
+ Command 'rspec' from package 'ruby-rspec-core' (main)
+ Command 'rspec' from package 'ruby-rspec-core' (universe)
+rspe: command not found
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...F.F.........................
+
+Failures:
+
+  1) DiceBoard must return images sources for dices
+     Failure/Error: assert_equal db.img(dice) == 'blank.gif'
+     ArgumentError:
+       wrong number of arguments (1 for 2)
+     # ./spec/models/diceboard_spec.rb:8:in `block (3 levels) in <top (required)>'
+     # ./spec/models/diceboard_spec.rb:7:in `each'
+     # ./spec/models/diceboard_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  2) DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+     Failure/Error: db.select(3)
+     NameError:
+       undefined local variable or method `i' for #<DiceBoard:0x00000004a5b640>
+     # ./app/models/dice_board.rb:9:in `select'
+     # ./spec/models/diceboard_spec.rb:15:in `block (2 levels) in <top (required)>'
+
+Finished in 0.18179 seconds
+31 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:5 # DiceBoard must return images sources for dices
+rspec ./spec/models/diceboard_spec.rb:13 # DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+
+Randomized with seed 123
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..........FF...................
+
+Failures:
+
+  1) DiceBoard must return images sources for dices
+     Failure/Error: assert_equal db.img(dice) == 'blank.gif'
+     ArgumentError:
+       wrong number of arguments (1 for 2)
+     # ./spec/models/diceboard_spec.rb:9:in `block (3 levels) in <top (required)>'
+     # ./spec/models/diceboard_spec.rb:8:in `each'
+     # ./spec/models/diceboard_spec.rb:8:in `block (2 levels) in <top (required)>'
+
+  2) DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+     Failure/Error: assert_equal db.class_str(3).split(" ").include?("selected"), true
+     NameError:
+       undefined local variable or method `i' for #<DiceBoard:0x00000003c87de8>
+     # ./app/models/dice_board.rb:49:in `class_str'
+     # ./spec/models/diceboard_spec.rb:18:in `block (2 levels) in <top (required)>'
+
+Finished in 0.13994 seconds
+31 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:6 # DiceBoard must return images sources for dices
+rspec ./spec/models/diceboard_spec.rb:15 # DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+
+Randomized with seed 26628
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+......................FF.......
+
+Failures:
+
+  1) DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+     Failure/Error: assert_equal db.class_str(3).split(" ").include?("selected"), true
+     NameError:
+       undefined local variable or method `i' for #<DiceBoard:0x000000051fd1a0>
+     # ./app/models/dice_board.rb:49:in `class_str'
+     # ./spec/models/diceboard_spec.rb:18:in `block (2 levels) in <top (required)>'
+
+  2) DiceBoard must return images sources for dices
+     Failure/Error: assert_equal  db.img(3) == "die-#{db.dices[3]}large.gif", true
+     NoMethodError:
+       undefined method `dices' for #<DiceBoard:0x00000004e9dcd0>
+     # ./spec/models/diceboard_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+Finished in 0.14478 seconds
+31 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:15 # DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+rspec ./spec/models/diceboard_spec.rb:6 # DiceBoard must return images sources for dices
+
+Randomized with seed 28724
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..........F....................
+
+Failures:
+
+  1) DiceBoard must return images sources for dices
+     Failure/Error: assert_equal  db.img(3) == "die-#{db.dices[3]}large.gif", true
+     NoMethodError:
+       undefined method `dices' for #<DiceBoard:0x00000004b4aab0>
+     # ./spec/models/diceboard_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+Finished in 0.20704 seconds
+31 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:6 # DiceBoard must return images sources for dices
+
+Randomized with seed 65246
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.....................F.........
+
+Failures:
+
+  1) DiceBoard must return images sources for dices
+     Failure/Error: assert_equal  db.img(3) == "die-#{db.dices[3]}large.gif", true
+     MiniTest::Assertion:
+       <false> expected but was
+       <true>.
+     # ./spec/models/diceboard_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+Finished in 0.14546 seconds
+31 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:6 # DiceBoard must return images sources for dices
+
+Randomized with seed 24990
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...............................
+
+Finished in 0.13382 seconds
+31 examples, 0 failures
+
+Randomized with seed 23947
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+
+...F.F.........................
+
+Failures:
+
+  1) DiceBoard must return images sources for dices
+     Failure/Error: assert_equal  db.img(3), "die-#{db.dices[3]}large.gif"
+     MiniTest::Assertion:
+       <"die-3large.gif"> expected but was
+       <"die-6large.gif">.
+     # ./spec/models/diceboard_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+  2) DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+     Failure/Error: assert_equal db.class_str(4).split(" ").include?("selected"), false
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/diceboard_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+Finished in 0.14531 seconds
+31 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:6 # DiceBoard must return images sources for dices
+rspec ./spec/models/diceboard_spec.rb:15 # DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+
+Randomized with seed 56899
+
+[braca@bvm:~/develop/rails/cjproject]$[braca@bvm:~/develop/rails/cjproject]$rspec
+....F..........................
+
+Failures:
+
+  1) DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+     Failure/Error: assert_equal db.class_str(4).split(" ").include?("selected"), false
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/diceboard_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+Finished in 0.1333 seconds
+31 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:15 # DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+
+Randomized with seed 2160
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...........................F...
+
+Failures:
+
+  1) DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+     Failure/Error: assert_equal db.class_str(4).split(" ").include?("selected"), false
+     NoMethodError:
+       undefined method `split' for nil:NilClass
+     # ./spec/models/diceboard_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+Finished in 0.14089 seconds
+31 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:15 # DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+
+Randomized with seed 36535
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...F...........................
+
+Failures:
+
+  1) DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+     Failure/Error: assert_equal db.class_str(4).split(" ").include?("selected"), false
+     NoMethodError:
+       undefined method `split' for nil:NilClass
+     # ./spec/models/diceboard_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+Finished in 0.12638 seconds
+31 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:15 # DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+
+Randomized with seed 28213
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...............................
+
+Finished in 0.1429 seconds
+31 examples, 0 failures
+
+Randomized with seed 46459
+
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "to roll"
+[master 63fa2a1] to roll
+ 5 files changed, 56 insertions(+), 4 deletions(-)
+[braca@bvm:~/develop/rails/cjproject]$git push origin master
+Username for 'https://github.com': cobranet
+Password for 'https://cobranet@github.com': 22003bpm
+
+Counting objects: 31, done.
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (16/16), 1.92 KiB, done.
+Total 16 (delta 10), reused 0 (delta 0)
+To https://github.com/cobranet/cjproject.git
+   22867cf..63fa2a1  master -> master
+[braca@bvm:~/develop/rails/cjproject]$rake routes
+   Prefix Verb   URI Pattern               Controller#Action
+play_game POST   /games/:id/play(.:format) games#play
+    games GET    /games(.:format)          games#index
+          POST   /games(.:format)          games#create
+ new_game GET    /games/new(.:format)      games#new
+edit_game GET    /games/:id/edit(.:format) games#edit
+     game GET    /games/:id(.:format)      games#show
+          PATCH  /games/:id(.:format)      games#update
+          PUT    /games/:id(.:format)      games#update
+          DELETE /games/:id(.:format)      games#destroy
+     root GET    /                         games#index
+[braca@bvm:~/develop/rails/cjproject]$rake routes
+   Prefix Verb   URI Pattern               Controller#Action
+play_game POST   /games/:id/play(.:format) games#play
+roll_game POST   /games/:id/roll(.:format) games#roll
+    games GET    /games(.:format)          games#index
+          POST   /games(.:format)          games#create
+ new_game GET    /games/new(.:format)      games#new
+edit_game GET    /games/:id/edit(.:format) games#edit
+     game GET    /games/:id(.:format)      games#show
+          PATCH  /games/:id(.:format)      games#update
+          PUT    /games/:id(.:format)      games#update
+          DELETE /games/:id(.:format)      games#destroy
+     root GET    /                         games#index
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...............................
+
+Finished in 0.18802 seconds
+31 examples, 0 failures
+
+Randomized with seed 44118
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...............................
+
+Finished in 0.26868 seconds
+31 examples, 0 failures
+
+Randomized with seed 35724
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+FFFFFF.....FFFFFFFFFFFFFFFFFFFF
+
+Failures:
+
+  1) DiceBoard must be created 
+     Failure/Error: db = DiceBoard.new(5)
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x0000000382fbb0>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./spec/models/diceboard_spec.rb:3:in `new'
+     # ./spec/models/diceboard_spec.rb:3:in `block (2 levels) in <top (required)>'
+
+  2) DiceBoard must return images sources for dices
+     Failure/Error: db = DiceBoard.new(5)
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003837590>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./spec/models/diceboard_spec.rb:7:in `new'
+     # ./spec/models/diceboard_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  3) DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+     Failure/Error: db = DiceBoard.new(5)
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x0000000383f628>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./spec/models/diceboard_spec.rb:16:in `new'
+     # ./spec/models/diceboard_spec.rb:16:in `block (2 levels) in <top (required)>'
+
+  4) Game must have from_jamb method that returns String class 
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003947458>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/game_spec.rb:5:in `new'
+     # ./spec/models/game_spec.rb:5:in `block (2 levels) in <top (required)>'
+
+  5) Game must have to_jamb method returns Jamb class
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003943c68>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/game_spec.rb:12:in `new'
+     # ./spec/models/game_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+  6) Game must preserve state
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x0000000394dce0>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/game_spec.rb:19:in `new'
+     # ./spec/models/game_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+  7) Cell must have bcolcalc style in rows 7,8,11,16 and col 0 
+     Failure/Error: j=Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003d7e7b0>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/cell_spec.rb:35:in `new'
+     # ./spec/models/cell_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  8) Jamb must be created
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003d879a0>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:3:in `new'
+     # ./spec/models/jamb_spec.rb:3:in `block (2 levels) in <top (required)>'
+
+  9) Jamb rows from 1 to 6 and 9 and 10 must be normal if col <> 0 
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003d912c0>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:35:in `new'
+     # ./spec/models/jamb_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  10) Jamb rows from 7, 8, 11 and 16  must be calc and disabled if col <> 0 
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003d9b478>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:46:in `new'
+     # ./spec/models/jamb_spec.rb:46:in `block (2 levels) in <top (required)>'
+
+  11) Jamb col num 0 must have type :LABEL and be disabled
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003da5518>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:27:in `new'
+     # ./spec/models/jamb_spec.rb:27:in `block (2 levels) in <top (required)>'
+
+  12) Jamb  with distibution must return sorted array of counts of diferent values of dices
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003dae960>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:158:in `new'
+     # ./spec/models/jamb_spec.rb:158:in `block (2 levels) in <top (required)>'
+
+  13) Jamb if cell is :NORMAL and asigned by value must keep it
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003dab170>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:58:in `new'
+     # ./spec/models/jamb_spec.rb:58:in `block (2 levels) in <top (required)>'
+
+  14) Jamb after created cells 1,1 and 15,2 must be enabled
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003db4db0>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:7:in `new'
+     # ./spec/models/jamb_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  15) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003dbf530>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:116:in `new'
+     # ./spec/models/jamb_spec.rb:116:in `block (2 levels) in <top (required)>'
+
+  16) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003dc89f0>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:149:in `new'
+     # ./spec/models/jamb_spec.rb:149:in `block (2 levels) in <top (required)>'
+
+  17) Jamb row num 0 must have type :LABEL and be disabled
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003dd2540>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:19:in `new'
+     # ./spec/models/jamb_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+  18) Jamb calc_roll return value for dices and row 
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003ddc658>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:165:in `new'
+     # ./spec/models/jamb_spec.rb:165:in `block (2 levels) in <top (required)>'
+
+  19) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003de67c0>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:87:in `new'
+     # ./spec/models/jamb_spec.rb:87:in `block (2 levels) in <top (required)>'
+
+  20) Jamb enable next cell in col 1   and 2
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003defbe0>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:136:in `new'
+     # ./spec/models/jamb_spec.rb:136:in `block (2 levels) in <top (required)>'
+
+  21) Jamb if cell is not empty and somebody must be disabled
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003dec3f0>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:70:in `new'
+     # ./spec/models/jamb_spec.rb:70:in `block (2 levels) in <top (required)>'
+
+  22) Jamb calc_dif metod is first row multyplay with diference of second and third
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003df6030>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:128:in `new'
+     # ./spec/models/jamb_spec.rb:128:in `block (2 levels) in <top (required)>'
+
+  23) Jamb observed by > for rows that are obsered by same calc rows observed_by must return array of that rows
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003dc98f0>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:99:in `new'
+     # ./spec/models/jamb_spec.rb:99:in `block (2 levels) in <top (required)>'
+
+  24) Jamb if cell is not empty and somebody try to set value it must raise error
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x0000000387f9f8>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:64:in `new'
+     # ./spec/models/jamb_spec.rb:64:in `block (2 levels) in <top (required)>'
+
+  25) Jamb must have rownum 16
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000003b25248>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:13:in `new'
+     # ./spec/models/jamb_spec.rb:13:in `block (2 levels) in <top (required)>'
+
+  26) Jamb for calculated rows method depends_on must be array of rows on which that cell depends
+     Failure/Error: j = Jamb.new
+     NoMethodError:
+       undefined method `put' for #<DiceBoard:0x00000002100188>
+     # ./app/models/dice_board.rb:24:in `clear'
+     # ./app/models/dice_board.rb:5:in `initialize'
+     # ./app/models/jamb.rb:183:in `new'
+     # ./app/models/jamb.rb:183:in `initialize'
+     # ./spec/models/jamb_spec.rb:76:in `new'
+     # ./spec/models/jamb_spec.rb:76:in `block (2 levels) in <top (required)>'
+
+Finished in 0.171 seconds
+31 examples, 26 failures
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:2 # DiceBoard must be created 
+rspec ./spec/models/diceboard_spec.rb:6 # DiceBoard must return images sources for dices
+rspec ./spec/models/diceboard_spec.rb:15 # DiceBoard must return class_str for dices ... if dices is selected must heave selected class 
+rspec ./spec/models/game_spec.rb:4 # Game must have from_jamb method that returns String class 
+rspec ./spec/models/game_spec.rb:11 # Game must have to_jamb method returns Jamb class
+rspec ./spec/models/game_spec.rb:18 # Game must preserve state
+rspec ./spec/models/cell_spec.rb:34 # Cell must have bcolcalc style in rows 7,8,11,16 and col 0 
+rspec ./spec/models/jamb_spec.rb:2 # Jamb must be created
+rspec ./spec/models/jamb_spec.rb:34 # Jamb rows from 1 to 6 and 9 and 10 must be normal if col <> 0 
+rspec ./spec/models/jamb_spec.rb:45 # Jamb rows from 7, 8, 11 and 16  must be calc and disabled if col <> 0 
+rspec ./spec/models/jamb_spec.rb:26 # Jamb col num 0 must have type :LABEL and be disabled
+rspec ./spec/models/jamb_spec.rb:157 # Jamb  with distibution must return sorted array of counts of diferent values of dices
+rspec ./spec/models/jamb_spec.rb:57 # Jamb if cell is :NORMAL and asigned by value must keep it
+rspec ./spec/models/jamb_spec.rb:6 # Jamb after created cells 1,1 and 15,2 must be enabled
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+rspec ./spec/models/jamb_spec.rb:148 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+rspec ./spec/models/jamb_spec.rb:18 # Jamb row num 0 must have type :LABEL and be disabled
+rspec ./spec/models/jamb_spec.rb:164 # Jamb calc_roll return value for dices and row 
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+rspec ./spec/models/jamb_spec.rb:135 # Jamb enable next cell in col 1   and 2
+rspec ./spec/models/jamb_spec.rb:69 # Jamb if cell is not empty and somebody must be disabled
+rspec ./spec/models/jamb_spec.rb:127 # Jamb calc_dif metod is first row multyplay with diference of second and third
+rspec ./spec/models/jamb_spec.rb:98 # Jamb observed by > for rows that are obsered by same calc rows observed_by must return array of that rows
+rspec ./spec/models/jamb_spec.rb:63 # Jamb if cell is not empty and somebody try to set value it must raise error
+rspec ./spec/models/jamb_spec.rb:12 # Jamb must have rownum 16
+rspec ./spec/models/jamb_spec.rb:75 # Jamb for calculated rows method depends_on must be array of rows on which that cell depends
+
+Randomized with seed 52689
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+.6
+......6
+.6
+.6
+.6
+.6
+.6
+.
+
+Finished in 0.26397 seconds
+31 examples, 0 failures
+
+Randomized with seed 63818
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+....0
+1
+2
+3
+4
+5
+6
+...0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.0
+1
+2
+3
+4
+5
+6
+.
+
+Finished in 0.24583 seconds
+31 examples, 0 failures
+
+Randomized with seed 1359
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+......0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.0
+1
+2
+3
+4
+5
+.
+
+Finished in 0.18923 seconds
+31 examples, 0 failures
+
+Randomized with seed 4621
+
+[braca@bvm:~/develop/rails/cjproject]$rake routes
+     Prefix Verb   URI Pattern                 Controller#Action
+  play_game POST   /games/:id/play(.:format)   games#play
+  roll_game POST   /games/:id/roll(.:format)   games#roll
+select_game POST   /games/:id/select(.:format) games#select
+      games GET    /games(.:format)            games#index
+            POST   /games(.:format)            games#create
+   new_game GET    /games/new(.:format)        games#new
+  edit_game GET    /games/:id/edit(.:format)   games#edit
+       game GET    /games/:id(.:format)        games#show
+            PATCH  /games/:id(.:format)        games#update
+            PUT    /games/:id(.:format)        games#update
+            DELETE /games/:id(.:format)        games#destroy
+       root GET    /                           games#index
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...............................
+
+Finished in 0.16782 seconds
+31 examples, 0 failures
+
+Randomized with seed 47383
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...............................
+
+Finished in 0.17252 seconds
+31 examples, 0 failures
+
+Randomized with seed 51259
+
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "rolling dice"
+[master 9872eb9] rolling dice
+ 7 files changed, 56 insertions(+), 13 deletions(-)
+[braca@bvm:~/develop/rails/cjproject]$git push origin master
+Username for 'https://github.com': cobranet
+Password for 'https://cobranet@github.com': 22003bpm
+
+Counting objects: 37, done.
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (19/19), 1.87 KiB, done.
+Total 19 (delta 16), reused 0 (delta 0)
+To https://github.com/cobranet/cjproject.git
+   63fa2a1..9872eb9  master -> master
+[braca@bvm:~/develop/rails/cjproject]$rspec
+................................
+
+Finished in 0.94393 seconds
+32 examples, 0 failures
+
+Randomized with seed 10640
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.......F.........................
+
+Failures:
+
+  1) DiceBoard must set mode to first roll after roll selected 
+     Failure/Error: assert_equal db.mode,:first_roll
+     MiniTest::Assertion:
+       <:end> expected but was
+       <:first_roll>.
+     # ./spec/models/diceboard_spec.rb:31:in `block (2 levels) in <top (required)>'
+
+Finished in 0.1852 seconds
+33 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:28 # DiceBoard must set mode to first roll after roll selected 
+
+Randomized with seed 4953
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+............................mde first_roll
+F....
+
+Failures:
+
+  1) DiceBoard must set mode to first roll after roll selected 
+     Failure/Error: assert_equal db.mode,:first_roll
+     MiniTest::Assertion:
+       <:end> expected but was
+       <:first_roll>.
+     # ./spec/models/diceboard_spec.rb:31:in `block (2 levels) in <top (required)>'
+
+Finished in 0.26081 seconds
+33 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:28 # DiceBoard must set mode to first roll after roll selected 
+
+Randomized with seed 64289
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.......................mode no_roll
+mode first_roll
+F.........
+
+Failures:
+
+  1) DiceBoard must set mode to first roll after roll selected 
+     Failure/Error: assert_equal db.mode,:first_roll
+     MiniTest::Assertion:
+       <:end> expected but was
+       <:first_roll>.
+     # ./spec/models/diceboard_spec.rb:31:in `block (2 levels) in <top (required)>'
+
+Finished in 0.15786 seconds
+33 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:28 # DiceBoard must set mode to first roll after roll selected 
+
+Randomized with seed 5603
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.................................
+
+Finished in 0.14883 seconds
+33 examples, 0 failures
+
+Randomized with seed 44663
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.....................F...........
+
+Failures:
+
+  1) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: assert_equal j.cell(4,1).is_enabled?,true
+     MiniTest::Assertion:
+       <false> expected but was
+       <true>.
+     # ./spec/models/jamb_spec.rb:157:in `block (2 levels) in <top (required)>'
+
+Finished in 1.27 seconds
+33 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:148 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+
+Randomized with seed 56160
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...............F...............F.
+
+Failures:
+
+  1) Jamb enable next cell in col 1   and 2
+     Failure/Error: assert_equal j.cell(4,1).is_enabled?, true
+     MiniTest::Assertion:
+       <false> expected but was
+       <true>.
+     # ./spec/models/jamb_spec.rb:141:in `block (2 levels) in <top (required)>'
+
+  2) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: assert_equal j.cell(4,1).is_enabled?,true
+     MiniTest::Assertion:
+       <false> expected but was
+       <true>.
+     # ./spec/models/jamb_spec.rb:160:in `block (2 levels) in <top (required)>'
+
+Finished in 0.29604 seconds
+33 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:135 # Jamb enable next cell in col 1   and 2
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+
+Randomized with seed 28304
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...............F........F.F......
+
+Failures:
+
+  1) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,2,10)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:101:in `enable_next'
+     # ./app/models/jamb.rb:110:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:121:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:120:in `each'
+     # ./spec/models/jamb_spec.rb:120:in `block (2 levels) in <top (required)>'
+
+  2) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j.set_cel_value(15,2,80)
+     NoMethodError:
+       undefined method `set_cel_value' for #<Jamb:0x0000000580dc20>
+     # ./spec/models/jamb_spec.rb:161:in `block (2 levels) in <top (required)>'
+
+  3) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j.set_cell_value(row,col,1)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:101:in `enable_next'
+     # ./app/models/jamb.rb:110:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:91:in `block (4 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:90:in `each'
+     # ./spec/models/jamb_spec.rb:90:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/jamb_spec.rb:88:in `block (2 levels) in <top (required)>'
+
+Finished in 0.21902 seconds
+33 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+
+Randomized with seed 24928
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..F....F.....F...................
+
+Failures:
+
+  1) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,2,10)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enarble'
+     # ./app/models/jamb.rb:101:in `enable_next'
+     # ./app/models/jamb.rb:110:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:121:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:120:in `each'
+     # ./spec/models/jamb_spec.rb:120:in `block (2 levels) in <top (required)>'
+
+  2) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j.set_cell_value(row,col,1)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:101:in `enable_next'
+     # ./app/models/jamb.rb:110:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:91:in `block (4 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:90:in `each'
+     # ./spec/models/jamb_spec.rb:90:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/jamb_spec.rb:88:in `block (2 levels) in <top (required)>'
+
+  3) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j.set_cell_value(15,2,80)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:101:in `enable_next'
+     # ./app/models/jamb.rb:110:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:161:in `block (2 levels) in <top (required)>'
+
+Finished in 0.14657 seconds
+33 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+
+Randomized with seed 2022
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..ROw:1 col 1
+..ROw:1 col 1
+ROw:3 col 1
+ROw:14 col 2
+.ROw:1 col 1
+ROw:9 col 1
+ROw:10 col 1
+.ROw:1 col 1
+......ROw:1 col 1
+ROw:2 col 1
+ROw:3 col 1
+ROw:4 col 1
+ROw:5 col 1
+ROw:6 col 1
+ROw:12 col 2
+ROw:13 col 2
+ROw:14 col 2
+ROw:15 col 2
+F....ROw:1 col 1
+.ROw:1 col 1
+..ROw:1 col 1
+ROw:2 col 1
+ROw:3 col 1
+ROw:15 col 2
+FROw:1 col 1
+ROw:2 col 1
+ROw:3 col 1
+ROw:4 col 1
+ROw:5 col 1
+ROw:6 col 1
+ROw:1 col 2
+ROw:2 col 2
+ROw:3 col 2
+ROw:4 col 2
+ROw:5 col 2
+ROw:6 col 2
+F...........
+
+Failures:
+
+  1) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,2,10)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:102:in `enable_next'
+     # ./app/models/jamb.rb:111:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:121:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:120:in `each'
+     # ./spec/models/jamb_spec.rb:120:in `block (2 levels) in <top (required)>'
+
+  2) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j.set_cell_value(15,2,80)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:102:in `enable_next'
+     # ./app/models/jamb.rb:111:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:161:in `block (2 levels) in <top (required)>'
+
+  3) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j.set_cell_value(row,col,1)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:102:in `enable_next'
+     # ./app/models/jamb.rb:111:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:91:in `block (4 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:90:in `each'
+     # ./spec/models/jamb_spec.rb:90:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/jamb_spec.rb:88:in `block (2 levels) in <top (required)>'
+
+Finished in 0.30707 seconds
+33 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+
+Randomized with seed 14566
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...........ROw:1 col 1
+ROw:1 col 1 - 2 
+ROw:3 col 1
+ROw:3 col 1 - 4 
+ROw:14 col 2
+ROw:14 col 2 - 15 
+....ROw:1 col 1
+ROw:1 col 1 - 2 
+..ROw:1 col 1
+ROw:1 col 1 - 2 
+ROw:2 col 1
+ROw:2 col 1 - 3 
+ROw:3 col 1
+ROw:3 col 1 - 4 
+ROw:4 col 1
+ROw:4 col 1 - 5 
+ROw:5 col 1
+ROw:5 col 1 - 6 
+ROw:6 col 1
+ROw:6 col 1 - 9 
+ROw:1 col 2
+F..ROw:1 col 1
+ROw:1 col 1 - 2 
+ROw:9 col 1
+ROw:9 col 1 - 10 
+ROw:10 col 1
+ROw:10 col 1 - 12 
+.ROw:1 col 1
+ROw:1 col 1 - 2 
+ROw:2 col 1
+ROw:2 col 1 - 3 
+ROw:3 col 1
+ROw:3 col 1 - 4 
+ROw:4 col 1
+ROw:4 col 1 - 5 
+ROw:5 col 1
+ROw:5 col 1 - 6 
+ROw:6 col 1
+ROw:6 col 1 - 9 
+ROw:12 col 2
+ROw:12 col 2 - 14 
+ROw:13 col 2
+ROw:13 col 2 - 14 
+ROw:14 col 2
+ROw:14 col 2 - 15 
+ROw:15 col 2
+ROw:15 col 2 - 16 
+F..ROw:1 col 1
+ROw:1 col 1 - 2 
+ROw:2 col 1
+ROw:2 col 1 - 3 
+ROw:3 col 1
+ROw:3 col 1 - 4 
+ROw:15 col 2
+ROw:15 col 2 - 16 
+F..ROw:1 col 1
+ROw:1 col 1 - 2 
+..ROw:1 col 1
+ROw:1 col 1 - 2 
+...ROw:1 col 1
+ROw:1 col 1 - 2 
+.
+
+Failures:
+
+  1) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j.set_cell_value(row,col,1)
+     NoMethodError:
+       undefined method `+' for nil:NilClass
+     # ./app/models/jamb.rb:102:in `enable_next'
+     # ./app/models/jamb.rb:112:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:91:in `block (4 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:90:in `each'
+     # ./spec/models/jamb_spec.rb:90:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/jamb_spec.rb:88:in `block (2 levels) in <top (required)>'
+
+  2) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,2,10)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:103:in `enable_next'
+     # ./app/models/jamb.rb:112:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:121:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:120:in `each'
+     # ./spec/models/jamb_spec.rb:120:in `block (2 levels) in <top (required)>'
+
+  3) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j.set_cell_value(15,2,80)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:103:in `enable_next'
+     # ./app/models/jamb.rb:112:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:161:in `block (2 levels) in <top (required)>'
+
+Finished in 0.21227 seconds
+33 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+
+Randomized with seed 16271
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.............ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  15 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  16 
+FROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:9 col 1
+ROw:9 col 1 - NEXT NORMAL  10 
+ROw:10 col 1
+ROw:10 col 1 - NEXT NORMAL  12 
+....ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 
+ROw:1 col 2
+ROw:2 col 2
+ROw:2 col 2 - NEXT NORMAL  3 
+ROw:3 col 2
+ROw:3 col 2 - NEXT NORMAL  4 
+ROw:4 col 2
+ROw:4 col 2 - NEXT NORMAL  5 
+ROw:5 col 2
+ROw:5 col 2 - NEXT NORMAL  6 
+ROw:6 col 2
+ROw:6 col 2 - NEXT NORMAL  7 
+F....ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 
+ROw:12 col 2
+ROw:12 col 2 - NEXT NORMAL  14 
+ROw:13 col 2
+ROw:13 col 2 - NEXT NORMAL  14 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  15 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  16 
+F...
+
+Failures:
+
+  1) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j.set_cell_value(15,2,80)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:103:in `enable_next'
+     # ./app/models/jamb.rb:112:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:161:in `block (2 levels) in <top (required)>'
+
+  2) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j.set_cell_value(row,col,1)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:103:in `enable_next'
+     # ./app/models/jamb.rb:112:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:91:in `block (4 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:90:in `each'
+     # ./spec/models/jamb_spec.rb:90:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/jamb_spec.rb:88:in `block (2 levels) in <top (required)>'
+
+  3) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,2,10)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:103:in `enable_next'
+     # ./app/models/jamb.rb:112:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:121:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:120:in `each'
+     # ./spec/models/jamb_spec.rb:120:in `block (2 levels) in <top (required)>'
+
+Finished in 0.14657 seconds
+33 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+
+Randomized with seed 18366
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.......ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:14 col 2
+ROw:14 col 2 - NrEXT NORMAL  15 
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 
+ROw:1 col 2
+FROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  16 
+F.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:9 col 1
+ROw:9 col 1 - NEXT NORMAL  10 
+ROw:10 col 1
+ROw:10 col 1 - NEXT NORMAL  12 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 
+ROw:12 col 2
+ROw:12 col 2 - NEXT NORMAL  12 
+ROw:13 col 2
+ROw:13 col 2 - NEXT NORMAL  14 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  15 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  16 
+F............ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+..
+
+Failures:
+
+  1) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j.set_cell_value(row,col,1)
+     NoMethodError:
+       undefined method `-@' for nil:NilClass
+     # ./app/models/jamb.rb:100:in `enable_next'
+     # ./app/models/jamb.rb:112:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:91:in `block (4 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:90:in `each'
+     # ./spec/models/jamb_spec.rb:90:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/jamb_spec.rb:88:in `block (2 levels) in <top (required)>'
+
+  2) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j.set_cell_value(15,2,80)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:103:in `enable_next'
+     # ./app/models/jamb.rb:112:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:161:in `block (2 levels) in <top (required)>'
+
+  3) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,2,10)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:103:in `enable_next'
+     # ./app/models/jamb.rb:112:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:121:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:120:in `each'
+     # ./spec/models/jamb_spec.rb:120:in `block (2 levels) in <top (required)>'
+
+Finished in 0.2311 seconds
+33 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+
+Randomized with seed 21451
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  16 
+FROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  15 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:9 col 1
+ROw:9 col 1 - NEXT NORMAL  10 
+ROw:10 col 1
+ROw:10 col 1 - NEXT NORMAL  12 
+....ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 
+ROw:1 col 2
+ROw:2 col 2
+ROw:2 col 2 - NEXT NORMAL  3 
+ROw:3 col 2
+ROw:3 col 2 - NEXT NORMAL  4 
+ROw:4 col 2
+ROw:4 col 2 - NEXT NORMAL  5 
+ROw:5 col 2
+ROw:5 col 2 - NEXT NORMAL  6 
+ROw:6 col 2
+ROw:6 col 2 - NEXT NORMAL  7 
+FROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 
+ROw:12 col 2
+ROw:12 col 2 - NEXT NORMAL  12 
+ROw:13 col 2
+ROw:13 col 2 - NEXT NORMAL  14 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  15 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  16 
+F..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+..................ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 
+.
+
+Failures:
+
+  1) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j.set_cell_value(15,2,80)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:114:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:161:in `block (2 levels) in <top (required)>'
+
+  2) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j.set_cell_value(row,col,1)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:114:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:91:in `block (4 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:90:in `each'
+     # ./spec/models/jamb_spec.rb:90:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/jamb_spec.rb:88:in `block (2 levels) in <top (required)>'
+
+  3) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,2,10)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:114:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:121:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:120:in `each'
+     # ./spec/models/jamb_spec.rb:120:in `block (2 levels) in <top (required)>'
+
+Finished in 0.19061 seconds
+33 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+
+Randomized with seed 16489
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+........ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 0 
+...ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 0 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 0 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 0 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 diff 0 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 diff 0 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 diff 2 
+ROw:1 col 2
+ROw:2 col 2
+ROw:2 col 2 - NEXT NORMAL  3 diff 0 
+ROw:3 col 2
+ROw:3 col 2 - NEXT NORMAL  4 diff 0 
+ROw:4 col 2
+ROw:4 col 2 - NEXT NORMAL  5 diff 0 
+ROw:5 col 2
+ROw:5 col 2 - NEXT NORMAL  6 diff 0 
+ROw:6 col 2
+ROw:6 col 2 - NEXT NORMAL  7 diff 0 
+FROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 0 
+ROw:9 col 1
+ROw:9 col 1 - NEXT NORMAL  10 diff 0 
+ROw:10 col 1
+ROw:10 col 1 - NEXT NORMAL  12 diff 1 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 0 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 0 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 0 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  16 diff 0 
+F.....ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 0 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 0 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  15 diff 0 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 0 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 0 
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 0 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 0 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 0 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 diff 0 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 diff 0 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 diff 2 
+ROw:12 col 2
+ROw:12 col 2 - NEXT NORMAL  12 diff -1 
+ROw:13 col 2
+ROw:13 col 2 - NEXT NORMAL  14 diff 0 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  15 diff 0 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  16 diff 0 
+F..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 0 
+.......
+
+Failures:
+
+  1) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j.set_cell_value(row,col,1)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:114:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:91:in `block (4 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:90:in `each'
+     # ./spec/models/jamb_spec.rb:90:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/jamb_spec.rb:88:in `block (2 levels) in <top (required)>'
+
+  2) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j.set_cell_value(15,2,80)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:114:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:161:in `block (2 levels) in <top (required)>'
+
+  3) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,2,10)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:114:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:121:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:120:in `each'
+     # ./spec/models/jamb_spec.rb:120:in `block (2 levels) in <top (required)>'
+
+Finished in 0.14268 seconds
+33 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+
+Randomized with seed 41602
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+......ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 diff 1 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 diff 1 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 diff 3 
+ROw:1 col 2
+FROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  15 diff 1 
+...ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 diff 1 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 diff 1 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 diff 3 
+ROw:12 col 2
+ROw:12 col 2 - NEXT NORMAL  12 diff 0 
+ROw:13 col 2
+ROw:13 col 2 - NEXT NORMAL  14 diff 1 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  15 diff 1 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  16 diff 1 
+F..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:9 col 1
+ROw:9 col 1 - NEXT NORMAL  10 diff 1 
+ROw:10 col 1
+ROw:10 col 1 - NEXT NORMAL  12 diff 2 
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  16 diff 1 
+F.............ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+.
+
+Failures:
+
+  1) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j.set_cell_value(row,col,1)
+     NoMethodError:
+       undefined method `-' for nil:NilClass
+     # ./app/models/jamb.rb:100:in `enable_next'
+     # ./app/models/jamb.rb:114:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:91:in `block (4 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:90:in `each'
+     # ./spec/models/jamb_spec.rb:90:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/jamb_spec.rb:88:in `block (2 levels) in <top (required)>'
+
+  2) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,2,10)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:114:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:121:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:120:in `each'
+     # ./spec/models/jamb_spec.rb:120:in `block (2 levels) in <top (required)>'
+
+  3) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j.set_cell_value(15,2,80)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:114:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:161:in `block (2 levels) in <top (required)>'
+
+Finished in 0.23313 seconds
+33 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+
+Randomized with seed 11960
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.......ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  14 diff -1 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  13 diff -1 
+.....ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:9 col 1
+ROw:9 col 1 - NEXT NORMAL  10 diff 1 
+ROw:10 col 1
+ROw:10 col 1 - NEXT NORMAL  12 diff 2 
+...ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  13 diff -1 
+F....ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 diff 1 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 diff 1 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 diff 3 
+ROw:12 col 2
+ROw:12 col 2 - NEXT NORMAL  10 diff -2 
+ROw:13 col 2
+ROw:13 col 2 - NEXT NORMAL  12 diff -1 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  13 diff -1 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  14 diff -1 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 diff 1 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 diff 1 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 diff 3 
+ROw:1 col 2
+ROw:2 col 2
+ROw:2 col 2 - NEXT NORMAL  1 diff -1 
+ROw:3 col 2
+ROw:3 col 2 - NEXT NORMAL  2 diff -1 
+ROw:4 col 2
+ROw:4 col 2 - NEXT NORMAL  3 diff -1 
+ROw:5 col 2
+ROw:5 col 2 - NEXT NORMAL  4 diff -1 
+ROw:6 col 2
+ROw:6 col 2 - NEXT NORMAL  5 diff -1 
+ROw:1 col 3
+ROw:2 col 3
+ROw:3 col 3
+ROw:4 col 3
+ROw:5 col 3
+ROw:6 col 3
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+.......
+
+Failures:
+
+  1) Jamb enable next cell in col 1   and 2
+     Failure/Error: assert_equal j.cell(13,2).is_enabled?, false
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/jamb_spec.rb:146:in `block (2 levels) in <top (required)>'
+
+Finished in 0.1793 seconds
+33 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:135 # Jamb enable next cell in col 1   and 2
+
+Randomized with seed 3529
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+...................ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  14 diff -1 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  13 diff -1 
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 diff 1 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 diff 1 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 diff 3 
+ROw:12 col 2
+ROw:12 col 2 - NEXT NORMAL  11 diff -1 
+F...ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 diff 1 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 diff 1 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 diff 3 
+ROw:1 col 2
+ROw:2 col 2
+ROw:3 col 2
+ROw:3 col 2 - NEXT NORMAL  2 diff -1 
+ROw:4 col 2
+ROw:4 col 2 - NEXT NORMAL  3 diff -1 
+ROw:5 col 2
+ROw:5 col 2 - NEXT NORMAL  4 diff -1 
+ROw:6 col 2
+ROw:6 col 2 - NEXT NORMAL  5 diff -1 
+ROw:1 col 3
+ROw:2 col 3
+ROw:3 col 3
+ROw:4 col 3
+ROw:5 col 3
+ROw:6 col 3
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:9 col 1
+ROw:9 col 1 - NEXT NORMAL  10 diff 1 
+ROw:10 col 1
+ROw:10 col 1 - NEXT NORMAL  12 diff 2 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  13 diff -1 
+F.
+
+Failures:
+
+  1) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,2,10)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:114:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:121:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:120:in `each'
+     # ./spec/models/jamb_spec.rb:120:in `block (2 levels) in <top (required)>'
+
+  2) Jamb enable next cell in col 1   and 2
+     Failure/Error: assert_equal j.cell(13,2).is_enabled?, false
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/jamb_spec.rb:146:in `block (2 levels) in <top (required)>'
+
+Finished in 0.17137 seconds
+33 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+rspec ./spec/models/jamb_spec.rb:135 # Jamb enable next cell in col 1   and 2
+
+Randomized with seed 24303
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+.............ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 diff 1 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 diff 1 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 diff 3 
+ROw:1 col 2
+ROw:2 col 2
+ROw:3 col 2
+ROw:3 col 2 - NEXT NORMAL  2 diff -1 
+ROw:4 col 2
+ROw:4 col 2 - NEXT NORMAL  3 diff -1 
+ROw:5 col 2
+ROw:5 col 2 - NEXT NORMAL  4 diff -1 
+ROw:6 col 2
+ROw:6 col 2 - NEXT NORMAL  5 diff -1 
+ROw:1 col 3
+ROw:2 col 3
+ROw:3 col 3
+ROw:4 col 3
+ROw:5 col 3
+ROw:6 col 3
+..ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:15 col 2
+ROw:15 col 2 - NEXT NORMAL  14 diff -1 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  13 diff -1 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:2 col 1
+ROw:2 col 1 - NEXT NORMAL  3 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:4 col 1
+ROw:4 col 1 - NEXT NORMAL  5 diff 1 
+ROw:5 col 1
+ROw:5 col 1 - NEXT NORMAL  6 diff 1 
+ROw:6 col 1
+ROw:6 col 1 - NEXT NORMAL  9 diff 3 
+ROw:12 col 2
+ROw:12 col 2 - NEXT NORMAL  11 diff -1 
+F...ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+...ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:9 col 1
+ROw:9 col 1 - NEXT NORMAL  10 diff 1 
+ROw:10 col 1
+ROw:10 col 1 - NEXT NORMAL  12 diff 2 
+.ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+ROw:3 col 1
+ROw:3 col 1 - NEXT NORMAL  4 diff 1 
+ROw:14 col 2
+ROw:14 col 2 - NEXT NORMAL  13 diff -1 
+F...ROw:1 col 1
+ROw:1 col 1 - NEXT NORMAL  2 diff 1 
+..
+
+Failures:
+
+  1) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,2,10)
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:114:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:121:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:120:in `each'
+     # ./spec/models/jamb_spec.rb:120:in `block (2 levels) in <top (required)>'
+
+  2) Jamb enable next cell in col 1   and 2
+     Failure/Error: assert_equal j.cell(13,2).is_enabled?, false
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/jamb_spec.rb:145:in `block (2 levels) in <top (required)>'
+
+Finished in 0.16768 seconds
+33 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+rspec ./spec/models/jamb_spec.rb:135 # Jamb enable next cell in col 1   and 2
+
+Randomized with seed 50562
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...FFF....F..FFFF.............F..
+
+Failures:
+
+  1) Jamb if cell is not empty and somebody try to set value it must raise error
+     Failure/Error: j.set_cell_value(1,1,"B")
+     NameError:
+       undefined local variable or method `nrow' for #<Jamb:0x00000003a8b670>
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:117:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:65:in `block (2 levels) in <top (required)>'
+
+  2) Jamb if cell is :NORMAL and asigned by value must keep it
+     Failure/Error: j.set_cell_value(1,1,12)
+     NameError:
+       undefined local variable or method `nrow' for #<Jamb:0x0000000338f6f0>
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:117:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:59:in `block (2 levels) in <top (required)>'
+
+  3) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j.set_cell_value(row,1,3)
+     NameError:
+       undefined local variable or method `nrow' for #<Jamb:0x000000035dc9a8>
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:117:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:118:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:117:in `each'
+     # ./spec/models/jamb_spec.rb:117:in `block (2 levels) in <top (required)>'
+
+  4) Jamb calc_dif metod is first row multyplay with diference of second and third
+     Failure/Error: j.set_cell_value(1,1,5)
+     NameError:
+       undefined local variable or method `nrow' for #<Jamb:0x00000003a74718>
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:117:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:129:in `block (2 levels) in <top (required)>'
+
+  5) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j.set_cell_value(1,1,1)
+     NameError:
+       undefined local variable or method `nrow' for #<Jamb:0x0000000399fdb0>
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:117:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:154:in `block (2 levels) in <top (required)>'
+
+  6) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j.set_cell_value(row,col,1)
+     NameError:
+       undefined local variable or method `nrow' for #<Jamb:0x000000039a86b8>
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:117:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:91:in `block (4 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:90:in `each'
+     # ./spec/models/jamb_spec.rb:90:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/jamb_spec.rb:88:in `block (2 levels) in <top (required)>'
+
+  7) Jamb enable next cell in col 1   and 2
+     Failure/Error: j.enable_next(1,1)
+     NameError:
+       undefined local variable or method `nrow' for #<Jamb:0x000000038361e0>
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./spec/models/jamb_spec.rb:138:in `block (2 levels) in <top (required)>'
+
+  8) Jamb if cell is not empty and somebody must be disabled
+     Failure/Error: j.set_cell_value(1,1,1)
+     NameError:
+       undefined local variable or method `nrow' for #<Jamb:0x00000003848548>
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:117:in `set_cell_value'
+     # ./spec/models/jamb_spec.rb:71:in `block (2 levels) in <top (required)>'
+
+  9) Game must preserve state
+     Failure/Error: j.set_cell_value(1,1,7)
+     NameError:
+       undefined local variable or method `nrow' for #<Jamb:0x00000003a698e0>
+     # ./app/models/jamb.rb:105:in `enable_next'
+     # ./app/models/jamb.rb:117:in `set_cell_value'
+     # ./spec/models/game_spec.rb:21:in `block (2 levels) in <top (required)>'
+
+Finished in 0.13304 seconds
+33 examples, 9 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:63 # Jamb if cell is not empty and somebody try to set value it must raise error
+rspec ./spec/models/jamb_spec.rb:57 # Jamb if cell is :NORMAL and asigned by value must keep it
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_sum metod calc sum of all rows on which dependes 
+rspec ./spec/models/jamb_spec.rb:127 # Jamb calc_dif metod is first row multyplay with diference of second and third
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+rspec ./spec/models/jamb_spec.rb:135 # Jamb enable next cell in col 1   and 2
+rspec ./spec/models/jamb_spec.rb:69 # Jamb if cell is not empty and somebody must be disabled
+rspec ./spec/models/game_spec.rb:18 # Game must preserve state
+
+Randomized with seed 60846
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...F......F...F..................
+
+Failures:
+
+  1) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: assert_equal j.cell(2,1).is_enabled?, true
+     MiniTest::Assertion:
+       <false> expected but was
+       <true>.
+     # ./spec/models/jamb_spec.rb:155:in `block (2 levels) in <top (required)>'
+
+  2) Jamb enable next cell in col 1   and 2
+     Failure/Error: assert_equal j.cell(2,1).is_enabled?, true
+     MiniTest::Assertion:
+       <false> expected but was
+       <true>.
+     # ./spec/models/jamb_spec.rb:139:in `block (2 levels) in <top (required)>'
+
+  3) Jamb if cell is not empty and somebody must be disabled
+     Failure/Error: assert_equal j.cell(1,1).is_enabled?, false
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/jamb_spec.rb:72:in `block (2 levels) in <top (required)>'
+
+Finished in 0.15702 seconds
+33 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:151 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+rspec ./spec/models/jamb_spec.rb:135 # Jamb enable next cell in col 1   and 2
+rspec ./spec/models/jamb_spec.rb:69 # Jamb if cell is not empty and somebody must be disabled
+
+Randomized with seed 55021
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+......................F..........
+
+Failures:
+
+  1) Jamb enable next cell in col 1   and 2
+     Failure/Error: assert_equal j.cell(13,2).is_enabled?, false
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/jamb_spec.rb:145:in `block (2 levels) in <top (required)>'
+
+Finished in 0.13663 seconds
+33 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:135 # Jamb enable next cell in col 1   and 2
+
+Randomized with seed 46519
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.................................
+
+Finished in 0.15086 seconds
+33 examples, 0 failures
+
+Randomized with seed 7515
+
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git -m "fixed bug with enable next"
+Unknown option: -m
+usage: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [-c name=value] [--help]
+           <command> [<args>]
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "fixed bug with enable next"
+[master 1020a4f] fixed bug with enable next
+ 7 files changed, 68 insertions(+), 20 deletions(-)
+[braca@bvm:~/develop/rails/cjproject]$git push origin master
+Username for 'https://github.com': cobranet
+Password for 'https://cobranet@github.com': 22003bpm
+
+Counting objects: 31, done.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (16/16), 1.88 KiB, done.
+Total 16 (delta 13), reused 0 (delta 0)
+To https://github.com/cobranet/cjproject.git
+   9872eb9..1020a4f  master -> master
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "first full"
+# On branch master
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    app/controllers/jabmgames_controller.rb
+#	deleted:    app/models/#jamb.rb#
+#	deleted:    app/models/.#jamb.rb
+#	deleted:    app/views/games/#show.html.erb#
+#	deleted:    app/views/games/.#show.html.erb
+#	deleted:    db/migrate/20130717132845_create_jabmgames.rb
+#	deleted:    db/migrate/20130722091005_create_games.rb
+#	deleted:    spec/controllers/jabmgames_controller_spec.rb
+#	deleted:    spec/helpers/games_helper_spec.rb
+#	deleted:    spec/models/#jamb_spec.rb#
+#	deleted:    spec/models/.#jamb_spec.rb
+#	deleted:    spec/models/jabmgame_spec.rb
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "first kkk"
+# On branch master
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    app/controllers/jabmgames_controller.rb
+#	deleted:    app/models/#jamb.rb#
+#	deleted:    app/models/.#jamb.rb
+#	deleted:    app/views/games/#show.html.erb#
+#	deleted:    app/views/games/.#show.html.erb
+#	deleted:    db/migrate/20130717132845_create_jabmgames.rb
+#	deleted:    db/migrate/20130722091005_create_games.rb
+#	deleted:    spec/controllers/jabmgames_controller_spec.rb
+#	deleted:    spec/helpers/games_helper_spec.rb
+#	deleted:    spec/models/#jamb_spec.rb#
+#	deleted:    spec/models/.#jamb_spec.rb
+#	deleted:    spec/models/jabmgame_spec.rb
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+[braca@bvm:~/develop/rails/cjproject]$ls
+Gemfile       Gemfile~	   Rakefile  bin	config	   db	log	spec  tmp
+Gemfile.lock  README.rdoc  app	     bootstrap	config.ru  lib	public	test  vendor
+[braca@bvm:~/develop/rails/cjproject]$git push origin master
+Username for 'https://github.com': cobranet
+Password for 'https://cobranet@github.com': 22003bpm
+
+Everything up-to-date
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...............F..................
+
+Failures:
+
+  1) Jamb calc_rowe must return 30 if sum of rows 1 to 6 is greater 59 
+     Failure/Error: assert_equal j.cell(7,1).value, 30
+     MiniTest::Assertion:
+       <63> expected but was
+       <30>.
+     # ./spec/models/jamb_spec.rb:123:in `block (2 levels) in <top (required)>'
+
+Finished in 0.16308 seconds
+34 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_rowe must return 30 if sum of rows 1 to 6 is greater 59 
+
+Randomized with seed 14659
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..............................F...
+
+Failures:
+
+  1) Jamb calc_rowe must return 30 if sum of rows 1 to 6 is greater 59 
+     Failure/Error: assert_equal j.cell(7,1).value, 30
+     MiniTest::Assertion:
+       <0> expected but was
+       <30>.
+     # ./spec/models/jamb_spec.rb:131:in `block (2 levels) in <top (required)>'
+
+Finished in 0.17797 seconds
+34 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_rowe must return 30 if sum of rows 1 to 6 is greater 59 
+r
+Randomized with seed 47540
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...........CALC row7 sum 18
+.....CALC row7 sum 63
+CALC row7 sum 45
+F..CALC row7 sum 6
+CALC row7 sum 6
+CALC row7 sum 6
+...............
+
+Failures:
+
+  1) Jamb calc_rowe must return 30 if sum of rows 1 to 6 is greater 59 
+     Failure/Error: assert_equal j.cell(7,1).value, 30
+     MiniTest::Assertion:
+       <0> expected but was
+       <30>.
+     # ./spec/models/jamb_spec.rb:131:in `block (2 levels) in <top (required)>'
+
+Finished in 0.30845 seconds
+34 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_rowe must return 30 if sum of rows 1 to 6 is greater 59 
+
+Randomized with seed 62251
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..........CALC row7 sum 63
+CALC row7 sum 45
+.CALC row7 sum 6
+CALC row7 sum 6
+CALC row7 sum 6
+.....CALC row7 sum 18
+..................
+
+Finished in 0.24137 seconds
+34 examples, 0 failures
+
+Randomized with seed 25256
+
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "fixed bonus"
+[master dbee0d7] fixed bonus
+ 2 files changed, 29 insertions(+), 2 deletions(-)
+[braca@bvm:~/develop/rails/cjproject]$git push origin master
+Username for 'https://github.com': cobranet
+Password for 'https://cobranet@github.com': 22003bpm
+
+Counting objects: 15, done.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 889 bytes, done.
+Total 8 (delta 7), reused 0 (delta 0)
+To https://github.com/cobranet/cjproject.git
+   1020a4f..dbee0d7  master -> master
+[braca@bvm:~/develop/rails/cjproject]$rspec
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load': /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:228: syntax error, unexpected keyword_end, expecting $end (SyntaxError)
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `block in load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject]$rspec
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load': /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:228: syntax error, unexpected keyword_end, expecting $end (SyntaxError)
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `block in load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject]$rspec
+/home/braca/develop/rails/cjproject/app/models/dice_board.rb:33:in `roll': wrong number of arguments (0 for 1) (ArgumentError)
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:137:in `block (2 levels) in <top (required)>'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:136:in `each'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:136:in `block in <top (required)>'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:245:in `module_eval'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:245:in `subclass'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:231:in `describe'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/dsl.rb:18:in `describe'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:1:in `<top (required)>'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `block in load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject]$rspec
+/home/braca/develop/rails/cjproject/app/models/dice_board.rb:33:in `roll': wrong number of arguments (0 for 1) (ArgumentError)
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:137:in `block (2 levels) in <top (required)>'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:136:in `each'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:136:in `block in <top (required)>'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:245:in `module_eval'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:245:in `subclass'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:231:in `describe'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/dsl.rb:18:in `describe'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:1:in `<top (required)>'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `block in load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject]$rspec
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/enumerable.rb:24:in `block in sum': undefined method `+' for nil:NilClass (NoMethodError)
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/enumerable.rb:24:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/enumerable.rb:24:in `inject'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/enumerable.rb:24:in `sum'
+	from /home/braca/develop/rails/cjproject/app/models/jamb.rb:160:in `calc_roll'
+	from /home/braca/develop/rails/cjproject/app/models/jamb.rb:140:in `play'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:139:in `block (2 levels) in <top (required)>'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:136:in `each'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:136:in `block in <top (required)>'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:245:in `module_eval'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:245:in `subclass'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:231:in `describe'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/dsl.rb:18:in `describe'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:1:in `<top (required)>'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `block in load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject]$rspec
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/enumerable.rb:24:in `block in sum': undefined method `+' for nil:NilClass (NoMethodError)
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/enumerable.rb:24:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/enumerable.rb:24:in `inject'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/enumerable.rb:24:in `sum'
+	from /home/braca/develop/rails/cjproject/app/models/jamb.rb:160:in `calc_roll'
+	from /home/braca/develop/rails/cjproject/app/models/jamb.rb:140:in `play'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:139:in `block (2 levels) in <top (required)>'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:136:in `each'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:136:in `block in <top (required)>'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:245:in `module_eval'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:245:in `subclass'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/example_group.rb:231:in `describe'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/dsl.rb:18:in `describe'
+	from /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:1:in `<top (required)>'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `block in load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject]$rspec
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load': /home/braca/develop/rails/cjproject/spec/models/jamb_spec.rb:212: syntax error, unexpected $end, expecting keyword_end (SyntaxError)
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `block in load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..................................
+
+Finished in 0.16375 seconds
+34 examples, 0 failures
+
+Randomized with seed 53098
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+....................F..............
+
+Failures:
+
+  1) Jamb if there is no empty cell than diceboard must go to end_game mode
+     Failure/Error: j.play(row,3)
+     NoMethodError:
+       undefined method `+' for nil:NilClass
+     # ./app/models/jamb.rb:160:in `calc_roll'
+     # ./app/models/jamb.rb:140:in `play'
+     # ./spec/models/jamb_spec.rb:219:in `block (3 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:216:in `each'
+     # ./spec/models/jamb_spec.rb:216:in `block (2 levels) in <top (required)>'
+
+Finished in 0.15363 seconds
+35 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:214 # Jamb if there is no empty cell than diceboard must go to end_game mode
+
+Randomized with seed 54831
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+........1
+1
+1
+1
+4
+5
+2
+2
+2
+1
+4
+5
+3
+3
+1
+1
+4
+5
+4
+4
+4
+4
+4
+4
+5
+5
+1
+1
+4
+5
+6
+6
+6
+1
+6
+5
+9
+6
+6
+6
+2
+3
+10
+2
+2
+1
+1
+1
+12
+1
+2
+3
+4
+5
+12
+1
+2
+3
+4
+6
+12
+6
+2
+3
+4
+5
+13
+6
+6
+6
+5
+5
+13
+6
+6
+6
+4
+5
+14
+6
+6
+6
+6
+5
+14
+6
+5
+6
+6
+5
+14
+6
+6
+6
+6
+6
+15
+6
+6
+6
+6
+6
+15
+6
+6
+6
+6
+5
+.....1
+6
+1
+4
+3
+3
+1
+4
+4
+6
+1
+6
+2
+6
+2
+3
+1
+3
+2
+2
+4
+2
+3
+4
+3
+5
+6
+1
+1
+5
+3
+1
+5
+2
+2
+5
+4
+6
+6
+4
+6
+3
+4
+1
+3
+5
+2
+1
+5
+1
+2
+1
+6
+6
+5
+2
+3
+2
+1
+1
+6
+2
+6
+1
+3
+4
+6
+6
+4
+4
+3
+3
+9
+3
+2
+5
+4
+4
+9
+6
+3
+5
+2
+6
+10
+1
+5
+6
+5
+6
+10
+1
+2
+1
+2
+3
+12
+3
+6
+1
+4
+1
+12
+6
+2
+1
+3
+3
+13
+6
+1
+1
+2
+5
+13
+1
+2
+5
+4
+5
+14
+1
+4
+5
+6
+3
+14
+6
+1
+3
+6
+3
+15
+4
+5
+1
+4
+2
+15
+2
+1
+2
+1
+3
+15
+4
+6
+2
+2
+3
+14
+6
+3
+4
+6
+2
+13
+2
+6
+4
+6
+1
+12
+2
+6
+3
+2
+1
+10
+3
+1
+2
+5
+5
+9
+2
+2
+2
+3
+4
+6
+3
+5
+3
+1
+6
+5
+4
+5
+4
+3
+4
+4
+1
+1
+2
+5
+6
+3
+5
+3
+1
+2
+4
+2
+5
+6
+5
+6
+1
+1
+3
+2
+3
+3
+1
+......................
+
+Finished in 0.15763 seconds
+35 examples, 0 failures
+
+Randomized with seed 11842
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..............................F....
+
+Failures:
+
+  1) Jamb if there is no empty cell than diceboard must go to end_game mode
+     Failure/Error: asert_equal j.diceboard == :end_game, false
+     NoMethodError:
+       undefined method `asert_equal' for #<RSpec::Core::ExampleGroup::Nested_5:0x00000004bb6530>
+     # ./spec/models/jamb_spec.rb:222:in `block (2 levels) in <top (required)>'
+
+Finished in 0.13365 seconds
+35 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:214 # Jamb if there is no empty cell than diceboard must go to end_game mode
+
+Randomized with seed 18584
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...................................
+
+Finished in 0.16087 seconds
+35 examples, 0 failures
+
+Randomized with seed 43962
+
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "end game"
+# On branch master
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    app/controllers/jabmgames_controller.rb
+#	deleted:    app/models/#jamb.rb#
+#	deleted:    app/models/.#jamb.rb
+#	modified:   app/models/jamb.rb
+#	deleted:    app/views/games/#show.html.erb#
+#	deleted:    app/views/games/.#show.html.erb
+#	deleted:    db/migrate/20130717132845_create_jabmgames.rb
+#	deleted:    db/migrate/20130722091005_create_games.rb
+#	deleted:    spec/controllers/jabmgames_controller_spec.rb
+#	deleted:    spec/helpers/games_helper_spec.rb
+#	deleted:    spec/models/#jamb_spec.rb#
+#	deleted:    spec/models/.#jamb_spec.rb
+#	deleted:    spec/models/jabmgame_spec.rb
+#	modified:   spec/models/jamb_spec.rb
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "end game2"
+[master e8f1897] end game2
+ 2 files changed, 24 insertions(+), 3 deletions(-)
+[braca@bvm:~/develop/rails/cjproject]$
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.....F.............................
+
+Failures:
+
+  1) Jamb if cell is not empty and somebody try to set value it must raise error
+     Failure/Error: expect {j.set_cell_value(1,1,"C")}.to raise_error(RuntimeError)
+       expected RuntimeError, got #<NoMethodError: undefined method `RuntimeError' for #<Jamb:0x000000045a2fb8>> with backtrace:
+         # ./app/models/jamb.rb:120:in `set_cell_value'
+         # ./spec/models/jamb_spec.rb:66:in `block (3 levels) in <top (required)>'
+         # ./spec/models/jamb_spec.rb:66:in `block (2 levels) in <top (required)>'
+     # ./spec/models/jamb_spec.rb:66:in `block (2 levels) in <top (required)>'
+
+Finished in 0.16603 seconds
+35 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/jamb_spec.rb:63 # Jamb if cell is not empty and somebody try to set value it must raise error
+
+Randomized with seed 56890
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...........1
+1
+cell type NORMAL  @value B @enabled false
+........................
+
+Finished in 0.19717 seconds
+35 examples, 0 failures
+
+Randomized with seed 9506
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..............................1
+1
+cell type NORMAL  @value B @enabled false
+.....
+
+Finished in 0.16631 seconds
+35 examples, 0 failures
+
+Randomized with seed 55967
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.......1
+1
+cell type NORMAL  @value B @enabled false
+.........................F...
+
+Failures:
+
+  1) DiceBoard if is roll selected ... unselected dices must keep value 
+     Failure/Error: db = DiceBoard.new
+     ArgumentError:
+       wrong number of arguments (0 for 1)
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./spec/models/diceboard_spec.rb:35:in `new'
+     # ./spec/models/diceboard_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+Finished in 0.19306 seconds
+36 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:34 # DiceBoard if is roll selected ... unselected dices must keep value 
+
+Randomized with seed 31932
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.......................1
+1
+cell type NORMAL  @value B @enabled false
+.............
+
+Finished in 0.14449 seconds
+36 examples, 0 failures
+
+Randomized with seed 35593
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.........1
+1
+cell type NORMAL  @value B @enabled false
+...........................
+
+Finished in 0.18127 seconds
+36 examples, 0 failures
+
+Randomized with seed 26852
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...............1
+1
+cell type NORMAL  @value B @enabled false
+......................
+
+Finished in 0.19909 seconds
+37 examples, 0 failures
+
+Randomized with seed 40236
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..........F..FFFFFFFFFFFFFFFFFFFFFFFF
+
+Failures:
+
+  1) Cell must have bcolcalc style in rows 7,8,11,16 and col 0 
+     Failure/Error: j=Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/cell_spec.rb:35:in `new'
+     # ./spec/models/cell_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  2) Game must preserve state
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/game_spec.rb:19:in `new'
+     # ./spec/models/game_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+  3) Game must have to_jamb method returns Jamb class
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/game_spec.rb:12:in `new'
+     # ./spec/models/game_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+  4) Game must have from_jamb method that returns String class 
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/game_spec.rb:5:in `new'
+     # ./spec/models/game_spec.rb:5:in `block (2 levels) in <top (required)>'
+
+  5) Jamb  with distibution must return sorted array of counts of diferent values of dices
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:186:in `new'
+     # ./spec/models/jamb_spec.rb:186:in `block (2 levels) in <top (required)>'
+
+  6) Jamb set_cel_value must enable next cel if cols are 1 and 2
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:171:in `new'
+     # ./spec/models/jamb_spec.rb:171:in `block (2 levels) in <top (required)>'
+
+  7) Jamb col num 0 must have type :LABEL and be disabled
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:27:in `new'
+     # ./spec/models/jamb_spec.rb:27:in `block (2 levels) in <top (required)>'
+
+  8) Jamb must have rownum 16
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:13:in `new'
+     # ./spec/models/jamb_spec.rb:13:in `block (2 levels) in <top (required)>'
+
+  9) Jamb if cell is not empty and somebody must be disabled
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:70:in `new'
+     # ./spec/models/jamb_spec.rb:70:in `block (2 levels) in <top (required)>'
+
+  10) Jamb row num 0 must have type :LABEL and be disabled
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:19:in `new'
+     # ./spec/models/jamb_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+  11) Jamb for calculated rows method depends_on must be array of rows on which that cell depends
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:76:in `new'
+     # ./spec/models/jamb_spec.rb:76:in `block (2 levels) in <top (required)>'
+
+  12) Jamb after created cells 1,1 and 15,2 must be enabled
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:7:in `new'
+     # ./spec/models/jamb_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  13) Jamb if cell is not empty and somebody try to set value it must raise error
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:64:in `new'
+     # ./spec/models/jamb_spec.rb:64:in `block (2 levels) in <top (required)>'
+
+  14) Jamb enable next cell in col 1   and 2
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:155:in `new'
+     # ./spec/models/jamb_spec.rb:155:in `block (2 levels) in <top (required)>'
+
+  15) Jamb calc_roll return value for dices and row 
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:193:in `new'
+     # ./spec/models/jamb_spec.rb:193:in `block (2 levels) in <top (required)>'
+
+  16) Jamb all rows on which row depends that call must be calculate if all cells are full
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:87:in `new'
+     # ./spec/models/jamb_spec.rb:87:in `block (2 levels) in <top (required)>'
+
+  17) Jamb must be created
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:3:in `new'
+     # ./spec/models/jamb_spec.rb:3:in `block (2 levels) in <top (required)>'
+
+  18) Jamb calc_sum metod calc sum of all rows on which dependes 
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:135:in `new'
+     # ./spec/models/jamb_spec.rb:135:in `block (2 levels) in <top (required)>'
+
+  19) Jamb rows from 1 to 6 and 9 and 10 must be normal if col <> 0 
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:35:in `new'
+     # ./spec/models/jamb_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  20) Jamb if cell is :NORMAL and asigned by value must keep it
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:58:in `new'
+     # ./spec/models/jamb_spec.rb:58:in `block (2 levels) in <top (required)>'
+
+  21) Jamb observed by > for rows that are obsered by same calc rows observed_by must return array of that rows
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:99:in `new'
+     # ./spec/models/jamb_spec.rb:99:in `block (2 levels) in <top (required)>'
+
+  22) Jamb if there is no empty cell than diceboard must go to end_game mode
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:215:in `new'
+     # ./spec/models/jamb_spec.rb:215:in `block (2 levels) in <top (required)>'
+
+  23) Jamb rows from 7, 8, 11 and 16  must be calc and disabled if col <> 0 
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:46:in `new'
+     # ./spec/models/jamb_spec.rb:46:in `block (2 levels) in <top (required)>'
+
+  24) Jamb calc_dif metod is first row multyplay with diference of second and third
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:147:in `new'
+     # ./spec/models/jamb_spec.rb:147:in `block (2 levels) in <top (required)>'
+
+  25) Jamb calc_rowe must return 30 if sum of rows 1 to 6 is greater 59 
+     Failure/Error: j = Jamb.new
+     RuntimeError:
+       RuntimeError
+     # ./app/models/cell.rb:18:in `enable'
+     # ./app/models/jamb.rb:230:in `block (2 levels) in initialize'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./app/models/jamb.rb:214:in `block in initialize'
+     # ./app/models/jamb.rb:212:in `each'
+     # ./app/models/jamb.rb:212:in `initialize'
+     # ./spec/models/jamb_spec.rb:116:in `new'
+     # ./spec/models/jamb_spec.rb:116:in `block (2 levels) in <top (required)>'
+
+Finished in 0.12565 seconds
+37 examples, 25 failures
+
+Failed examples:
+
+rspec ./spec/models/cell_spec.rb:34 # Cell must have bcolcalc style in rows 7,8,11,16 and col 0 
+rspec ./spec/models/game_spec.rb:18 # Game must preserve state
+rspec ./spec/models/game_spec.rb:11 # Game must have to_jamb method returns Jamb class
+rspec ./spec/models/game_spec.rb:4 # Game must have from_jamb method that returns String class 
+rspec ./spec/models/jamb_spec.rb:185 # Jamb  with distibution must return sorted array of counts of diferent values of dices
+rspec ./spec/models/jamb_spec.rb:170 # Jamb set_cel_value must enable next cel if cols are 1 and 2
+rspec ./spec/models/jamb_spec.rb:26 # Jamb col num 0 must have type :LABEL and be disabled
+rspec ./spec/models/jamb_spec.rb:12 # Jamb must have rownum 16
+rspec ./spec/models/jamb_spec.rb:69 # Jamb if cell is not empty and somebody must be disabled
+rspec ./spec/models/jamb_spec.rb:18 # Jamb row num 0 must have type :LABEL and be disabled
+rspec ./spec/models/jamb_spec.rb:75 # Jamb for calculated rows method depends_on must be array of rows on which that cell depends
+rspec ./spec/models/jamb_spec.rb:6 # Jamb after created cells 1,1 and 15,2 must be enabled
+rspec ./spec/models/jamb_spec.rb:63 # Jamb if cell is not empty and somebody try to set value it must raise error
+rspec ./spec/models/jamb_spec.rb:154 # Jamb enable next cell in col 1   and 2
+rspec ./spec/models/jamb_spec.rb:192 # Jamb calc_roll return value for dices and row 
+rspec ./spec/models/jamb_spec.rb:86 # Jamb all rows on which row depends that call must be calculate if all cells are full
+rspec ./spec/models/jamb_spec.rb:2 # Jamb must be created
+rspec ./spec/models/jamb_spec.rb:134 # Jamb calc_sum metod calc sum of all rows on which dependes 
+rspec ./spec/models/jamb_spec.rb:34 # Jamb rows from 1 to 6 and 9 and 10 must be normal if col <> 0 
+rspec ./spec/models/jamb_spec.rb:57 # Jamb if cell is :NORMAL and asigned by value must keep it
+rspec ./spec/models/jamb_spec.rb:98 # Jamb observed by > for rows that are obsered by same calc rows observed_by must return array of that rows
+rspec ./spec/models/jamb_spec.rb:214 # Jamb if there is no empty cell than diceboard must go to end_game mode
+rspec ./spec/models/jamb_spec.rb:45 # Jamb rows from 7, 8, 11 and 16  must be calc and disabled if col <> 0 
+rspec ./spec/models/jamb_spec.rb:146 # Jamb calc_dif metod is first row multyplay with diference of second and third
+rspec ./spec/models/jamb_spec.rb:115 # Jamb calc_rowe must return 30 if sum of rows 1 to 6 is greater 59 
+
+Randomized with seed 20979
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...........................1
+1
+cell type NORMAL  @value B @enabled false
+..........
+
+Finished in 0.15374 seconds
+37 examples, 0 failures
+
+Randomized with seed 33009
+
+[braca@bvm:~/develop/rails/cjproject]$git add .
+[braca@bvm:~/develop/rails/cjproject]$git commit -m "gameround added"
+[master e8b0579] gameround added
+ 8 files changed, 69 insertions(+), 7 deletions(-)
+[braca@bvm:~/develop/rails/cjproject]$git push origin master
+Username for 'https://github.com': cobranet
+Password for 'https://cobranet@github.com': 22003bpm
+
+Counting objects: 44, done.
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (26/26), 2.75 KiB, done.
+Total 26 (delta 22), reused 0 (delta 0)
+To https://github.com/cobranet/cjproject.git
+   dbee0d7..e8b0579  master -> master
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.............1
+1
+cell type NORMAL  @value B @enabled false
+........................
+
+Finished in 0.19524 seconds
+37 examples, 0 failures
+
+Randomized with seed 65273
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load': /home/braca/develop/rails/cjproject/spec/models/cell_spec.rb:43: syntax error, unexpected tSTRING_BEG (SyntaxError)
+  def "it must go from to_str and from str in same cell " do
+       ^
+/home/braca/develop/rails/cjproject/spec/models/cell_spec.rb:43: syntax error, unexpected keyword_do, expecting keyword_end
+/home/braca/develop/rails/cjproject/spec/models/cell_spec.rb:52: syntax error, unexpected keyword_end, expecting $end
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `block in load'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+	from /usr/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `each'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/command_line.rb:22:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:80:in `run'
+	from /usr/lib/ruby/gems/1.9.1/gems/rspec-core-2.14.4/lib/rspec/core/runner.rb:17:in `block in autorun'
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...................1
+1
+cell type NORMAL  @value B @enabled false
+...........F.......
+
+Failures:
+
+  1) Cell it must go from to_str and from str in same cell 
+     Failure/Error: cell = Cell.new
+     ArgumentError:
+       wrong number of arguments (0 for 1)
+     # ./app/models/cell.rb:5:in `initialize'
+     # ./spec/models/cell_spec.rb:45:in `new'
+     # ./spec/models/cell_spec.rb:45:in `block (2 levels) in <top (required)>'
+
+Finished in 0.14903 seconds
+38 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/cell_spec.rb:43 # Cell it must go from to_str and from str in same cell 
+
+Randomized with seed 57415
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+......F....1
+1
+cell type NORMAL  @value B @enabled false
+...........................
+
+Failures:
+
+  1) Cell it must go from to_str and from str in same cell 
+     Failure/Error: assert_equal j.cell(row.col).to_str,cell.from_str(j.cell(row.col).to_str).to_str
+     NoMethodError:
+       undefined method `col' for 0:Fixnum
+     # ./spec/models/cell_spec.rb:48:in `block (4 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/cell_spec.rb:47:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:65:in `block in rows'
+     # ./app/models/jamb.rb:64:in `each'
+     # ./app/models/jamb.rb:64:in `rows'
+     # ./spec/models/cell_spec.rb:46:in `block (2 levels) in <top (required)>'
+
+Finished in 0.19828 seconds
+38 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/cell_spec.rb:43 # Cell it must go from to_str and from str in same cell 
+
+Randomized with seed 42868
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.............1
+1
+cell type NORMAL  @value B @enabled false
+.....................F...
+
+Failures:
+
+  1) Cell it must go from to_str and from str in same cell 
+     Failure/Error: assert_equal j.cell(row,col).to_str,cell.from_str(j.cell(row,col).to_str).to_str
+     NoMethodError:
+       undefined method `spllit' for "LABEL&X&0&0":String
+     # ./app/models/cell.rb:55:in `from_str'
+     # ./spec/models/cell_spec.rb:48:in `block (4 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/cell_spec.rb:47:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:65:in `block in rows'
+     # ./app/models/jamb.rb:64:in `each'
+     # ./app/models/jamb.rb:64:in `rows'
+     # ./spec/models/cell_spec.rb:46:in `block (2 levels) in <top (required)>'
+
+Finished in 0.17621 seconds
+38 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/cell_spec.rb:43 # Cell it must go from to_str and from str in same cell 
+
+Randomized with seed 51300
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+1
+1
+cell type NORMAL  @value B @enabled false
+.....................F................
+
+Failures:
+
+  1) Cell it must go from to_str and from str in same cell 
+     Failure/Error: assert_equal j.cell(row,col).to_str,cell.from_str(j.cell(row,col).to_str).to_str
+     NoMethodError:
+       undefined method `to_str' for false:FalseClass
+     # ./spec/models/cell_spec.rb:48:in `block (4 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/cell_spec.rb:47:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:65:in `block in rows'
+     # ./app/models/jamb.rb:64:in `each'
+     # ./app/models/jamb.rb:64:in `rows'
+     # ./spec/models/cell_spec.rb:46:in `block (2 levels) in <top (required)>'
+
+Finished in 0.19226 seconds
+38 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/cell_spec.rb:43 # Cell it must go from to_str and from str in same cell 
+
+Randomized with seed 44213
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..............................1
+1
+cell type NORMAL  @value B @enabled false
+........
+
+Finished in 0.15123 seconds
+38 examples, 0 failures
+
+Randomized with seed 37582
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..........1
+1
+cell type NORMAL  @value B @enabled false
+............................
+
+Finished in 0.12698 seconds
+38 examples, 0 failures
+
+Randomized with seed 10202
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+........1
+1
+cell type NORMAL  @value B @enabled false
+..............................
+
+Finished in 0.1948 seconds
+38 examples, 0 failures
+
+Randomized with seed 5806
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+...................1
+1
+cell type NORMAL  @value B @enabled false
+...................
+
+Finished in 0.18308 seconds
+38 examples, 0 failures
+
+Randomized with seed 42079
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+......F............1
+1
+cell type NORMAL  @value B @enabled false
+...................
+
+Failures:
+
+  1) Cell it must go from to_str and from str in same cell 
+     Failure/Error: assert_equal j.cell(row,col).to_str , cell.from_str(j.cell(row,col).to_str).to_str
+     NameError:
+       uninitialized constant Jamb::TYPE
+     # ./app/models/cell.rb:52:in `to_str'
+     # ./spec/models/cell_spec.rb:48:in `block (4 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/cell_spec.rb:47:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:65:in `block in rows'
+     # ./app/models/jamb.rb:64:in `each'
+     # ./app/models/jamb.rb:64:in `rows'
+     # ./spec/models/cell_spec.rb:46:in `block (2 levels) in <top (required)>'
+
+Finished in 0.14223 seconds
+38 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/cell_spec.rb:43 # Cell it must go from to_str and from str in same cell 
+
+Randomized with seed 9076
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..........F.......................1
+1
+cell type NORMAL  @value B @enabled false
+....
+
+Failures:
+
+  1) Cell it must go from to_str and from str in same cell 
+     Failure/Error: assert_equal j.cell(row,col).to_str , cell.from_str(j.cell(row,col).to_str).to_str
+     MiniTest::Assertion:
+       <"0&X&0&0"> expected but was
+       <"&X&0&0">.
+     # ./spec/models/cell_spec.rb:48:in `block (4 levels) in <top (required)>'
+     # ./app/models/jamb.rb:59:in `block in columns'
+     # ./app/models/jamb.rb:58:in `each'
+     # ./app/models/jamb.rb:58:in `columns'
+     # ./spec/models/cell_spec.rb:47:in `block (3 levels) in <top (required)>'
+     # ./app/models/jamb.rb:65:in `block in rows'
+     # ./app/models/jamb.rb:64:in `each'
+     # ./app/models/jamb.rb:64:in `rows'
+     # ./spec/models/cell_spec.rb:46:in `block (2 levels) in <top (required)>'
+
+Finished in 0.12636 seconds
+38 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/cell_spec.rb:43 # Cell it must go from to_str and from str in same cell 
+
+Randomized with seed 26095
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.....................1
+1
+cell type NORMAL  @value B @enabled false
+.................
+
+Finished in 0.13031 seconds
+38 examples, 0 failures
+
+Randomized with seed 17421
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..F....................1
+1
+cell type NORMAL  @value B @enabled false
+................
+
+Failures:
+
+  1) DiceBoard must keep state using to_str and from_str
+     Failure/Error: a = DiceBoard.new
+     ArgumentError:
+       wrong number of arguments (0 for 1)
+     # ./app/models/dice_board.rb:3:in `initialize'
+     # ./spec/models/diceboard_spec.rb:59:in `new'
+     # ./spec/models/diceboard_spec.rb:59:in `block (2 levels) in <top (required)>'
+
+Finished in 0.14355 seconds
+39 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:58 # DiceBoard must keep state using to_str and from_str
+
+Randomized with seed 37595
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.......F........................1
+1
+cell type NORMAL  @value B @enabled false
+.......
+
+Failures:
+
+  1) DiceBoard must keep state using to_str and from_str
+     Failure/Error: assert_equal a.selected[i] , b.selected[i]
+     NoMethodError:
+       undefined method `selected' for #<DiceBoard:0x00000004c70d40>
+     # ./spec/models/diceboard_spec.rb:68:in `block (3 levels) in <top (required)>'
+     # ./spec/models/diceboard_spec.rb:67:in `each'
+     # ./spec/models/diceboard_spec.rb:67:in `block (2 levels) in <top (required)>'
+
+Finished in 0.15699 seconds
+39 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:58 # DiceBoard must keep state using to_str and from_str
+
+Randomized with seed 11972
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.......F........1
+1
+cell type NORMAL  @value B @enabled false
+.......................
+
+Failures:
+
+  1) DiceBoard must keep state using to_str and from_str
+     Failure/Error: assert_equal a.selected[i] , b.selected[i]
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/diceboard_spec.rb:68:in `block (3 levels) in <top (required)>'
+     # ./spec/models/diceboard_spec.rb:67:in `each'
+     # ./spec/models/diceboard_spec.rb:67:in `block (2 levels) in <top (required)>'
+
+Finished in 0.17532 seconds
+39 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:58 # DiceBoard must keep state using to_str and from_str
+
+Randomized with seed 50901
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+............1
+1
+cell type NORMAL  @value B @enabled false
+.....................1&0&3&0&5&1&0&0&1&0&no_roll
+1&0&3&0&5&0&0&0&0&0&no_roll
+F.....
+
+Failures:
+
+  1) DiceBoard must keep state using to_str and from_str
+     Failure/Error: assert_equal a.selected[i] , b.selected[i]
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/diceboard_spec.rb:71:in `block (3 levels) in <top (required)>'
+     # ./spec/models/diceboard_spec.rb:69:in `each'
+     # ./spec/models/diceboard_spec.rb:69:in `block (2 levels) in <top (required)>'
+
+Finished in 0.17635 seconds
+39 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:58 # DiceBoard must keep state using to_str and from_str
+
+Randomized with seed 37278
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+........1
+1
+cell type NORMAL  @value B @enabled false
+.......................1&0&3&0&5&1&0&0&1&0&no_roll
+1&0&3&0&5&0&0&0&0&0&no_roll
+F.......
+
+Failures:
+
+  1) DiceBoard must keep state using to_str and from_str
+     Failure/Error: assert_equal a.selected[i] , b.selected[i]
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/diceboard_spec.rb:71:in `block (3 levels) in <top (required)>'
+     # ./spec/models/diceboard_spec.rb:69:in `each'
+     # ./spec/models/diceboard_spec.rb:69:in `block (2 levels) in <top (required)>'
+
+Finished in 0.1931 seconds
+39 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:58 # DiceBoard must keep state using to_str and from_str
+
+Randomized with seed 600
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.1&0&3&0&5&1&0&0&1&0&no_roll
+ 1&0&3&0&5&0&0&0&0&0&no_roll
+F........................1
+1
+cell type NORMAL  @value B @enabled false
+.............
+
+Failures:
+
+  1) DiceBoard must keep state using to_str and from_str
+     Failure/Error: assert_equal a.selected[i] , b.selected[i]
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/diceboard_spec.rb:71:in `block (3 levels) in <top (required)>'
+     # ./spec/models/diceboard_spec.rb:69:in `each'
+     # ./spec/models/diceboard_spec.rb:69:in `block (2 levels) in <top (required)>'
+
+Finished in 0.19517 seconds
+39 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:58 # DiceBoard must keep state using to_str and from_str
+
+Randomized with seed 43864
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+..........1&0&3&0&5&1&0&0&1&0&no_roll
+1&0&3&0&5&0&0&0&0&0&no_roll
+F......................1
+1
+cell type NORMAL  @value B @enabled false
+......
+
+Failures:
+
+  1) DiceBoard must keep state using to_str and from_str
+     Failure/Error: assert_equal a.selected[i] , b.selected[i]
+     MiniTest::Assertion:
+       <true> expected but was
+       <false>.
+     # ./spec/models/diceboard_spec.rb:71:in `block (3 levels) in <top (required)>'
+     # ./spec/models/diceboard_spec.rb:69:in `each'
+     # ./spec/models/diceboard_spec.rb:69:in `block (2 levels) in <top (required)>'
+
+Finished in 0.17146 seconds
+39 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:58 # DiceBoard must keep state using to_str and from_str
+
+Randomized with seed 51688
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+......1
+1
+cell type NORMAL  @value B @enabled false
+....................1&0&3&0&5&1&0&0&1&0&no_roll
+1&0&3&0&5&1&1&1&1&1&no_roll
+F............
+
+Failures:
+
+  1) DiceBoard must keep state using to_str and from_str
+     Failure/Error: assert_equal b.dice[i], a.dice[i]
+     NoMethodError:
+       undefined method `dice' for #<DiceBoard:0x0000000367bf30>
+     # ./spec/models/diceboard_spec.rb:72:in `block (3 levels) in <top (required)>'
+     # ./spec/models/diceboard_spec.rb:69:in `each'
+     # ./spec/models/diceboard_spec.rb:69:in `block (2 levels) in <top (required)>'
+
+Finished in 0.20212 seconds
+39 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:58 # DiceBoard must keep state using to_str and from_str
+
+Randomized with seed 34674
+
+[braca@bvm:~/develop/rails/cjproject]$rspec
+.....1
+1
+cell type NORMAL  @value B @enabled false
+..........................1&0&3&0&5&1&0&0&1&0&no_roll
+1&0&3&0&5&1&1&1&1&1&no_roll
+F.......
+
+Failures:
+
+  1) DiceBoard must keep state using to_str and from_str
+     Failure/Error: assert_equal a.selected[i] , b.selected[i]
+     MiniTest::Assertion:
+       <false> expected but was
+       <true>.
+     # ./spec/models/diceboard_spec.rb:71:in `block (3 levels) in <top (required)>'
+     # ./spec/models/diceboard_spec.rb:69:in `each'
+     # ./spec/models/diceboard_spec.rb:69:in `block (2 levels) in <top (required)>'
+
+Finished in 0.18986 seconds
+39 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/diceboard_spec.rb:58 # DiceBoard must keep state using to_str and from_str
+
+Randomized with seed 30415
+
+[braca@bvm:~/develop/rails/cjproject]$
