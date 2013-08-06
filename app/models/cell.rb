@@ -51,7 +51,7 @@ class Cell
     @is_col == true  ? ser = ser + "1" : ser + "0" 
   end
   
-  def is_equal(cell)
+  def is_equal?(cell)
     self.value == cell.value && self.is_col? == cell.is_col? && self.is_enabled? == cell.is_enabled? && self.type == cell.type
   end
 
@@ -61,7 +61,7 @@ class Cell
     if arr[1] == ""
       @value = nil
     else
-      @value = arr[1]
+      [:NORMAL,:CALC].include?(@type)  ? @value = arr[1].to_i : @value = arr[1] 
     end
     arr[2] == "1" ? @enabled = true : @enabled = false 
     arr[3] == "1" ? @is_col = true : @is_col = false 

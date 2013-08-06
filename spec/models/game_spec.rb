@@ -27,8 +27,10 @@ describe Game do
     assert_equal g1.jambgame, g.jambgame
     j.from_game_string(g.jambgame)
     j1.from_game_string(g.jambgame)
-    (0..17).each do |row|
-      assert_equal j1.cells[row], j.cells[row]
+    (0..16).each do |row|
+      (0..3).each do |col|
+        assert_equal j1.cell(row,col).is_equal?(j.cell(row,col)), true
+      end  
     end  
     assert_equal 7, j1.cell(1,1).value
   end

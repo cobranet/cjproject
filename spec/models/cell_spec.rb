@@ -17,33 +17,32 @@ describe Cell do
     assert_equal  c.class_str.split(" ").include?('blabel'), true
    end
 
-   it "must return empty? = false if value is not set otherwise true" do
+  it "must return empty? = false if value is not set otherwise true" do
      c = Cell.new(:NORMAL)
      assert_equal c.empty?, true
      c.value = 1;
      assert_equal c.empty?, false
-   end
+  end
 
-   it "if is column label and calc must have class style bcolcalc" do
+  it "if is column label and calc must have class style bcolcalc" do
      c = Cell.new(:LABEL,true)
      c1 = Cell.new(:LABEL) 
      assert_equal c.class_str.split(" ").include?("bcolcalc"), true  
      assert_equal c1.class_str.split(" ").include?("bcolcalc"), false  
-   end 
+  end 
   it "must be equal to it self" do
     c = Cell.new(:NORMAL)
-    assert_equal c.is_equal(c), true
+    assert_equal c.is_equal?(c), true
     c = Cell.new(:CALC)
-    assert_equal c.is_equal(c), true
+    assert_equal c.is_equal?(c), true
     c = Cell.new(:SUM)
-    assert_equal c.is_equal(c), true
+    assert_equal c.is_equal?(c), true
     c = Cell.new(:NORMAL,true)
-    assert_equal c.is_equal(c), true
+    assert_equal c.is_equal?(c), true
     c = Cell.new(:CALC,true)
-    assert_equal c.is_equal(c), true
+    assert_equal c.is_equal?(c), true
     c = Cell.new(:SUM,true)
-    assert_equal c.is_equal(c), true
-
+    assert_equal c.is_equal?(c), true
   end
 
   it "must be not equal if value,type,is_enabled? and is_col? are not same" do
@@ -56,7 +55,7 @@ describe Cell do
     c.value = 7
     c.enable 
 
-    assert_equal c1.is_equal(c),false
+    assert_equal c1.is_equal?(c),false
   end
 
   it "must be not equal if value,type,is_enabled? and is_col? are not same" do
@@ -69,7 +68,7 @@ describe Cell do
     c.value = 7
     c.enable 
 
-    assert_equal c1.is_equal(c),false
+    assert_equal c1.is_equal?(c),false
   end
 
   it "must be not if value,type,is_enabled? and is_col? are not same" do
@@ -82,7 +81,7 @@ describe Cell do
     c.value = 7
     c.enable 
 
-    assert_equal c1.is_equal(c),true
+    assert_equal c1.is_equal?(c),true
   end
 
   it "must have bcolcalc style in rows 7,8,11,16 and col 0 " do

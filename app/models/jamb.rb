@@ -114,7 +114,9 @@ class Jamb
       end
     end   
   end
- 
+  def is_number?(str)
+    true if Float(str) rescue false
+  end
   def set_cell_value(row,col,value)
     if cell(row,col).type == :NORMAL
       if @cells[row][col].empty? == false
@@ -253,7 +255,7 @@ class Jamb
     arr = str.split("#")
     rows do |row|
       columns do |col| 
-        @cells[row][col].from_str( arr[row*col])
+        @cells[row][col].from_str( arr[row*colnum+col])
       end
     end          
     where = (rownum)*(colnum)+1 
