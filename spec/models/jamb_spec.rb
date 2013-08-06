@@ -225,7 +225,37 @@ describe Jamb do
       j.play(row,2)
     end
     assert_equal j.diceboard.mode, :end_game
-  
   end
 
+  it "Must save cells state from to_game_string and from_game_string" do
+    original = Jamb.new
+    copy = Jamb.new
+    #some plays done... 
+    [1,2,3,4,5,6,9,10,12,13,14,15].each do |row|
+      original.diceboard.roll_all
+      original.play(row,1)
+      original.diceboard.roll_all
+      original.play(row,3)
+    end
+    #to sting
+    str1 = original.to_game_string
+    copy = copy.from_game_string(str1)
+    original.rows do |row|
+      original.columns do |col|
+        assert_equal original.cell(row,col).value, copy.cell(row,col).value
+        assert_equal original.cell(row,col).is_enabled?, copy.cell(row,col).is_enabled?
+        assert_equal original.cell(row,col).type, copy.cell(row,col).type
+        assert_equal original.cell(row,col).is_col?, copy.cell(row,col).is_col?
+      end
+    end
+
+  end
+   
+  it "game must save diceboard too" do
+    original = Jamb.new
+    original.diceboard.roll_all
+    copy = Jamb.new
+    copy.from_game_string(original.to_game_string)
+    assert_equal copy.diceboard.dices, original.diceboard.dices
+  end                                                  
 end

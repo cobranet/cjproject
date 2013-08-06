@@ -24,7 +24,7 @@ class Jamb
                 [11,[1,9,10]],
                 [16,[12,13,14,15]]
               ]
-  attr_accessor :diceboard,:playround
+  attr_accessor :diceboard,:playround,:cells
   def depends_on(row)
     DEPENDS.each do |rule|
       if rule[0] == row
@@ -118,8 +118,6 @@ class Jamb
   def set_cell_value(row,col,value)
     if cell(row,col).type == :NORMAL
       if @cells[row][col].empty? == false
-        puts row,col
-        puts @cells[row][col].inspect
         raise RuntimeError 
       end  
     end
@@ -153,6 +151,7 @@ class Jamb
   def cellxy(row,col)
     puts "Row #{row}- Col #{col}"
   end
+ 
   def calc_roll(row,dices)
     if [1,2,3,4,5,6].include?(row)
       sum = 0 
@@ -236,6 +235,7 @@ class Jamb
     @cells[1][1].enable
     @cells[15][2].enable
   end
+
   def to_game_string
     str = ""
     rows do |row|
@@ -243,7 +243,25 @@ class Jamb
         str =  str+@cells[row][col].to_str + "#"
       end
     end
+
     str = str + @empty.to_s + "#"
     str = str + @playround.to_s + "#"    
+    str = str + @diceboard.to_str
+  end
+  
+  def from_game_string(str)
+    arr = str.split("#")
+    rows do |row|
+      columns do |col| 
+        @cells[row][col].from_str( arr[row*col])
+      end
+    end          
+    where = (rownum)*(colnum)+1 
+    @empty = arr[where].to_i
+    where = where + 1
+    @playround = arr[where].to_i
+    @diceboard = DiceBoard.new(5)
+    @diceboard.from_str(arr[where])
+    self
   end
 end

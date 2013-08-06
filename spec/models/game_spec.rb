@@ -22,7 +22,14 @@ describe Game do
     g.from_jamb(j)
     g.save!
     g1 = Game.find(g.id)
+    j1 = Jamb.new
     j1 = g1.to_jamb
+    assert_equal g1.jambgame, g.jambgame
+    j.from_game_string(g.jambgame)
+    j1.from_game_string(g.jambgame)
+    (0..17).each do |row|
+      assert_equal j1.cells[row], j.cells[row]
+    end  
     assert_equal 7, j1.cell(1,1).value
   end
 end

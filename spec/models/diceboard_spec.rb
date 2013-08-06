@@ -64,7 +64,6 @@ describe DiceBoard do
      a.select(3)
      b = DiceBoard.new(5)
      b.from_str(a.to_str)
-     puts b.to_str
      (0...5).each do |i|
        assert_equal a.selected[i] , b.selected[i]
        assert_equal b.dices[i], a.dices[i]

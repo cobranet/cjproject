@@ -6,9 +6,13 @@ class Cell
     @type = type
     @value = nil
     @enabled = false
-    @is_col = is_col  
+    @is_col = is_col
+    @is_col ||= false
+      
   end
- 
+  def is_col?
+    @is_col
+  end 
   def is_enabled?
     @enabled
   end
@@ -41,16 +45,16 @@ class Cell
     str
   end 
    
-  def is_to_num(val)
-    if val 
-      return 1
-    else
-      return 0
-    end
-  end
   def to_str
-    ser = "#{TYPES.index(@type)}&#{@value}&#{is_to_num(@enabled)}&#{is_to_num(@is_col)}"
+    ser = "#{TYPES.index(@type)}&#{@value}&"
+    is_enabled? ? ser = ser + "1&" : ser = ser+"0&" 
+    @is_col == true  ? ser = ser + "1" : ser + "0" 
   end
+  
+  def is_equal(cell)
+    self.value == cell.value && self.is_col? == cell.is_col? && self.is_enabled? == cell.is_enabled? && self.type == cell.type
+  end
+
   def from_str(str) 
     arr = str.split('&')
     @type = TYPES[arr[0].to_i]
