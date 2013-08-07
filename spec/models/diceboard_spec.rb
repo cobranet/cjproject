@@ -67,6 +67,7 @@ describe DiceBoard do
      (0...5).each do |i|
        assert_equal a.selected[i] , b.selected[i]
        assert_equal b.dices[i], a.dices[i]
+       assert_equal a.is_equal?(b) , true
      end
    end
 end

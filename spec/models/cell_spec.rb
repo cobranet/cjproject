@@ -140,6 +140,5 @@ describe Cell do
       end
     end 
   end
-  
 end 
       

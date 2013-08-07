@@ -29,12 +29,6 @@
 <%end%>
 
 <% content_for :diceboard do%>
-  <div id="diceboard"> 
-    <div id="old">
-    <script type='text/javascript'>
-      D6.dice(5);
-    </script>
-    </div>
     <div id='new'>
       <% (0..5).each do |dice| %>
         <%= link_to select_game_path(:dice => dice ) , :method => :post do %>
@@ -46,14 +40,16 @@
     <% if @jamb.diceboard.mode != :end %> 
       <div id="roll_button">
         <%= link_to roll_game_path(:playroud => @jamb.playround),  { :method=>:post, :class =>  "btn btn-primary btn-large"} do %>
-          <i class="icon-white icon-thumbs-up"></i> Roll selected dices</i>
+          <i class="icon-white icon-thumbs-up"></i><%= @jamb.diceboard.mode.to_sym == :no_roll ? "Roll" :  "Roll selected dices" %></i>
         <% end %>
       </div>
-      <div id="roll_other_button">
-        <%= link_to roll_other_game_path(:playround => @jamb.playround) ,  { :method=>:post, :class =>  "btn btn-primary btn-large"} do %>
-          <i class="icon-white icon-thumbs-up"></i> Roll unselected dices</i>
-        <% end %>
-      </div>  
+      <% if @jamb.diceboard.mode.to_sym != :no_roll %>
+        <div id="roll_other_button">
+          <%= link_to roll_other_game_path(:playround => @jamb.playround) ,  { :method=>:post, :class =>  "btn btn-primary btn-large"} do %>
+            <i class="icon-white icon-thumbs-up"></i> <%=  "Roll unslected dices" %> </i>
+          <% end %>
+        </div>  
+      <%end%>
     <% end %>
   </div>
 <%end%>

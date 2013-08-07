@@ -19,7 +19,11 @@ class DiceBoard
   def mode  
     @mode
   end  
-  
+
+  def is_equal?(other)
+    @dices == other.dices && @mode == other.mode && @selected == other.selected
+  end  
+
   def clear 
     @dices = Array.new
     @selected = Array.new
@@ -54,17 +58,20 @@ class DiceBoard
     end 
     str
   end
-
+  def change_mode
+    if @mode == :no_roll
+      @mode = :first_roll
+    elsif @mode == :first_roll
+      @mode = :second_roll
+    else
+      @mode = :end
+    end
+  end
   def roll_all 
     (0...@num).each do |i|
       roll(i)
     end
-    if @mode == :no_roll
-      @mode = :first_roll
-    else
-      @mode = :end
-    end 
-    
+    change_mode     
   end   
 
   def roll_selected
@@ -76,11 +83,7 @@ class DiceBoard
         roll(i) unless sel == false
       end
     end
-    if @mode == :no_roll
-      @mode = :first_roll
-    else
-      @mode = :end
-    end 
+    change_mode
   end
   def roll_unselected
     if dices[0] == nil 
@@ -91,11 +94,7 @@ class DiceBoard
         roll(i) unless sel == true
       end
     end
-    if @mode == :no_roll
-      @mode = :first_roll
-    else
-      @mode = :end
-    end 
+    change_mode
   end
   def to_str
     str = ""

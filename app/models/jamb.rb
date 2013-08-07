@@ -145,9 +145,9 @@ class Jamb
     @diceboard.clear
     @empty = @empty - 1
     @playround = @playround + 1
-    if @empty == 0 
-      @diceboard.mode = :end_game
-    end
+#    if @empty == 0 
+ #     @diceboard.mode = :end_game
+ #   end
   end  
 
   def cellxy(row,col)

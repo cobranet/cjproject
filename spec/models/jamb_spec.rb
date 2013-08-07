@@ -257,5 +257,27 @@ describe Jamb do
     copy = Jamb.new
     copy.from_game_string(original.to_game_string)
     assert_equal copy.diceboard.dices, original.diceboard.dices
-  end                                                  
+    assert_equal copy.diceboard.is_equal?(original.diceboard), true
+  end
+  it "after play diceboard state must be in :no_roll " do
+    j = Jamb.new
+    j.rows do |row|
+      j.columns do |col|
+        j.diceboard.roll_all
+        if j.cell(row,col).is_enabled? 
+          j.play(row,col)
+          assert_equal j.diceboard.mode, :no_roll
+        end
+      end
+    end
+  end
+  
+  it " cell 0 0 must no be enabled" do
+    j = Jamb.new
+    assert_equal j.cell(0,0).is_enabled?, false
+  end        
+  it " when created dice board must be in :no_roll mode " do 
+    j = Jamb.new
+    assert_equal j.diceboard.mode, :no_roll
+  end   
 end
