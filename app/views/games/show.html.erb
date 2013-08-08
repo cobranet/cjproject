@@ -31,8 +31,8 @@
 <% content_for :diceboard do%>
     <div id='new'>
       <% (0..5).each do |dice| %>
-        <%= link_to select_game_path(:dice => dice ) , :method => :post do %>
-          <%= image_tag @jamb.diceboard.img(dice) , :id => dice, :class => @jamb.diceboard.class_str(dice) %>  
+        <%= link_to select_game_path(:dice => dice ) , :id => "select_dice_link#{dice}", :method => :post , :remote => true do %>
+          <%= image_tag @jamb.diceboard.img(dice) , :id => "dice#{dice}", :class => @jamb.diceboard.class_str(dice) %>  
 	<%end%>  
       <% end %>
     </div>

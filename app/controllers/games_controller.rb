@@ -16,12 +16,17 @@ class GamesController < ApplicationController
   end
   
   def select
+    @selected = params[:dice].to_i
     game = Game.find(params[:id])
     jamb = game.to_jamb
-    jamb.diceboard.toggle(params[:dice].to_i)
+    jamb.diceboard.toggle(@selected)
     game.from_jamb(jamb)
     game.save!
-    redirect_to game_path(game.id)
+    respond_to do |format|
+      format.html { redirect_to game_path(game.id)}
+      format.js 
+    end
+    
   end 
 
   def roll 
