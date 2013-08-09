@@ -1,2 +1,0 @@
-* Starting the server
-  FACEBOOK_APP_ID=567995016569984 FACEBOOK_SECRET=215f28112d8b7114f0fcfeda7e91eaf3 rails s

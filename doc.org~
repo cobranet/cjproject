@@ -1,2 +1,0 @@
-* Starting the server
-FACEBOOK_APP_ID=your_app_id FACEBOOK_SECRET=your_secret rails s
