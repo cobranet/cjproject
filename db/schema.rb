@@ -11,14 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130809075841) do
+ActiveRecord::Schema.define(version: 20130809123400) do
 
   create_table "games", force: true do |t|
     t.text     "jambgame"
-    t.integer  "user_id"
+    t.string   "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "user_stats", force: true do |t|
+    t.string   "user_id"
+    t.string   "property"
+    t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_stats", ["user_id"], name: "index_user_stats_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "provider"

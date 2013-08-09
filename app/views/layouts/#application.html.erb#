@@ -35,12 +35,6 @@
 
   <div class="container">
     <div class="row">
-      <div id="user_nav">
-        <% if current_user %> 
-        Signed in as <strong><%= current_user.name %></strong>!
-	  <%= image_tag current_user.image %> 
-	<% end %>  
-       </div>
     </div> 
     <div class="row">
       <div class="span1"></div>
@@ -50,8 +44,16 @@
       <div class="span6">
         <%= yield :diceboard %>
       </div>
-      <div class="span2"></div>
-    </div>
+      
+      <div class="span2">
+        <div id="user_nav">
+        <% if current_user %> 
+	  <%= image_tag current_user.image %> 
+          <%= current_user.name %>
+	<% end %>  
+        </div>
+      </div>
+      </div>
   </div>
 </body>
 </html>

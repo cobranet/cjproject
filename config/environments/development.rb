@@ -27,5 +27,6 @@ Cjproject::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+
 #  config.middleware.delete Rack::Lock
 end
