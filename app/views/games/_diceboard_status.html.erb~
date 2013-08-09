@@ -1,0 +1,3 @@
+<div id#="diceboardstatus">
+  <%= @jamb.diceboard.to_str %> 
+</div> 

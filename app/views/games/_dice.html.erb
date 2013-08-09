@@ -1,4 +1,4 @@
-<span class ="any_dice">
+<span class="any_dice">
 <%= link_to select_game_path(:dice => dice ) , :id => "select_dice_link#{dice}", :method => :post , :remote => true do %>
   <%= image_tag @jamb.diceboard.img(dice) , :id => "dice#{dice}", :class => @jamb.diceboard.class_str(dice) %>  
 <%end%>  

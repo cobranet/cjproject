@@ -29,13 +29,9 @@
 <%end%>
 
 <% content_for :diceboard do%>
-    <div id='new'>
+    <div id='diceboard'>
       <%= render partial: "dices" %>
-    </div>
-    <%= "mode #{@jamb.diceboard.mode}" %>
-    <%= "dicechanged #{@jamb.diceboard.changed}" %>
-    <%= "playroud #{@jamb.playround}" %>
-    <%= render partial: "buttons" %>
-  </div>
+      <%= render partial: "buttons" %>
+   </div>
 <%end%>
 

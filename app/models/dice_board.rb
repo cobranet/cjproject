@@ -59,6 +59,7 @@ class DiceBoard
     end 
     str
   end
+
   def change_mode
     if @mode == :no_roll
       @mode = :first_roll
@@ -68,6 +69,7 @@ class DiceBoard
       @mode = :end
     end
   end
+
   def roll_all 
     @changed = [0,1,2,3,4]
     (0...@num).each do |i|

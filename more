@@ -1,0 +1,239 @@
+commit d4e9a05a855c1a4811cafeb7ca44fd0aba2da337
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Fri Aug 9 05:44:55 2013 +0200
+
+    from and to game bug fixed
+
+commit 3939fb5b484b7551e4b57eea62a1165b5fcfeccf
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Fri Aug 9 04:01:11 2013 +0200
+
+    back on track
+
+commit 8d4ed41732b8fbb95788102b83bbd6683e070599
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Fri Aug 9 03:13:52 2013 +0200
+
+    script gone bad
+
+commit 16d132747d0a8ea0459fd11fb81ef2fcff376063
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Fri Aug 9 00:08:45 2013 +0200
+
+    javascript start
+
+commit ea2d59bf491969614de75ece6743d8574684d1a1
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Wed Aug 7 03:14:31 2013 +0200
+
+    end game dont working but game is working
+
+commit c8f7cb95924bf5869f7b9100e51319a8f195e0fd
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Tue Aug 6 23:35:12 2013 +0200
+
+     refactoring serialization
+
+commit effb81cd1fe4a65e4e21e3c0d3c404d2ed4bdcff
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Tue Aug 6 17:39:14 2013 +0200
+
+    more test
+
+commit 4039ed62f7ed2c934ae045a9854e9c1380f08b64
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Mon Aug 5 13:55:49 2013 +0200
+
+    refactoring serialize
+
+commit e8b05797d7d9b4fc494764b3f73f0b511296bf2d
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Tue Jul 30 14:26:29 2013 +0200
+
+    gameround added
+
+commit e8f1897276ef1ac0c976535752753b43edb6d522
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Tue Jul 30 13:48:14 2013 +0200
+
+    end game2
+
+commit dbee0d7f1f89348fcf618490e850ccc2e7f39958
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Tue Jul 30 12:51:06 2013 +0200
+
+    fixed bonus
+
+commit 1020a4f59222e2f2c8dfd3c8fa66bd84dbc76927
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Sun Jul 28 05:16:15 2013 +0200
+
+    fixed bug with enable next
+
+commit 9872eb900e1ef470e91538d7c712e1221ad8f25a
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Sun Jul 28 02:54:59 2013 +0200
+
+    rolling dice
+
+commit 63fa2a1d9effa0f246c4a321f7bff273236e51f5
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Sat Jul 27 23:46:30 2013 +0200
+
+    to roll
+
+commit 22867cfa686f0e5d82b377a80c399b110cb70df3
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Sat Jul 27 21:18:24 2013 +0200
+
+    large gifs
+
+commit d22716b30e5de69b9241168c15b13a2fcf64df35
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Sat Jul 27 20:32:16 2013 +0200
+
+    some dice
+
+commit 0d02ab1d82712eb5655c6181c5631f067ea8cadb
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Sat Jul 27 19:38:54 2013 +0200
+
+    upis 1
+
+commit 5b63ac7dd693efad76bdbde7e86f20a2db2fc404
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Sat Jul 27 19:04:16 2013 +0200
+
+    working link
+
+commit ac34cd26962a8273a5b0636515120746d66d6a88
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Sat Jul 27 18:51:09 2013 +0200
+
+    link to play
+
+commit f39de3a2b7d00bc85dc99baee3ebf4ab337987ce
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Tue Jul 23 14:13:57 2013 +0200
+
+    more styling
+
+commit 64c22c1ac0f38f0dd8a8c0f3dc4c750bcfbe485d
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Tue Jul 23 06:28:52 2013 +0200
+
+    little style
+
+commit 74d25930e9304e4a58b861ae26c96ea3d86818ef
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Mon Jul 22 18:24:08 2013 +0200
+
+    bootstra
+
+commit 0e1d81372b0ad3a2fd0db8a82e45a43853ac7ba8
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Mon Jul 22 17:49:19 2013 +0200
+
+    bootstrap working
+
+commit 2bdea4a1775b7cb00cae3ef1350911c103944c31
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Mon Jul 22 17:30:23 2013 +0200
+
+    bundle install
+
+commit 1e5a5300cd13245479607e2e9f8dd504e096f1b1
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Mon Jul 22 16:39:43 2013 +0200
+
+    calc roll
+
+commit 871f4936ceea71a054d9274ed6db3492d6c16c35
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Mon Jul 22 15:44:16 2013 +0200
+
+    first view
+
+commit 36cdaaa4492cb9cdbb8eda2f6a03fb2d51aa467f
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Mon Jul 22 15:16:50 2013 +0200
+
+    serialize game
+
+commit cc93370e6256da2ca7c4417a1b697d27173f91f7
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Mon Jul 22 11:41:33 2013 +0200
+
+    games added
+
+commit 2a79af53b4c05a0000b77aa496d734caec864d9d
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Mon Jul 22 09:25:28 2013 +0200
+
+    22 examples
+
+commit b44855f6cc11b7b04b310e96cf9d240263bb9e69
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Fri Jul 19 15:07:41 2013 +0200
+
+    enabling
+
+commit 99bc34ea699c6c7847a4f10f5659d9ae7ecc9d67
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Fri Jul 19 14:26:54 2013 +0200
+
+    back
+
+commit c386ba9a2169ed167f1df370097391ade22e6597
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Fri Jul 19 12:56:09 2013 +0200
+
+    calc
+
+commit 0c6d7b97d7fb64ca289599994cb828ec23b0fdc2
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Fri Jul 19 12:30:56 2013 +0200
+
+    first calc
+
+commit b056c7953935fc328ae9af3b748c9672474622f8
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Fri Jul 19 09:00:31 2013 +0200
+
+    raise
+
+commit b724a679ae8928095dc3899abd6f1f5201c18499
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Wed Jul 17 19:01:25 2013 +0200
+
+    cell tests
+
+commit 73eda181155794695b7cbf1ab6c4cd852c4895f2
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Wed Jul 17 18:29:41 2013 +0200
+
+    more tests
+
+commit 055848921d05fe5f886d2f86c07831219206da5e
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Wed Jul 17 18:19:08 2013 +0200
+
+    and rows
+
+commit f2fa2dff2cacf6f12ada0aaf8d4de8538fec68b9
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Wed Jul 17 18:12:00 2013 +0200
+
+    block as param
+
+commit 6e99874908c6998b95f7d8caebd8d8f3616e7bba
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Wed Jul 17 17:13:05 2013 +0200
+
+    rspec working
+
+commit 15fd7214076819397fc612629fedfd823319472e
+Author: Bratislav Petrovic <bratislav.petrovic@gmail.com>
+Date:   Wed Jul 17 16:43:50 2013 +0200
+
+    first commit

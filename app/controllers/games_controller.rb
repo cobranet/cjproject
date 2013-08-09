@@ -16,12 +16,14 @@ class GamesController < ApplicationController
   end
   
   def select
-    @selected = params[:dice].to_i
     game = Game.find(params[:id])
     @jamb = game.to_jamb
-    @jamb.diceboard.toggle(@selected)
-    game.from_jamb(@jamb)
-    game.save!
+    if [:first_roll,:second_roll].include?(@jamb.diceboard.mode) 
+      @selected = params[:dice].to_i
+      @jamb.diceboard.toggle(@selected)
+      game.from_jamb(@jamb)
+      game.save!
+    end
     respond_to do |format|
       format.html { redirect_to game_path(game.id)}
       format.js 
@@ -43,11 +45,14 @@ class GamesController < ApplicationController
 
   def roll_other 
     game = Game.find(params[:id])
-    jamb = game.to_jamb
-    jamb.diceboard.roll_unselected
-    game.from_jamb(jamb)
+    @jamb = game.to_jamb
+    @jamb.diceboard.roll_unselected
+    game.from_jamb(@jamb)
     game.save!
-    redirect_to game_path(game.id)
+    respond_to do |format|
+      format.html { redirect_to game_path(game.id) }
+      format.js { render 'roll.js'}
+    end  
   end  
 
   def play
