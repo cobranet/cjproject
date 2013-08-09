@@ -7,6 +7,18 @@ class UserStat < ActiveRecord::Base
       u.value = score
       u.save!
     end
+    best = UserStat.where(:property => 'BEST_SCORE',:user_id => user).all.first
+    if best == nil  
+      u = UserStat.new
+      u.user_id = user
+      u.property = "BEST_SCORE"
+      u.value = score
+      u.save!
+    else
+      if best.value.to_i < score   
+        UserStat.where(:property => 'BEST_SCORE',:user_id => user).update_all(:value => score)
+      end  
+    end
     if UserStat.where(:property => 'LAST_PLAYED',:user_id => user).update_all(:value => Time.now.strftime("%Y-%d-%m %H:%M"))  == 0 
       u = UserStat.new
       u.user_id = user

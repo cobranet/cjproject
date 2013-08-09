@@ -7,30 +7,18 @@ class GamesController < ApplicationController
   def index
     
   end 
-
-  def on_end_game
-    game = Game.find(params[:id])
-    redirect_to games_path unless game.user_id == current_user.uid  
-    @jamb = game.to_jamb
-    UserStat.add_score(current_user,@jamb.end_game_score)
-  end   
  
   def create
-    if current_user == nil 
-     redirect_to games_path
-    else   
-      @jamb = Jamb.new
-      game = Game.new
-      game.user_id = current_user
-      game.from_jamb(@jamb)
-      game.save!
-      redirect_to game_path(game.id)
-    end
-  end
+    @jamb = Jamb.new
+    game = Game.new
+    game.user_id = current_user
+    game.from_jamb(@jamb)
+    game.save!
+    redirect_to game_path(game.id)
+   end
   
   def select
     game = Game.find(params[:id])
-    redirect_to games_path unless game.user_id == current_user.uid  
     @jamb = game.to_jamb
     if [:first_roll,:second_roll].include?(@jamb.diceboard.mode) 
       @selected = params[:dice].to_i
@@ -78,8 +66,10 @@ class GamesController < ApplicationController
     end 
     jamb.play(params[:row].to_i,params[:col].to_i)
     game.from_jamb(jamb)
-    puts jamb.playround
     game.save!
+    if jamb.diceboard.mode == :end_game
+      UserStat.add_score(current_user,jamb.end_game_score)
+    end
     redirect_to game_path(game.id)
   end  
 end
