@@ -259,6 +259,32 @@ describe Jamb do
     assert_equal copy.diceboard.dices, original.diceboard.dices
     assert_equal copy.diceboard.is_equal?(original.diceboard), true
   end
+  it "must have same to_string from and back" do
+    original = Jamb.new
+    original.diceboard.roll_all
+    original.play(1,1)
+    original.diceboard.select(0)
+    original.diceboard.roll_selected
+    copy = Jamb.new
+    copy.from_game_string(original.to_game_string)
+    assert_equal copy.to_game_string, original.to_game_string
+  end 
+    
+
+  it "must keep playround property from string and back"do
+    original = Jamb.new
+    original.playround = 10
+    copy = Jamb.new
+    copy.from_game_string(original.to_game_string)
+    assert_equal original.playround, copy.playround
+  end
+  it "ater play playround must be one + previos" do
+    j = Jamb.new
+    j.diceboard.roll_all
+    last = j.playround
+    j.play(1,1)
+    assert_equal j.playround, last + 1
+  end
   it "after play diceboard state must be in :no_roll " do
     j = Jamb.new
     j.rows do |row|

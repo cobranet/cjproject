@@ -259,9 +259,9 @@ class Jamb
       end
     end          
     where = (rownum)*(colnum)+1 
-    @empty = arr[where].to_i
     where = where + 1
-    @playround = arr[where].to_i
+    @empty = arr[where-2].to_i
+    @playround = arr[where-1].to_i
     @diceboard = DiceBoard.new(5)
     @diceboard.from_str(arr[where])
     self
