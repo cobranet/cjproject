@@ -1,0 +1,3 @@
+<% @jamb.diceboard.changed.each do |i| %>
+  $("#<%=j "dice#{i}"%>").atrr("src",@jamb.diceboard.img(dice));
+<%end%>   

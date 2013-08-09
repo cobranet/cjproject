@@ -63,11 +63,51 @@ describe DiceBoard do
      a.select(0)
      a.select(3)
      b = DiceBoard.new(5)
+     b.changed = []
+     b.selected = []
+     b.dices = []
      b.from_str(a.to_str)
      (0...5).each do |i|
        assert_equal a.selected[i] , b.selected[i]
        assert_equal b.dices[i], a.dices[i]
        assert_equal a.is_equal?(b) , true
+       assert_equal a.changed[i], b.changed[i]  
      end
    end
+    
+   it "set_changed_to_sell must set changed to selected" do
+     a = DiceBoard.new(5)
+     a.select(0)
+     a.select(3)
+     a.select(4)
+     a.set_changed_to_sel
+     assert_equal a.changed, [0,3,4]
+   end
+   it "set_changed_to_unsel must set changed to unselected" do
+     a = DiceBoard.new(5)
+     a.select(0)
+     a.select(3)
+     a.select(4)
+     a.set_changed_to_unsel
+     assert_equal a.changed, [1,2]
+   end
+
+   it "after roll_selected changed must be eqaul to index of selected  " do
+    a = DiceBoard.new(5)
+    a.roll_all
+    a.select(0)
+    a.select(1)
+    a.roll_selected
+    assert_equal a.changed, [0,1]
+   end
+
+   it "after roll_unselected changed must be eqaul to index of unselected  " do
+    a = DiceBoard.new(5)
+    a.roll_all
+    a.select(0)
+    a.select(1)
+    a.roll_unselected
+    assert_equal a.changed, [2,3,4]
+   end
+
 end

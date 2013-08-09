@@ -1,5 +1,5 @@
 class DiceBoard
-  attr_accessor :dices, :mode,:selected
+  attr_accessor :dices, :mode,:selected,:changed
   def initialize (num)
     @num = num
     clear
@@ -27,6 +27,7 @@ class DiceBoard
   def clear 
     @dices = Array.new
     @selected = Array.new
+    @changed = [0,1,2,3,4]
     (0...@num).each do |i|
       @dices[i] = nil
       @selected[i] = false
@@ -36,7 +37,7 @@ class DiceBoard
     
   def roll(num)
     @dices[num] = 1 + rand(6)
-     @selected[num] = false
+    @selected[num] = false
   end
 
   def img(dice)
@@ -68,13 +69,35 @@ class DiceBoard
     end
   end
   def roll_all 
+    @changed = [0,1,2,3,4]
     (0...@num).each do |i|
       roll(i)
     end
     change_mode     
   end   
+  def set_changed_to_sel
+    arr = Array.new
+    @selected.each_with_index do |x,i|
+      if x == true 
+        arr << i 
+      end   
+    end
+    @changed = arr  
+  end
+
+
+  def set_changed_to_unsel
+    arr = Array.new
+    @selected.each_with_index do |x,i|
+      if x == false
+        arr << i 
+      end  
+    end
+    @changed = arr  
+  end
 
   def roll_selected
+    set_changed_to_sel
     if dices[0] == nil 
       roll_all
       return
@@ -86,6 +109,7 @@ class DiceBoard
     change_mode
   end
   def roll_unselected
+    set_changed_to_unsel
     if dices[0] == nil 
       roll_all
       return
@@ -104,9 +128,14 @@ class DiceBoard
     (0...@num).each do |i|
       @selected[i] ? str = str +  "1" + "&" : str = str + "0" + "&"
     end  
-    str = str + @mode.to_s
+    str = str + @mode.to_s + "&"
+    @changed.each do |i|
+      str = str + i.to_s + "&"
+    end 
+    str
   end
   def from_str(str)
+    @changed = []
     arr = str.split("&")
     (0...@num).each do |i|
       arr[i] == "0" ? @dices[i] = nil : @dices[i] = arr[i].to_i
@@ -115,6 +144,9 @@ class DiceBoard
       arr[i] == "1" ? @selected[i-@num] = true : @selected[i-@num] = false
     end
     @mode = arr[2*@num].to_sym
+    ((2*@num+1)..arr.length-1).each do |i|
+      @changed << arr[i].to_i
+    end
     self
   end
 end 

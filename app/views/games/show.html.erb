@@ -30,16 +30,13 @@
 
 <% content_for :diceboard do%>
     <div id='new'>
-      <% (0..5).each do |dice| %>
-        <%= link_to select_game_path(:dice => dice ) , :id => "select_dice_link#{dice}", :method => :post , :remote => true do %>
-          <%= image_tag @jamb.diceboard.img(dice) , :id => "dice#{dice}", :class => @jamb.diceboard.class_str(dice) %>  
-	<%end%>  
-      <% end %>
+      <%= render partial: "dices" %>
     </div>
     <%= "mode #{@jamb.diceboard.mode}" %>
+    <%= "dicechanged #{@jamb.diceboard.changed}" %>
     <% if @jamb.diceboard.mode != :end %> 
       <div id="roll_button">
-        <%= link_to roll_game_path(:playroud => @jamb.playround),  { :method=>:post, :class =>  "btn btn-primary btn-large"} do %>
+        <%= link_to roll_game_path(:playroud => @jamb.playround),  { :method=>:post, :class =>  "btn btn-primary btn-large",:remote => true } do %>
           <i class="icon-white icon-thumbs-up"></i><%= @jamb.diceboard.mode.to_sym == :no_roll ? "Roll" :  "Roll selected dices" %></i>
         <% end %>
       </div>
