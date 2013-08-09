@@ -1,2 +1,6 @@
-alert("<%= "#{@jamb.diceboard.changed}" %>");
+$(".any_dice").remove();
 $("#new").append("<%= j render partial: 'dices' %>");  
+$("#roll_buttons").children().remove();
+$("#roll_buttons").append("<%= j render partial: 'buttons' %>"); 
+
+

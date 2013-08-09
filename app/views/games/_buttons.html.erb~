@@ -1,0 +1,8 @@
+<span class="roll_buttons">
+  <% if @jamb.diceboard.mode != :end %> 
+    <%= render partial: "roll_button" %> 
+    <% if @jamb.diceboard.mode.to_sym != :no_roll %>
+      <%= render partial: "roll_other" %>
+    <%end%>
+  <% end %>
+ </span>
