@@ -250,7 +250,16 @@ class Jamb
     str = str + @playround.to_s + "#"    
     str = str + @diceboard.to_str
   end
-  
+  def end_game_score
+    rows = [7,8,11,15]
+    final = 0
+    rows.each do |row|
+      [1,2,3].each do |col|
+        final = final + cell(row,col).value
+      end
+    end
+    final
+  end  
   def from_game_string(str)
     arr = str.split("#")
     rows do |row|

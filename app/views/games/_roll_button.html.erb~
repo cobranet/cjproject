@@ -1,6 +1,6 @@
-<span id="roll_button">
+<div id="roll_button">
   <%= link_to roll_game_path(:playroud => @jamb.playround),  { :method=>:post, :class =>  "btn btn-primary btn-large",:remote => true } do %>
     <i class="icon-white icon-thumbs-up"></i><%= @jamb.diceboard.mode.to_sym == :no_roll ? "Roll" :  "Roll selected dices" %></i>
   <% end %>
-</span>
+</div>
     

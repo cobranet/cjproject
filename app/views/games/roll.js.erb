@@ -1,5 +1,6 @@
-$(".any_dice").remove();
-$("#diceboard").append("<%= j render partial: 'dices' %>");  
+$("#dices").children().remove();
+$("#dices").append("<%= j render partial: 'dices' %>");  
 $("#roll_buttons").children().remove();
 $("#roll_buttons").append("<%= j render partial: 'buttons' %>"); 
+$("#diceboardstatus").html("<%= j render partial: 'diceboard_status' %>");
 

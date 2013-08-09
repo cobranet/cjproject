@@ -1,4 +1,3 @@
-<h1>Google</h1>
 <% content_for :table do %>
   <table id="jtable" class="table table-bordered table-game">
     <% @jamb.rows do |row| %>
@@ -29,9 +28,24 @@
 <%end%>
 
 <% content_for :diceboard do%>
+  <div id="diceboardstatus">  
+    <%= render partial: "diceboard_status" %>
+  </div>  
+  <% if @jamb.diceboard.mode != :end_game %>   
     <div id='diceboard'>
-      <%= render partial: "dices" %>
-      <%= render partial: "buttons" %>
-   </div>
+      <span id="dices">   
+        <%= render partial: "dices" %>
+      </span>
+      <span id="roll_buttons">
+        <%= render partial: "buttons" %>
+      </span>
+    </div>
+  <% else %>
+    <div id='endgame'%>
+      <% if @jamb.diceboard.mode == :end_game %>
+        <%= render partial: "end_game" %>
+      <%end%>
+    </div> 
+  <% end %>
 <%end%>
 

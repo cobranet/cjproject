@@ -1,2 +1,3 @@
 $("<%= j "#dice#{@selected}" %>").removeClass();
 $("<%= j "#dice#{@selected}" %>").addClass("<%= j @jamb.diceboard.class_str(@selected)%>");
+$("#diceboardstatus").html("<%= j render partial: 'diceboard_status' %>");
