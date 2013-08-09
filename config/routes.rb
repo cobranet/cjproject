@@ -1,4 +1,9 @@
 Cjproject::Application.routes.draw do
+  # omiauth facebook as in RailsCast 360
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+   get 'signout', to: 'sessions#destroy', as: 'signout'
+ 
   resources :games do
     member do
       post 'play'

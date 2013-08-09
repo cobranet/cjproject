@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130722120943) do
+ActiveRecord::Schema.define(version: 20130809075841) do
 
   create_table "games", force: true do |t|
     t.text     "jambgame"
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(version: 20130722120943) do
   create_table "jabmgames", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "outh_token"
+    t.datetime "outh_expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
+    t.string   "location"
   end
 
 end
