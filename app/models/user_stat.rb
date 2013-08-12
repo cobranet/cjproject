@@ -1,5 +1,25 @@
 class UserStat < ActiveRecord::Base
-  def self.add_score(user,score)
+
+   def self.get_properties(user)
+     return UserStat.where(:user_id => user).all
+   end
+   def self.get_user_property(user,property)
+    prop = UserStat.get_properties(user)  
+    prop ? prop.select { |x|  x.property == property }.first.value} : nil
+  end
+    
+  def self.user_average(user)
+    a = get_property('AVERAGE')    
+    a ? a.to_f : 0
+  end
+
+  def self.user_last_score(user)
+    a = get_property(user,'LAST_SCORE') 
+    a ? a.to_i : 0
+  end 
+  
+
+   def self.add_score(user,score)
     if UserStat.where(:property => 'LAST_SCORE',:user_id => user).update_all(:value => score)  == 0 
       u = UserStat.new
       u.user_id = user
