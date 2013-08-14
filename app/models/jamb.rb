@@ -151,7 +151,6 @@ class Jamb
   end  
   def test_game(game_id,user_id)
     jamb = Jamb.new
-    Game.destroy(game_id)
     game = Game.new
     game.id = game_id
     game.user_id = user_id
@@ -179,8 +178,10 @@ class Jamb
       jamb.diceboard.roll_all
       jamb.play(row,2)
     end
-
-
+    [6,5,4,3,2,1].each do |row|
+      jamb.diceboard.roll_all
+      jamb.play(row,2)
+    end
     game.from_jamb(jamb)
     game.save!
   end

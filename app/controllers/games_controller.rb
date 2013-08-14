@@ -11,7 +11,7 @@ class GamesController < ApplicationController
   def create
     @jamb = Jamb.new
     game = Game.new
-    game.user_id = current_user
+    game.user_id = current_user.id
     game.from_jamb(@jamb)
     game.save!
     redirect_to game_path(game.id)
@@ -68,7 +68,7 @@ class GamesController < ApplicationController
     game.from_jamb(jamb)
     game.save!
     if jamb.diceboard.mode == :end_game
-      UserStat.add_score(current_user,jamb.end_game_score)
+      UserStat.add_score(current_user.id,jamb.end_game_score)
     end
     redirect_to game_path(game.id)
   end  
