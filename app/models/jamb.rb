@@ -149,6 +149,41 @@ class Jamb
       @diceboard.mode = :end_game
     end
   end  
+  def test_game(game_id,user_id)
+    jamb = Jamb.new
+    Game.destroy(game_id)
+    game = Game.new
+    game.id = game_id
+    game.user_id = user_id
+    game.from_jamb(jamb)
+    game.save!
+    (1..6).each do |row|
+      [1,3].each do |col|
+        jamb.diceboard.roll_all
+        jamb.play(row,col)
+      end
+    end
+    [15,14,13,12].each do|row|
+      jamb.diceboard.roll_all
+      [2,3].each do |col|
+        jamb.play(row,col)
+      end  
+    end
+    [9,10].each do |row| 
+      jamb.diceboard.roll_all
+      jamb.play(row,1)
+      jamb.diceboard.roll_all
+      jamb.play(row,3)
+    end
+    [10,9].each do |row| 
+      jamb.diceboard.roll_all
+      jamb.play(row,2)
+    end
+
+
+    game.from_jamb(jamb)
+    game.save!
+  end
 
   def cellxy(row,col)
     puts "Row #{row}- Col #{col}"

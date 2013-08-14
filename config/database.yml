@@ -11,7 +11,7 @@ development:
   database: cjprojectdb_development
   pool: 5
   username: cjproject
-  password: 22003bpm
+  password: braca
 
 
 # development:
@@ -31,7 +31,7 @@ test:
   database: cjprojectdb_test
   pool: 5
   username: cjproject
-  password: 22003bpm
+  password: braca
 
 
 

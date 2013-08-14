@@ -50,7 +50,9 @@
         <% if current_user %> 
 	  <%= image_tag current_user.image %> 
           <%= current_user.name %>
-	  <%= "Last score: " %>
+	  <%= "Last score:    #{UserStat.user_last_score(current_user.id.to_s)}" %></br>
+	  <%= "Average score: #{UserStat.user_average(current_user.id.to_s)}" %></br>
+	  <%= "Games Played:  #{UserStat.user_games_played(current_user.id.to_s)}" %></br>
 	<% end %>  
         </div>
       </div>
