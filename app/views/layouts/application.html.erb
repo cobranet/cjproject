@@ -33,9 +33,9 @@
      </div>
     </div>
   </div>
-
   <div class="container">
     <div class="row">
+      <%= yield :home %>
     </div> 
     <div class="row">
       <div class="span1"></div>
@@ -48,13 +48,7 @@
       
       <div class="span2">
         <div id="user_nav">
-        <% if current_user %> 
-	  <%= image_tag current_user.image %> 
-          <%= current_user.name %>
-	  <%= "Last score:    #{UserStat.user_last_score(current_user.id.to_s)}" %></br>
-	  <%= "Average score: #{UserStat.user_average(current_user.id.to_s).to_i}" %></br>
-	  <%= "Games Played:  #{UserStat.user_games_played(current_user.id.to_s)}" %></br>
-	<% end %>  
+	  <%= yield :userstat %>  
         </div>
       </div>
   

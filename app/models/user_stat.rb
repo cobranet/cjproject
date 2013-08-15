@@ -3,6 +3,7 @@ class UserStat < ActiveRecord::Base
    def self.get_properties(user)
      return UserStat.where(:user_id => user).to_a
    end
+
    def self.get_user_property(user,property)
     prop = UserStat.get_properties(user)
     p =  prop.select { |x|  x.property == property }
@@ -24,6 +25,11 @@ class UserStat < ActiveRecord::Base
     a ? a.to_i : 0
   end 
   
+  def self.user_games_best(user)
+    a = get_user_property(user,'BEST_SCORE') 
+    a ? a.to_i : 0
+  end 
+    
 
    def self.add_score(user,score)
     userstr = user.to_s 

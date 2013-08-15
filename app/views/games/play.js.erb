@@ -6,3 +6,14 @@ var i=0;
     i++;
 <%end%>
 
+
+
+<% if @jamb.diceboard.mode != :end_game %>   
+  $("#dices").replaceWith("<%= j render partial: 'dices' %>");
+  $("#roll_buttons").children().remove();
+  $("#roll_buttons").append("<%= j render partial: 'buttons' %>"); 
+<%else%>
+  $("#diceboard").replaceWith("<%=j render partial: 'end_game' %>");
+<%end%>  
+$("#diceboardstatus").html("<%= j render partial: 'diceboard_status' %>");
+

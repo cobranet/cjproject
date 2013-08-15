@@ -25,25 +25,30 @@
   </table>
 <%end%>
 
+<% content_for :userstat do %>
+   <% if current_user %> 
+     <%= image_tag current_user.image %> 
+     <%= current_user.name %>
+     <%= "Last score:    #{UserStat.user_last_score(current_user.id.to_s)}" %></br>
+     <%= "Average score: #{UserStat.user_average(current_user.id.to_s).to_i}" %></br>
+     <%= "Games Played:  #{UserStat.user_games_played(current_user.id.to_s)}" %></br>
+     <%= "Best Game:  #{UserStat.user_games_best(current_user.id.to_s)}" %></br>
+   <% end %>  
+<%end%>
+
 <% content_for :diceboard do%>
-  <div id="diceboardstatus">  
+  <div id="diceboardstatus"> 
     <%= render partial: "diceboard_status" %>
   </div>  
   <% if @jamb.diceboard.mode != :end_game %>   
     <div id='diceboard'>
-      <span id="dices">   
-        <%= render partial: "dices" %>
-      </span>
+      <%= render partial: "dices" %>
       <span id="roll_buttons">
         <%= render partial: "buttons" %>
       </span>
     </div>
   <% else %>
-    <div id='endgame'%>
-      <% if @jamb.diceboard.mode == :end_game %>
-        <%= render partial: "end_game" %>
-      <%end%>
-    </div> 
+      <%= render partial: "end_game" %>
   <% end %>
 <%end%>
 
