@@ -2,6 +2,7 @@ class GamesController < ApplicationController
   def show
     game = Game.find(params[:id])
     @jamb = game.to_jamb
+    gon.user_name = current_user.name
   end
   
   def index
@@ -33,12 +34,13 @@ class GamesController < ApplicationController
     
   end 
 
-  def roll 
+  def roll
     game = Game.find(params[:id])
     @jamb = game.to_jamb
     @jamb.diceboard.roll_selected
     game.from_jamb(@jamb)
     game.save!
+    @changed = @jamb.diceboard.changed
     respond_to do |format|
       format.html {redirect_to game_path(game.id)}
       format.js
@@ -51,9 +53,10 @@ class GamesController < ApplicationController
     @jamb.diceboard.roll_unselected
     game.from_jamb(@jamb)
     game.save!
+    @changed = @jamb.diceboard.changed
     respond_to do |format|
       format.html { redirect_to game_path(game.id) }
-      format.js { render 'roll.js'}
+      format.js { render 'roll.js' }
     end  
   end  
 

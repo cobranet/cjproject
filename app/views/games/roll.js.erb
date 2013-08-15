@@ -1,5 +1,17 @@
-$("#dices").children().remove();
-$("#dices").append("<%= j render partial: 'dices' %>");  
+var changed = <%=raw @changed.to_json  %>;
+var index = 0;
+
+
+<% @changed.each do |dice| %>  
+  var link = $("#select_dice_link"+changed[index]).children();
+  link.remove();
+  $("#select_dice_link"+changed[index]).append("<%= j render partial: 'diceimg', locals: { dice: dice }  %>");
+  index++  
+<% end %>
+
+
+
+
 $("#roll_buttons").children().remove();
 $("#roll_buttons").append("<%= j render partial: 'buttons' %>"); 
 $("#diceboardstatus").html("<%= j render partial: 'diceboard_status' %>");

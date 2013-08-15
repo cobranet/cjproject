@@ -54,3 +54,5 @@ gem "twitter-bootstrap-rails"
 gem "unicorn"
 gem "omniauth-facebook"
 gem 'rails_12factor', group: :production
+# gon transfer from rails to javsript varibles
+gem 'gon'
