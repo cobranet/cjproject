@@ -37,12 +37,9 @@
 <%end%>
 
 <% content_for :diceboard do%>
-  <div id="diceboardstatus"> 
-    <%= render partial: "diceboard_status" %>
-  </div>  
   <% if @jamb.diceboard.mode != :end_game %>   
     <div id='diceboard'>
-      <%= render partial: "dices" %>
+      <%= render partial: "dices" %><br/>
       <span id="roll_buttons">
         <%= render partial: "buttons" %>
       </span>

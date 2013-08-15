@@ -2,15 +2,9 @@
  <div id="home" %> 
    <%= image_tag "heading.jpeg" %><br/>
    <% if current_user %>
-     <%= "Welcome #{current_user.name}" %>
-     <% g = User.current_game(current_user.id) %>
-     <% if g  != nil %>
-       <%= link_to "Continue game?", game_path(g) %>
-     <% else %>
-       <%= link_to "Play some jamb?", games_path,:method => :post  %>
-     <%end%>
+     <%= render partial: 'userindex' %>
    <%else%>    
-     <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+     <h2><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></h2>
    <%end%>  
  </div>
 <% end %>

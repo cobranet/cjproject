@@ -1,0 +1,12 @@
+<div id="currentuser">
+  <h3><%= "Welcome #{current_user.name}" %></h3>
+  <% g = User.current_game(current_user.id) %>
+  <h2>
+  <% if g  != nil %>
+    <%= link_to "Continue game?", game_path(g) %>
+  <% else %>
+    <%= link_to "Play some jamb?", games_path,:method => :post  %>
+  <%end%>
+  </h2> 
+  <small><%= link_to "Sign out", signout_path, id: "sign_out" %> </small>
+</div>
