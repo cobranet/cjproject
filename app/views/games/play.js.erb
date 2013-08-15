@@ -1,0 +1,8 @@
+var changed = <%=raw @jamb.changed.to_json %>;
+var i=0;
+<% @jamb.changed.each do |cell| %>
+    var idx = "#" + changed[i][0] + "a" + changed[i][1];
+    $(idx).replaceWith("<%= j render partial: 'cell', locals: { row: cell[0], col: cell[1] } %>");
+    i++;
+<%end%>
+

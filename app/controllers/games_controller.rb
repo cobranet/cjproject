@@ -63,16 +63,16 @@ class GamesController < ApplicationController
   def play
     game = Game.find(params[:id])
     game_playround = params[:playround].to_i
-    jamb = game.to_jamb
-    if jamb.playround != game_playround
-      raise "#{jamb.playround} - #{game_playround}"
-    end 
-    jamb.play(params[:row].to_i,params[:col].to_i)
-    game.from_jamb(jamb)
+    @jamb = game.to_jamb
+    @jamb.play(params[:row].to_i,params[:col].to_i)
+    game.from_jamb(@jamb)
     game.save!
-    if jamb.diceboard.mode == :end_game
-      UserStat.add_score(current_user.id,jamb.end_game_score)
+    if @jamb.diceboard.mode == :end_game
+      UserStat.add_score(current_user.id,@jamb.end_game_score)
     end
-    redirect_to game_path(game.id)
+    respond_to do |format|
+      format.html { redirect_to game_path(game.id) }
+      format.js
+    end
   end  
 end

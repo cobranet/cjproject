@@ -1,3 +1,4 @@
+require 'set'
 describe Jamb do
   it "must be created" do
     j = Jamb.new
@@ -306,4 +307,30 @@ describe Jamb do
     j = Jamb.new
     assert_equal j.diceboard.mode, :no_roll
   end   
+  it "must set changed for lists of changed cells" do
+    j = Jamb.new
+    j.diceboard.roll_all
+    j.play(1,1)
+    a = Array.new
+    a << [1,1]
+    a << [2,1] 
+    assert_equal a , j.changed
+  end
+  it "must set changed for lists of changed cells including calculated" do
+    j = Jamb.new
+    [1,2,3,4,5,6].each do |row|
+      j.diceboard.roll_all
+      j.play(row,1)
+    end 
+    a = Array.new
+    a << [6,1]
+    a << [7,1]
+    a << [8,1] 
+    a << [9,1]
+    set_a = a.to_set
+    set_changed = j.changed.to_set
+    assert_equal set_a.subset?(set_changed), true
+    assert_equal set_changed.subset?(set_a), true
+
+  end 
 end

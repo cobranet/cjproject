@@ -24,7 +24,7 @@ class Jamb
                 [11,[1,9,10]],
                 [16,[12,13,14,15]]
               ]
-  attr_accessor :diceboard,:playround,:cells
+  attr_accessor :diceboard,:playround,:cells, :changed
   def depends_on(row)
     DEPENDS.each do |rule|
       if rule[0] == row
@@ -110,6 +110,7 @@ class Jamb
       dif = dif + smer
       if ROW_TYPES[dif] == :NORMAL
         cell(dif,col).enable
+        @changed << [dif,col] 
         return
       end
     end   
@@ -129,6 +130,7 @@ class Jamb
     observed_by(row).each do |observer_row|
       if all_full(depends_on(observer_row),col)
         calc(observer_row,col)
+        @changed << [observer_row,col]
       end
     end
   end
@@ -141,6 +143,7 @@ class Jamb
   end
 
   def play(row,col)    
+    @changed = [[row,col]]
     set_cell_value(row,col,calc_roll(row,@diceboard.dices))
     @diceboard.clear
     @empty = @empty - 1
@@ -248,6 +251,7 @@ class Jamb
     @diceboard = DiceBoard.new(5)
     @empty = (6+2+4)*3
     @playround = 0
+    @changed = Array.new 
     (0...rownum).each do |row|
       @cells[row] = Array.new
       columns do |col|
