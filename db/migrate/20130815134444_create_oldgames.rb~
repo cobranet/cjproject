@@ -1,0 +1,8 @@
+class CreateOldgames < ActiveRecord::Migration
+  def change
+    create_table :oldgames do |t|
+
+      t.timestamps
+    end
+  end
+end

@@ -69,6 +69,8 @@ class GamesController < ApplicationController
     game.save!
     if @jamb.diceboard.mode == :end_game
       UserStat.add_score(current_user.id,@jamb.end_game_score)
+      Oldgame.save_new(game,@jamb.end_game_score)
+      Game.destroy(game.id)
     end
     respond_to do |format|
       format.html { redirect_to game_path(game.id) }

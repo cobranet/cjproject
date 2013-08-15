@@ -1,0 +1,2 @@
+class Oldgame < ActiveRecord::Base
+end
