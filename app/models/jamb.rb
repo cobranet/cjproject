@@ -291,7 +291,7 @@ class Jamb
     str = str + @diceboard.to_str
   end
   def end_game_score
-    rows = [7,8,11,15]
+    rows = [8,11,16]
     final = 0
     rows.each do |row|
       [1,2,3].each do |col|

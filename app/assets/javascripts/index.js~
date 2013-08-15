@@ -1,17 +1,6 @@
-<% content_for :home do %>
- <div id="home" %> 
-   <%= image_tag "heading.jpeg" %><br/>
-   <% if current_user %>
-     <%= render partial: 'userindex' %>
-   <%else%>    
-     <h2><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></h2>
-   <%end%>  
- </div>
-<div id="indexuserstat"> </div>
-<script>
-new Morris.Bar({
+new Morris.Line({
   // ID of the element in which to draw the chart.
-  element: "indexuserstat",
+  element: 'myfirstchart',
   // Chart data records -- each entry in this array corresponds to a point on
   // the chart.
   data: [
@@ -29,6 +18,3 @@ new Morris.Bar({
   // chart.
   labels: ['Value']
 });
-</script>
-<% end %>  
-
