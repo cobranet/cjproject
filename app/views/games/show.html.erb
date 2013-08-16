@@ -1,28 +1,5 @@
 <% content_for :table do %>
-  <table id="jtable" class="table table-bordered table-game">
-    <% @jamb.rows do |row| %>
-      <%  if row == 0  %>
-	<thead><tr>
-      <% else %> 
-	<tr>
-      <% end %>
-      <% @jamb.columns do |col| %>
-	<% if col == 0 %>
-	  <%= content_tag :th , @jamb.cell(row,col).value , :class => @jamb.cell(row,col).class_str, :id => @jamb.cell_id(row,col) %>	
-      <% else %> 
-	  <%= render partial: 'cell', locals: { row: row, col: col }  %>
-       <% end %>
-      <% end %>
-
-      <%  if row == 0  %>
-	</tr></thead><tbody>
-      <% else %> 
-	</tr>
-      <% end %>
-
-    <% end %>   
-     </tbody>
-  </table>
+ <%= render partial: "table"%>
 <%end%>
 
 <% content_for :userstat do %>
