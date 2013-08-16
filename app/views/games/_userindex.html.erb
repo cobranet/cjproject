@@ -11,12 +11,14 @@
     </h2> 
     <small><%= link_to "Sign out", signout_path, id: "sign_out" %> </small>
   </div>
+  <br/>
+  <br/>
   <div id="indexuserstat">
     <h3> Best players </h3>
    <ul> 
    <% User.all.each do |user|  %> 
    <li>
-     <%= image_tag user.image %> &nbsp <%= user.name %>   &nbsp <strong><%="#{UserStat.user_games_best(user.id.to_s)}" %></strong> 
+     <%= image_tag( user.image,:size => "30x30") %> &nbsp <%= user.name %>   &nbsp <strong><%="#{UserStat.user_games_best(user.id.to_s)}" %></strong> 
    </li>
    <%end%>
    </ul>  
