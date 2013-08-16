@@ -98,6 +98,7 @@ td.benabled { background-color: #FAF0E6;
 #userstat {
     padding-top: 50px;
 }
+
 #stat {
   width: 230px;   
   padding-top: 30px;

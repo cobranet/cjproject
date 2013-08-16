@@ -1,0 +1,8 @@
+<% if current_user %> 
+     <%= image_tag current_user.image %> 
+     <%= current_user.name %>
+     <%= "Last score:    #{UserStat.user_last_score(current_user.id.to_s)}" %></br>
+     <%= "Average score: #{UserStat.user_average(current_user.id.to_s).to_i}" %></br>
+     <%= "Games Played:  #{UserStat.user_games_played(current_user.id.to_s)}" %></br>
+     <%= "Best Game:  #{UserStat.user_games_best(current_user.id.to_s)}" %></br>
+<% end %>
