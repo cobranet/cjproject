@@ -3,4 +3,9 @@
   <% if @jamb.diceboard.mode.to_sym != :no_roll %>
     <%= render partial: "roll_other" %>
   <%end%>
+<%else%>
+  <%= link_to "#",  { :method=>:post, :class =>  "btn btn-primary btn-large",:remote => true } do %>
+    <i class="icon-white icon-pencil"></i> &nbsp Make your play</i>
+  <% end %>
+   
 <% end %>
