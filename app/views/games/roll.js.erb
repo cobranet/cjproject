@@ -5,9 +5,9 @@ var index = 0;
   $('#<%="testdice#{dice}"%>').show();
   $('#<%="testdice#{dice}"%>').css("top", $('#dice<%="#{dice}"%>').position().top);
   $('#<%="testdice#{dice}"%>').css("left",$('#dice<%="#{dice}"%>').position().left);
-  $('#<%="testdice#{dice}"%>').sprite({ fps: 20, 
-                          no_of_frames: 4, 
-                          on_last_frame:  function() { $('#<%="testdice#{dice}"%>').hide(); }
+  $('#<%="testdice#{dice}"%>').sprite({ fps: 15, 
+                                        no_of_frames: 10, 
+                                        on_last_frame:  function() { $('#<%="testdice#{dice}"%>').hide(); }
                        });  
 
   var link = $("#select_dice_link"+changed[index]).children();
