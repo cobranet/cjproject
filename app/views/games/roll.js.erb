@@ -2,6 +2,8 @@ var changed = <%=raw @changed.to_json  %>;
 var index = 0;
 
 <% @changed.each do |dice| %>
+  var sound= document.getElementById("dicerollsound");
+  sound.play();
   $('#<%="testdice#{dice}"%>').show();
   $('#<%="testdice#{dice}"%>').css("top", $('#dice<%="#{dice}"%>').position().top);
   $('#<%="testdice#{dice}"%>').css("left",$('#dice<%="#{dice}"%>').position().left);

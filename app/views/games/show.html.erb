@@ -34,28 +34,18 @@
 <script>
          
         $(document).ready(function() {
-	alert("in ready");
         var audioElement = document.createElement('audio');
         audioElement.setAttribute('src', '/diceroll.wav');
+	audioElement.setAttribute('id', 'dicerollsound');
         audioElement.setAttribute('autoplay', 'autoplay');
-        //audioElement.load()
-        $.get();
-        audioElement.addEventListener("load", function() {
-	alert("try to play");
-        audioElement.play();
+ //     audioElement.load()
+ //       $.get();
+//        audioElement.addEventListener("load", function() {
+//        audioElement.play();
         }, true);
 
-
-
-
         $('.play').click(function() {
-	alert("play");
         audioElement.play();
-        });
-
-
-        $('.pause').click(function() {
-        audioElement.pause();
         });
 
 
