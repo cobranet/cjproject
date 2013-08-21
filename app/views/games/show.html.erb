@@ -34,12 +34,14 @@
 <script>
          
         $(document).ready(function() {
+	alert("in ready");
         var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', 'diceroll.wav');
+        audioElement.setAttribute('src', '/diceroll.wav');
         audioElement.setAttribute('autoplay', 'autoplay');
         //audioElement.load()
         $.get();
         audioElement.addEventListener("load", function() {
+	alert("try to play");
         audioElement.play();
         }, true);
 
