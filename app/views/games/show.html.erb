@@ -29,3 +29,35 @@
   <% end %>
 <%end%>
 
+<% content_for :jscripts do %>
+<div class="play"> Play </div>
+<script>
+         
+        $(document).ready(function() {
+        var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', 'diceroll.wav');
+        audioElement.setAttribute('autoplay', 'autoplay');
+        //audioElement.load()
+        $.get();
+        audioElement.addEventListener("load", function() {
+        audioElement.play();
+        }, true);
+
+
+
+
+        $('.play').click(function() {
+	alert("play");
+        audioElement.play();
+        });
+
+
+        $('.pause').click(function() {
+        audioElement.pause();
+        });
+
+
+
+});
+</script>
+<%end%>
