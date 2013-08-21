@@ -1,3 +1,0 @@
-alert("<%= "#{@jamb.diceboard.changed}" %>");
-$("#new").
-$("#new").append("<%= j render partial: 'dices' %>");  

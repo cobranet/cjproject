@@ -1,5 +1,0 @@
-<div id='endgame'%>
-  <h3><%= "Your score is #{@jamb.end_game_score}" %></br>
-  <%= link_to "Play one more?", games_path,:method => :post  %></h3>
-  <%= link_to "Home", games_path  %> 
-</div>
