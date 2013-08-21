@@ -1,18 +1,26 @@
 var changed = <%=raw @changed.to_json  %>;
 var index = 0;
 
+<% @changed.each do |dice| %>
+  $('#<%="testdice#{dice}"%>').show();
+  $('#<%="testdice#{dice}"%>').css("top", $('#dice<%="#{dice}"%>').position().top);
+  $('#<%="testdice#{dice}"%>').css("left",$('#dice<%="#{dice}"%>').position().left);
+  $('#<%="testdice#{dice}"%>').sprite({ fps: 20, 
+                          no_of_frames: 4, 
+                          on_last_frame:  function() { $('#<%="testdice#{dice}"%>').hide(); }
+                       });  
 
-<% @changed.each do |dice| %>  
   var link = $("#select_dice_link"+changed[index]).children();
   link.remove();
   $("#select_dice_link"+changed[index]).append("<%= j render partial: 'diceimg', locals: { dice: dice }  %>");
-  index++  
+  index++;
 <% end %>
-
-
 
 
 $("#roll_buttons").children().remove();
 $("#roll_buttons").append("<%= j render partial: 'buttons' %>"); 
 $("#diceboardstatus").html("<%= j render partial: 'diceboard_status' %>");
+
+
+
 

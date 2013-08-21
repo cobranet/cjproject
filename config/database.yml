@@ -6,7 +6,7 @@
 
 development:
   adapter: postgresql
-  encoding: unicode
+  encoding: SQL_ASCII
   host: localhost
   database: cjprojectdb_development
   pool: 5
@@ -27,7 +27,7 @@ development:
 
 test:
   adapter: postgresql
-  encoding: unicode
+  encoding: SQL_ASCII
   database: cjprojectdb_test
   pool: 5
   username: cjproject

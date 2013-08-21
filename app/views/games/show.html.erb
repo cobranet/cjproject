@@ -7,24 +7,16 @@
 <%end%>
 
 <% content_for :userinfo do %>
-  <% if current_user %>	
-    <div id="userinfo"> 
-      <%= image_tag current_user.image %> 
-      <%= current_user.name %>
-    </div>
-    <ul class="nav nav-pills nav-stacked">
-      <li class="active">
-        <%= link_to "Home", games_path %> 
-     </li>
-      <li class="active">
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
-     </li>
-   </ul>
- 
-  <%end%>
+ <div id="testdice0"></div>
+ <div id="testdice1"></div>
+ <div id="testdice2"></div>
+ <div id="testdice3"></div>
+ <div id="testdice4"></div>
+  <%= render partial: "userinfo" %>
 <%end%>
 
 <% content_for :diceboard do%>
+ 
   <% if @jamb.diceboard.mode != :end_game %>   
     <div id='diceboard'>
       <%= render partial: "dices" %><br/><br/>

@@ -339,6 +339,7 @@ function D6AnimBuilder(id, results, locations, baseUrl, groupsize, interval, use
 D6AnimBuilder.animBuilders = new Array();
 
 D6AnimBuilder.get = function(id) {
+        alert( D6AnimBuilder.animBuilders.length);
 	return D6AnimBuilder.animBuilders[id];
 }
 
@@ -475,10 +476,10 @@ D6.dice = function(numDice, callback, callbackData, useImages, buttonLabel) {
 
 D6.roll = function() {
 	alert('tusam');
-	D6AnimBuilder.get("dice").reset();
-	D6AnimBuilder.get("dice").start();
-	alert($('#dice2'));
-	$('#dice2').click(alert("tu sam"));
+	D6AnimBuilder.get("dice1").reset();
+        alert('tusam4');
+	D6AnimBuilder.get("dice1").start();
+	alert('tusam2');
 }
 
 D6.baseUrl = "";
