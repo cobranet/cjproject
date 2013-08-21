@@ -1,5 +1,8 @@
 var changed = <%=raw @changed.to_json  %>;
 var index = 0;
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('src', '/diceroll.wav');
+audioElement.setAttribute('id', 'dicerollsound');
 audioElement.play();
 <% @changed.each do |dice| %>
 
