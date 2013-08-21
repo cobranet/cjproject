@@ -37,16 +37,15 @@
         var audioElement = document.createElement('audio');
         audioElement.setAttribute('src', '/diceroll.wav');
 	audioElement.setAttribute('id', 'dicerollsound');
-        audioElement.setAttribute('autoplay', 'autoplay');
+//        audioElement.setAttribute('autoplay', 'autoplay');
         audioElement.load();
- //       $.get();
+//       $.get();
 //        audioElement.addEventListener("load", function() {
 //        audioElement.play();
 //        }, true);
 
         $('.play').click(function() {
-	audioElement.load();
-        audioElement.play();
+           audioElement.play();
         });
 
 

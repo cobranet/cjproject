@@ -1,6 +1,6 @@
 var changed = <%=raw @changed.to_json  %>;
 var index = 0;
-
+audioElement.play();
 <% @changed.each do |dice| %>
 
   $('#<%="testdice#{dice}"%>').show();
