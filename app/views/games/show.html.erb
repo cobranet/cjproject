@@ -38,14 +38,14 @@
         audioElement.setAttribute('src', '/diceroll.wav');
 	audioElement.setAttribute('id', 'dicerollsound');
         audioElement.setAttribute('autoplay', 'autoplay');
-        audioElement.load()
+        audioElement.load();
  //       $.get();
 //        audioElement.addEventListener("load", function() {
 //        audioElement.play();
 //        }, true);
 
         $('.play').click(function() {
-	
+	audioElement.load();
         audioElement.play();
         });
 
