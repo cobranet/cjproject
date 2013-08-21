@@ -5,7 +5,7 @@ var index = 0;
   $('#<%="testdice#{dice}"%>').show();
   $('#<%="testdice#{dice}"%>').css("top", $('#dice<%="#{dice}"%>').position().top);
   $('#<%="testdice#{dice}"%>').css("left",$('#dice<%="#{dice}"%>').position().left);
-  $('#<%="testdice#{dice}"%>').sprite({ fps: 15, 
+  $('#<%="testdice#{dice}"%>').sprite({ fps: 10, 
                                         no_of_frames: 10, 
                                         on_last_frame:  function() { $('#<%="testdice#{dice}"%>').hide(); }
                        });  
