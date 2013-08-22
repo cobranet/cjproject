@@ -14,12 +14,16 @@
    <h3> Your stat </h3>
   <% if current_user %>      
      <table id="imgstat"> 
-      <tr class="bsrow"   >  
-        <td class="bscores" ><ul id = "bestuserstat">
-               <li><%= "Average: #{UserStat.user_average(current_user.id.to_s)}" %> </li> 
-               <li><%= "Best : #{UserStat.user_games_best(current_user.id.to_s)}" %> </li> 
-               <li><%= "Games played: #{UserStat.user_games_played(current_user.id.to_s)}" %></li> 
-        </ul></td></tr></table>
+       <tr class="bsrow"   >
+         <td class="bscores" >
+         <ul id = "bestuserstat">
+           <li><%= "Average: #{UserStat.user_average(current_user.id.to_s)}" %> </li> 
+           <li><%= "Best : #{UserStat.user_games_best(current_user.id.to_s)}" %> </li> 
+           <li><%= "Games played: #{UserStat.user_games_played(current_user.id.to_s)}" %></li> 
+        </ul>
+        <td>
+       </tr>
+     </table>
   <%else%>
     Please login to see your stat  
   <%end%>
@@ -49,15 +53,16 @@
 <% content_for :gamestats do %>
   <div id="gamestats">
     <h3> Game stat </h3>
-   <ul id = "gamestatlist" > 
-     <li>
-       <%= "Games played : #{GamesStat.games_played}" %>
-     </li>
-     <li>
-       <%= "Average score : #{GamesStat.all_user_average}" %>
-     </li>
-
-   </ul>  
+    <table id="imgstat"> 
+       <tr class="bsrow"   >
+         <td class="bscores" >
+         <ul id = "bestuserstat">
+           <li> <%= "Games played : #{GamesStat.games_played}" %> </li> 
+           <li>       <%= "Average score : #{GamesStat.all_user_average}" %> </li> 
+        </ul>
+        <td>
+       </tr>
+     </table>
   </div>
 <%end%>
 
