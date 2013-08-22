@@ -16,7 +16,7 @@
   <div id="indexuserstat">
     <h3> Best players </h3>
    <ul> 
-   <% User.all.each do |user|  %> 
+   <% GamesStat.best_scores.each do |user|  %> 
    <li>
      <%= image_tag( user.image,:size => "30x30") %> &nbsp <%= user.name %>   &nbsp 
      <strong><%="Best: #{UserStat.user_games_best(user.id.to_s)}" %></strong> 
