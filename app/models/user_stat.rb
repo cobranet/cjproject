@@ -13,6 +13,7 @@ class UserStat < ActiveRecord::Base
   def self.user_average(user)
     a = get_user_property(user,'AVERAGE')    
     a ? a.to_f : 0
+    "%.0f" % a
   end
 
   def self.user_last_score(user)

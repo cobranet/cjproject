@@ -13,8 +13,8 @@ class GamesStat
   end
   def self.best_scores
     a = Array.new  
-    best = UserStat.where(property: "BEST_SCORE").order("value desc").first(3)
-    best.each do |b| # unefficent until learn join
+    best = UserStat.where(property: "AVERAGE").order("CAST(value as float) desc").first(3)
+    best.each do |b| 
       a << User.find(b.user_id)
     end
     a
