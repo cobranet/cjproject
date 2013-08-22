@@ -11,6 +11,10 @@ class GamesStat
     a = ActiveRecord::Base.connection.select_all("select SUM(CAST(value as float) ) from user_stats where property = 'GAMES_PLAYED'")
     a[0]['sum'].to_i
   end
+  def self.best
+    a = ActiveRecord::Base.connection.select_all("select MAX(CAST(value as integer) ) from user_stats where property = 'BEST_SCORE'")
+    a[0]['max'].to_i
+  end
   def self.best_scores
     a = Array.new  
     best = UserStat.where(property: "AVERAGE").order("CAST(value as float) desc").first(3)

@@ -17,9 +17,9 @@
        <tr class="bsrow"   >
          <td class="bscores" >
          <ul id = "bestuserstat">
-           <li><%= "Average: #{UserStat.user_average(current_user.id.to_s)}" %> </li> 
-           <li><%= "Best : #{UserStat.user_games_best(current_user.id.to_s)}" %> </li> 
-           <li><%= "Games played: #{UserStat.user_games_played(current_user.id.to_s)}" %></li> 
+           <li><i class="icon-white icon-cloud"></i>&nbsp<%= "Average: #{UserStat.user_average(current_user.id.to_s)}" %> </li> 
+           <li><i class="icon-white icon-bell"></i>&nbsp<%= "Best : #{UserStat.user_games_best(current_user.id.to_s)}" %> </li> 
+           <li><i class="icon-white icon-signal"></i>&nbsp<%= "Games played: #{UserStat.user_games_played(current_user.id.to_s)}" %></li> 
         </ul>
         <td>
        </tr>
@@ -40,9 +40,9 @@
       <tr class="bsrow"   >  
 	<td class="imgtd"><%= image_tag( user.image, class: "bsimage"  ) %><br/><strong><%= user.name %></strong></td>
         <td class="bscores" ><ul id = "bestuserstat">
-               <li><%= "Average: #{UserStat.user_average(user.id.to_s)}" %> </li> 
-               <li><%= "Best : #{UserStat.user_games_best(user.id.to_s)}" %> </li> 
-               <li><%= "Games played: #{UserStat.user_games_played(user.id.to_s)}" %></li> 
+               <li><i class="icon-white icon-cloud"></i>&nbsp<%= "Average: #{UserStat.user_average(user.id.to_s)}" %> </li> 
+               <li><i class="icon-white icon-bell"></i>&nbsp<%= "Best : #{UserStat.user_games_best(user.id.to_s)}" %> </li> 
+               <li><i class="icon-white icon-signal"></i>&nbsp<%= "Games played: #{UserStat.user_games_played(user.id.to_s)}" %> 
         </ul></td></tr></table> 
    </li>
    <%end%>
@@ -57,8 +57,9 @@
        <tr class="bsrow"   >
          <td class="bscores" >
          <ul id = "bestuserstat">
-           <li> <%= "Games played : #{GamesStat.games_played}" %> </li> 
-           <li>       <%= "Average score : #{GamesStat.all_user_average}" %> </li> 
+           <li><i class="icon-white icon-signal"></i>&nbsp<%= "Games played : #{GamesStat.games_played}" %> </li> 
+           <li><i class="icon-white icon-cloud"></i>&nbsp<%= "Average score : #{GamesStat.all_user_average}" %> </li> 
+           <li><i class="icon-white icon-bell"></i>&nbsp<%= "Best score : #{GamesStat.best}" %> </li> 
         </ul>
         <td>
        </tr>
