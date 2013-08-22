@@ -5,11 +5,11 @@ class GamesStat
   end
   def self.all_user_average
     a = ActiveRecord::Base.connection.select_all("select AVG(CAST(value as float) ) from user_stats where property = 'AVERAGE'")
-    a[0]['avg'].to_f
+    "%.0f" % a[0]['avg'].to_f
   end
   def self.games_played
     a = ActiveRecord::Base.connection.select_all("select SUM(CAST(value as float) ) from user_stats where property = 'GAMES_PLAYED'")
-    a[0]['sum'].to_f
+    a[0]['sum'].to_i
   end
   def self.best_scores
     a = Array.new  

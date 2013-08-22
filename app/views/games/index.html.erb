@@ -7,5 +7,38 @@
      <h2><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class: "btn btn-primary btn-lg" %></h2>
    <%end%>  
  </div>
-<% end %>  
+<% end %>
+  
+<% content_for :bestscores do %>
+  <div id="indexuserstat">
+    <h3> Best players </h3>
+   <ul id = "bestlist" > 
+   <% GamesStat.best_scores.each do |user|  %> 
+   <li>
+     <%= image_tag( user.image,:size => "45x45") %> <br> <strong> <%= user.name %> </strong>
+     <ul id = "bestuserstat">
+       <li><%= "Average: #{UserStat.user_average(user.id.to_s)}" %> </li> 
+       <li><%= "Best : #{UserStat.user_games_best(user.id.to_s)}" %> </li> 
+       <li><%= "Games played: #{UserStat.user_games_played(user.id.to_s)}" %></li> 
+     </ul> 
+   </li>
+   <%end%>
+   </ul>  
+  </div>
+<%end%>
+
+<% content_for :gamestats do %>
+  <div id="gamestats">
+    <h3> Game stat </h3>
+   <ul id = "gamestatlist" > 
+     <li>
+       <%= "Games played : #{GamesStat.games_played}" %>
+     </li>
+     <li>
+       <%= "Average score : #{GamesStat.all_user_average}" %>
+     </li>
+
+   </ul>  
+  </div>
+<%end%>
 
