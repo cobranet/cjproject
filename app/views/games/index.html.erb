@@ -8,7 +8,24 @@
    <%end%>  
  </div>
 <% end %>
-  
+
+<% content_for :yourstat do %> 
+ <div id="indexyourstat">
+   <h3> Your stat </h3>
+  <% if current_user %>      
+     <table id="imgstat"> 
+      <tr class="bsrow"   >  
+        <td class="bscores" ><ul id = "bestuserstat">
+               <li><%= "Average: #{UserStat.user_average(current_user.id.to_s)}" %> </li> 
+               <li><%= "Best : #{UserStat.user_games_best(current_user.id.to_s)}" %> </li> 
+               <li><%= "Games played: #{UserStat.user_games_played(current_user.id.to_s)}" %></li> 
+        </ul></td></tr></table>
+  <%else%>
+    Please login to see your stat  
+  <%end%>
+ </div>
+<%end%>  
+
 <% content_for :bestscores do %>
   <div id="indexuserstat">
     <h3> Best players </h3>
