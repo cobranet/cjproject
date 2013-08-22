@@ -15,12 +15,14 @@
    <ul id = "bestlist" > 
    <% GamesStat.best_scores.each do |user|  %> 
    <li>
-     <%= image_tag( user.image,:size => "45x45") %> <br> <strong> <%= user.name %> </strong>
-     <ul id = "bestuserstat">
-       <li><%= "Average: #{UserStat.user_average(user.id.to_s)}" %> </li> 
-       <li><%= "Best : #{UserStat.user_games_best(user.id.to_s)}" %> </li> 
-       <li><%= "Games played: #{UserStat.user_games_played(user.id.to_s)}" %></li> 
-     </ul> 
+     <table id="imgstat"> 
+      <tr class="bsrow"   >  
+	<td class="imgtd"><%= image_tag( user.image, class: "bsimage"  ) %><br/><strong><%= user.name %></strong></td>
+        <td class="bscores" ><ul id = "bestuserstat">
+               <li><%= "Average: #{UserStat.user_average(user.id.to_s)}" %> </li> 
+               <li><%= "Best : #{UserStat.user_games_best(user.id.to_s)}" %> </li> 
+               <li><%= "Games played: #{UserStat.user_games_played(user.id.to_s)}" %></li> 
+        </ul></td></tr></table> 
    </li>
    <%end%>
    </ul>  
