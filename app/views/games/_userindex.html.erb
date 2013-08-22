@@ -1,6 +1,6 @@
-<div id="currentuser">
-  <div id="neworlogout">
-    <h3>Welcome <br/><%="#{current_user.name}"%></h3>
+<div >
+  <div>
+    <h1>Welcome <br/><strong><%= "#{current_user.name}"%></strong></h1>
     <% g = User.current_game(current_user.id) %>
     <h2>
     <% if g  != nil %>

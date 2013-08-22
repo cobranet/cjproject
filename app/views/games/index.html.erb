@@ -1,6 +1,5 @@
 <% content_for :home do %>
- <div id="home" %> 
-   <%= image_tag "heading.jpeg" %><br/>
+ <div id="home" class = "jumbotron"  %> 
    <% if current_user %>
      <%= render partial: 'userindex' %>
    <%else%>    
